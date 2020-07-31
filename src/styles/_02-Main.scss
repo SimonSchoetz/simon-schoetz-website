@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: $slim;
+    font-family: $mid;
     background: $main-bright;
     color: $main-dark;
     -webkit-font-smoothing: antialiased;
@@ -11,4 +11,12 @@
   }
   h1 {
       font-family: $fat;
+  }
+
+  .App {
+      display: flex;
+      justify-content: center;
+  }
+  .component-container {
+      width: 1400px;
   }

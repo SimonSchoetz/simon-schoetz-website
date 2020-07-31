@@ -6,3 +6,11 @@ $slim: "BellG-Light", sans-serif;
 //colors
 $main-bright: rgb(209, 213, 214);
 $main-dark: rgb(39, 40, 40);
+
+//component basics
+@mixin component-base {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}

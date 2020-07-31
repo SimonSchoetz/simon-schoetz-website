@@ -6,6 +6,7 @@ import Landing from './Landing';
 import WebDev from "./WebDev";
 import Producer from "./Producer";
 import SoundEngineer from "./SoundEngineer";
+import Error404 from './Error404';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
               <Route exact path="/webdev" render={() => <WebDev /> } />
               <Route exact path="/bustedfingerz" render={() => <Producer /> } />
               <Route exact path="/soundengineer" render={() => <SoundEngineer /> } />
+              <Route component={Error404} />
           </Switch>
         </div>
       </div>

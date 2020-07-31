@@ -4,6 +4,8 @@ import {HashRouter, Switch, Route} from "react-router-dom";
 
 import Landing from './Landing';
 import WebDev from "./WebDev";
+import Producer from "./Producer";
+import SoundEngineer from "./SoundEngineer";
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
           <Switch>
               <Route exact path="/" render={() => <Landing/>} />
               <Route exact path="/webdev" render={() => <WebDev /> } />
+              <Route exact path="/bustedfingerz" render={() => <Producer /> } />
+              <Route exact path="/soundengineer" render={() => <SoundEngineer /> } />
           </Switch>
         </div>
       </div>

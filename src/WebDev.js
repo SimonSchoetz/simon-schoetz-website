@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import DocumentTitle from 'react-document-title';
 
 export default function WebDev() {
     return (
-        <div>
-            <h1>This Is WebDev</h1>
-        </div>
+        <DocumentTitle title ="Web Developer">
+            <div className="web-dev">
+                <h2>Web Developer</h2>
+            </div>
+        </DocumentTitle>
     )
 }

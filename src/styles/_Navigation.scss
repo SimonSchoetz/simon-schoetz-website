@@ -1,0 +1,17 @@
+.main-nav {
+    margin: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1rem;
+    height: 80vh;
+
+    .nav-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3vw;
+        background-color: $main-dark;
+        color: $main-bright;
+        text-decoration: none;
+    }
+}

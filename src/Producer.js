@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import DocumentTitle from 'react-document-title';
 
 export default function Producer() {
     return (
-        <div>
-            <h1>This Is Producer</h1>
-        </div>
+        <DocumentTitle title ="Busted Fingerz">
+            <div className="producer">
+                <h2>Busted Fingerz</h2>
+            </div>
+        </DocumentTitle>
     )
 }

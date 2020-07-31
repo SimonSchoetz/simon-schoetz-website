@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import DocumentTitle from 'react-document-title';
 
 export default function SoundEngineer() {
     return (
-        <div>
-            <h1>This Is Sound Engineer</h1>
-        </div>
+        <DocumentTitle title ="Sound Engineer">
+            <div className="sound-engineer">
+                <h2>Sound Engineer</h2>
+            </div>
+        </DocumentTitle>
     )
 }

@@ -39,7 +39,7 @@ function App() {
           <div className="component-container">
             <header>
               <nav>
-                <h1><NavLink activeClassName="active-nav" className="home-link" exact={true} to="/"> SIMON SCHÖTZ</NavLink></h1> 
+                <h1><NavLink activeClassName="active-nav" className="home-link" exact={true} to="/"> Simon Schötz</NavLink></h1> 
                 <div className={`main-nav ${currentLocation !== "/" ? "shrinked-main-nav" : ""}`} onMouseOver={()=> mouseOver()}>
                 <NavLink activeClassName="active-nav" className={`nav-link ${shrink} `} to="/bustedfingerz">
                 Music Producer
@@ -47,7 +47,7 @@ function App() {
                 </NavLink>
                 <NavLink ref={refSoundEngineer} activeClassName="active-nav" className={`nav-link ${shrink} ${currentLocation === "/webdev" ? "right-nav" : ""}`} to="/soundengineer">
                 Sound Engineer
-                <FaderContainer navWidth={navWidth}/>
+                { currentLocation === "/" ? <FaderContainer navWidth={navWidth}/> : null }
                 </NavLink>
                 <NavLink activeClassName="active-nav" className={`nav-link ${shrink} `} to="/webdev">Web Developer</NavLink>
                 </div>

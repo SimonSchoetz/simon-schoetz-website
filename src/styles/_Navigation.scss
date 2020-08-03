@@ -8,7 +8,7 @@
         margin: 0 .5rem;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-end;
         max-width: 450px;
         height: 450px;
         font-size: 3vw;
@@ -16,10 +16,6 @@
         color: $main-bright;
         text-decoration: none;
         transition: .5s;
-
-        &:hover {
-            background-color: rgba(39, 40, 40, 0.50);
-        }
     }
     
     
@@ -29,21 +25,22 @@
     display: flex;
     flex-flow: wrap;
     height: 8rem;
-    // grid-template-columns: repeat(2, 1fr);
-    // grid-template-rows: 2rem 4rem;
-    // row-gap: .5rem;
     transition: .5s;
     .shrinked-nav {
         position: absolute;
         height: 3rem;
         font-size: 2rem;
         transition: .5s;
-            max-width: calc(50% - 1px);
+        width: calc(50% - 1px);
+        margin: 0;
+        max-width: calc(50% - 1px);
+        &:hover {
+            background-color: rgba(39, 40, 40, 0.50);
+        }
 
         &:nth-child(3) {
             right: 0;
         }
-        
     }
     .right-nav {
         right: 0;
@@ -67,5 +64,7 @@
 
 .home-link {
     text-decoration: none;
+    font-family: $fat;
+    
 }
 

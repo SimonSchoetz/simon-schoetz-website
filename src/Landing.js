@@ -12,8 +12,8 @@ export default function Landing() {
     return (
         <DocumentTitle title ="Simon Schötz">
                 <div className="landing">
-                <h2>Welcome to my web page!</h2>
-                <p>Click on one of the cards above to get more information about me as a music producer,</p>
+                {/* <h2>Welcome to my web page!</h2>
+                <p>Click on one of the cards above to get more information about me as a music producer,</p> */}
                 </div>
         </DocumentTitle>
     )

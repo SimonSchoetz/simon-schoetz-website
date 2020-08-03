@@ -8,7 +8,7 @@ import WebDev from "./WebDev";
 import Producer from "./Producer";
 import SoundEngineer from "./SoundEngineer";
 import Error404 from './Error404';
-import FaderContainer from './FaderContainer';
+import FaderContainer from './IconSE';
 
 
 

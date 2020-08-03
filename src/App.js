@@ -8,7 +8,8 @@ import WebDev from "./WebDev";
 import Producer from "./Producer";
 import SoundEngineer from "./SoundEngineer";
 import Error404 from './Error404';
-import FaderContainer from './IconSE';
+import IconSE from './IconSE';
+import IconWebDev from './IconWebDev';
 
 
 
@@ -47,9 +48,11 @@ function App() {
                 </NavLink>
                 <NavLink ref={refSoundEngineer} activeClassName="active-nav" className={`nav-link ${shrink} ${currentLocation === "/webdev" ? "right-nav" : ""}`} to="/soundengineer">
                 Sound Engineer
-                { currentLocation === "/" ? <FaderContainer navWidth={navWidth}/> : null }
+                { currentLocation === "/" ? <IconSE navWidth={navWidth}/> : null }
                 </NavLink>
-                <NavLink activeClassName="active-nav" className={`nav-link ${shrink} `} to="/webdev">Web Developer</NavLink>
+                <NavLink activeClassName="active-nav" className={`nav-link ${shrink} `} to="/webdev">Web Developer
+                { currentLocation === "/" ? <IconWebDev navWidth={navWidth}/> : null }
+                </NavLink>
                 </div>
               </nav>
             </header>

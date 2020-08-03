@@ -1,20 +1,15 @@
 import React, { Fragment } from 'react'
 
 export default function FaderContainer({navWidth}) {
-    console.log(navWidth)
     const col = Math.floor(navWidth/35) - 2;
     const dummyArray = []
 
     for (let i = 0; i < col; i++) {
         dummyArray.push(i)
     }
-
-    console.log(col)
+    
     const renderChannels = () => {
-
-            
            return dummyArray.map(num => (
-
                 <Fragment>
                     <div key={num} className="channel">
                         <svg className="fader-line" width="4" height="300" viewBox="0 0 4 300" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -26,8 +21,6 @@ export default function FaderContainer({navWidth}) {
                     </div>
                 </Fragment>
             ))
-        
-
     }
 
     return (

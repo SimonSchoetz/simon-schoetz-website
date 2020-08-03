@@ -12,7 +12,8 @@ import Error404 from './Error404';
 
 
 function App() {
-    const [currentLocation, setCurrentLocation] = useState("/")
+    const [currentLocation, setCurrentLocation] = useState("/");
+    const shrink = currentLocation !== "/" ? "shrinked-nav" : "";
     console.log(currentLocation)
   return (
 
@@ -23,15 +24,15 @@ function App() {
       <HashRouter > 
         <div className="App">
           <div className="component-container">
-              <header>
-            <nav>
-              <NavLink activeClassName="active-nav" className ="nav-link" exact={true} to="/"><h1> SIMON SCHÖTZ</h1></NavLink> 
-              <div className="main-nav">
-              <NavLink activeClassName="active-nav" className ="nav-link" to="/webdev">Web Developer</NavLink>
-              <NavLink activeClassName="active-nav" className ="nav-link" to="/bustedfingerz">Busted Fingerz</NavLink>
-              <NavLink activeClassName="active-nav" className ="nav-link" to="/soundengineer">Sound Engineer</NavLink>
-              </div>
-            </nav>
+            <header>
+              <nav>
+                <h1><NavLink activeClassName="active-nav" className="home-link" exact={true} to="/"> SIMON SCHÖTZ</NavLink></h1> 
+                <div className={`main-nav ${currentLocation !== "/" ? "shrinked-main-nav" : ""}`}>
+                <NavLink activeClassName="active-nav" className={`nav-link ${shrink} `} to="/bustedfingerz">Busted Fingerz</NavLink>
+                <NavLink activeClassName="active-nav" className={`nav-link ${shrink} ${currentLocation === "/webdev" ? "right-nav" : ""}`} to="/soundengineer">Sound Engineer</NavLink>
+                <NavLink activeClassName="active-nav" className={`nav-link ${shrink} `} to="/webdev">Web Developer</NavLink>
+                </div>
+              </nav>
             </header>
             <Switch>
                 <Route exact path="/" render={() => <Landing/>} />

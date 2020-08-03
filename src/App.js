@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 import './App.scss';
 import {HashRouter, Switch, Route, NavLink } from "react-router-dom";
 import { Context } from './Context';
@@ -8,13 +8,26 @@ import WebDev from "./WebDev";
 import Producer from "./Producer";
 import SoundEngineer from "./SoundEngineer";
 import Error404 from './Error404';
+import FaderContainer from './FaderContainer';
 
 
 
 function App() {
     const [currentLocation, setCurrentLocation] = useState("/");
     const shrink = currentLocation !== "/" ? "shrinked-nav" : "";
-    console.log(currentLocation)
+    const refSoundEngineer= useRef(0)
+
+    const [navWidth, setNavWidth] = useState(0);
+
+    useEffect(() => {
+      setNavWidth(refSoundEngineer.current.clientWidth)
+    }, [refSoundEngineer.current.clientWidth])
+
+    const mouseOver = () => {
+      setNavWidth(refSoundEngineer.current.clientWidth)
+    }
+    
+
   return (
 
     <Context.Provider value={{
@@ -27,9 +40,15 @@ function App() {
             <header>
               <nav>
                 <h1><NavLink activeClassName="active-nav" className="home-link" exact={true} to="/"> SIMON SCHÖTZ</NavLink></h1> 
-                <div className={`main-nav ${currentLocation !== "/" ? "shrinked-main-nav" : ""}`}>
-                <NavLink activeClassName="active-nav" className={`nav-link ${shrink} `} to="/bustedfingerz">Busted Fingerz</NavLink>
-                <NavLink activeClassName="active-nav" className={`nav-link ${shrink} ${currentLocation === "/webdev" ? "right-nav" : ""}`} to="/soundengineer">Sound Engineer</NavLink>
+                <div className={`main-nav ${currentLocation !== "/" ? "shrinked-main-nav" : ""}`} onMouseOver={()=> mouseOver()}>
+                <NavLink activeClassName="active-nav" className={`nav-link ${shrink} `} to="/bustedfingerz">
+                Music Producer
+
+                </NavLink>
+                <NavLink ref={refSoundEngineer} activeClassName="active-nav" className={`nav-link ${shrink} ${currentLocation === "/webdev" ? "right-nav" : ""}`} to="/soundengineer">
+                Sound Engineer
+                <FaderContainer navWidth={navWidth}/>
+                </NavLink>
                 <NavLink activeClassName="active-nav" className={`nav-link ${shrink} `} to="/webdev">Web Developer</NavLink>
                 </div>
               </nav>

@@ -1,12 +1,14 @@
 .main-nav {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 1vw;
+    display: flex;
+    
+    position: relative;
     .nav-link {
+        position: relative;
+        flex: 1 0 0;
+        margin: 0 .5rem;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
         max-width: 450px;
         height: 450px;
         font-size: 3vw;
@@ -26,7 +28,6 @@
 .shrinked-main-nav {
     display: flex;
     flex-flow: wrap;
-    position: relative;
     height: 8rem;
     // grid-template-columns: repeat(2, 1fr);
     // grid-template-rows: 2rem 4rem;

@@ -12,7 +12,8 @@ export default function Landing() {
     return (
         <DocumentTitle title ="Simon Schötz">
                 <div className="landing">
-                {/* Placeholder Landing Page so we don' t land on Error404 */}
+                <h2>Welcome to my web page!</h2>
+                <p>Click on one of the cards above to get more information about me as a music producer,</p>
                 </div>
         </DocumentTitle>
     )

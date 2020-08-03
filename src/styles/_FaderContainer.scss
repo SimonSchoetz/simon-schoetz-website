@@ -1,0 +1,47 @@
+.fader-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 450px;
+    height: 100%;
+    // opacity: 0;
+    transition: .5s;
+    background-color: $main-dark;
+    & * {
+        background-color: $main-dark;
+    }
+    &:hover {
+        // opacity: 1;
+        transition: .5s;
+    }
+
+    .channel {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        height: 100%;
+    }
+    .fader-line {
+    }
+    .fader-btn {
+        position: absolute;
+        bottom: 5rem;
+        transition: 1s;
+        // &:hover {
+        //     bottom: 10rem;
+        // }
+    }
+
+    &:hover {
+        .btn1 {
+            bottom: 10rem;
+        }
+        .btn2 {
+            bottom: 15rem;
+        }
+    }
+    
+}

@@ -7,7 +7,7 @@
     width: 100%;
     max-width: 450px;
     height: 100%;
-    // opacity: 0;
+    opacity: 0;
     transition: .25s;
     background-color: $main-dark;
     & * {
@@ -16,10 +16,68 @@
     &:hover {
         opacity: 1;
         transition: .25s;
+        //Busted
+        .st0-B{animation: fadeIn1 .1*2s;}
+        .st0-U{animation: fadeIn1 .2*2s;}
+        .st0-S{animation: fadeIn1 .3*2s;}
+        .st0-T{animation: fadeIn1 .4*2s;}
+        .st0-E1{animation: fadeIn1 .5*2s;}
+        .st0-D{animation: fadeIn1 .6*2s;}
+        //Fingerz
+        .st0-F{animation: fadeIn1 .8*3s;}
+        .st0-I-dot{animation: fadeIn1 .6*3s;} //GANZ ZUM SCHLUSS?
+        .st0-I-line{animation: fadeIn1 .9*3s;}
+        .st0-N{animation: fadeIn1 .7*3s;}
+        .st0-G{animation: fadeIn1 .8*3s;}
+        .st0-E2{animation: fadeIn1 .9*3s;}
+        .st0-R{animation: fadeIn1 1*3s;}
+        .st0-Z{animation: fadeIn1 1.1*3s;}
+        .st0-Z_{animation: fadeIn1 1.3*3s;} //
+        //Thump
+        .st0-T1{animation: fadeIn1 .7*2s;}
+        .st0-T2{animation: fadeIn1 1*2s;}
+        .st0-T3-1{animation: fadeIn1 1.5*2s;}
+        .st0-T3-2{animation: fadeIn1 1.7*2s;}
+        .st0-T3-3{animation: fadeIn1 1*2s;}
+        //Index Finger
+        .st0-IF1{animation: fadeIn1 1.2*2s;}
+        .st0-IF2-1{animation: fadeIn1 1.3*2s;}
+        .st0-IF2-2{animation: fadeIn1 1.4*2s;}
+        .st0-IF2-3{animation: fadeIn1 .5*2s;}
+        .st0-IF2-4{animation: fadeIn1 1.6*2s;}
+        .st0-IF3-1{animation: fadeIn1 .9*2s;}
+        .st0-IF3-2{animation: fadeIn1 2.1*2s;}
+        .st0-IF3-3{animation: fadeIn1 2.3*2s;}
+        .st0-IF3-4{animation: fadeIn1 1.5*2s;}
+        .st0-IF3-5{animation: fadeIn1 1.7*2s;}
+        //Middle Finger
+        .st0-MF1{animation: fadeIn1 1.3*2s;}
+        .st0-MF2{animation: fadeIn1 1.6*2s;}
+        .st0-MF3-1{animation: fadeIn1 1.7*2s;}
+        .st0-MF3-2{animation: fadeIn1 1.8*2s;}
+        .st0-MF3-3{animation: fadeIn1 .9*2s;}
+        .st0-MF3-4{animation: fadeIn1 1.2*2s;}
+        .st0-MF3-5{animation: fadeIn1 1.4*2s;}
+        //Ring Finger
+        .st0-RF1{animation: fadeIn1 1.3*2s;}
+        .st0-RF2{animation: fadeIn1 1.6*2s;}
+        .st0-RF3{animation: fadeIn1 .8*2s;}
+        //Lil Finger
+        .st0-LF1{animation: fadeIn1 .5*2s;}
+        .st0-LF2{animation: fadeIn1 1.8*2s;}
+        .st0-LF3{animation: fadeIn1 .8*2s;}
+        .st0-LF4{animation: fadeIn1 1.2*2s;}
     }
     svg {
         width: 100%;
         height: 100%;
+    }
+        
+    @keyframes fadeIn1 {
+        0% {opacity:0}
+        50% {opacity:0}
+        81% {opacity:1}
+        100% {opacity:1}
     }
 
 }

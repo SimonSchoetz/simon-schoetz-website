@@ -10,6 +10,7 @@ import SoundEngineer from "./SoundEngineer";
 import Error404 from './Error404';
 import IconSE from './IconSE';
 import IconWebDev from './IconWebDev';
+import IconProducer from './IconProducer';
 
 
 
@@ -44,6 +45,7 @@ function App() {
                 <div className={`main-nav ${currentLocation !== "/" ? "shrinked-main-nav" : ""}`} onMouseOver={()=> mouseOver()}>
                 <NavLink activeClassName="active-nav" className={`nav-link ${shrink} `} to="/bustedfingerz">
                 Music Producer
+                { currentLocation === "/" ? <IconProducer /> : null }
 
                 </NavLink>
                 <NavLink ref={refSoundEngineer} activeClassName="active-nav" className={`nav-link ${shrink} ${currentLocation === "/webdev" ? "right-nav" : ""}`} to="/soundengineer">
@@ -51,7 +53,7 @@ function App() {
                 { currentLocation === "/" ? <IconSE navWidth={navWidth}/> : null }
                 </NavLink>
                 <NavLink activeClassName="active-nav" className={`nav-link ${shrink} `} to="/webdev">Web Developer
-                { currentLocation === "/" ? <IconWebDev navWidth={navWidth}/> : null }
+                { currentLocation === "/" ? <IconWebDev /> : null }
                 </NavLink>
                 </div>
               </nav>

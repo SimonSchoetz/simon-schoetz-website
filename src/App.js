@@ -20,6 +20,7 @@ function App() {
     const refSoundEngineer= useRef(0)
 
     const [navWidth, setNavWidth] = useState(0);
+    const [hoverBF ,setHoverBF] = useState(false);
 
     useEffect(() => {
       setNavWidth(refSoundEngineer.current.clientWidth)
@@ -43,9 +44,9 @@ function App() {
               <nav>
                 <h1><NavLink activeClassName="active-nav" className="home-link" exact={true} to="/"> Simon Schötz</NavLink></h1> 
                 <div className={`main-nav ${currentLocation !== "/" ? "shrinked-main-nav" : ""}`} onMouseOver={()=> mouseOver()}>
-                <NavLink activeClassName="active-nav" className={`nav-link ${shrink} `} to="/bustedfingerz">
+                <NavLink onMouseEnter={()=> setHoverBF(true)} onMouseLeave={()=> setHoverBF(false)} activeClassName="active-nav" className={`nav-link ${shrink} `} to="/bustedfingerz">
                 Music Producer
-                { currentLocation === "/" ? <IconProducer /> : null }
+                { hoverBF && currentLocation === "/" ? <IconProducer /> : null }
 
                 </NavLink>
                 <NavLink ref={refSoundEngineer} activeClassName="active-nav" className={`nav-link ${shrink} ${currentLocation === "/webdev" ? "right-nav" : ""}`} to="/soundengineer">

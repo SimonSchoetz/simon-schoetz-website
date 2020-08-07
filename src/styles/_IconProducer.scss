@@ -12,7 +12,7 @@
     & * {
         background-color: transparent;
     }
-    animation: fadeIn .25s;
+    animation: fadeIn-BF-Logo .25s;
     &:hover {
         opacity: 1;
         .explode {
@@ -96,7 +96,7 @@
             transform:scale(1)}
     }
 
-    @keyframes fadeIn {
+    @keyframes fadeIn-BF-Logo {
         0% {
             opacity: 0;}
         100% {

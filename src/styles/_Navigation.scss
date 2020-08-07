@@ -2,6 +2,7 @@
     display: flex;
     
     position: relative;
+    z-index: 1;
     .nav-link {
         position: relative;
         flex: 1 0 0;
@@ -51,12 +52,12 @@
             height: 4rem;
             font-size: 3rem;
             transition: .5s;
-            background-color: $main-bright;
+            background-color: transparent;
             color: $main-dark;
             width: 100%;
             max-width: 100%;
             &:hover {
-                background-color: $main-bright;
+                background-color: transparent;
                 cursor: initial;
             }
     }
@@ -64,19 +65,22 @@
 
 .home-link {
     text-decoration: none;
-    span {font-family: $fat;}
+    span {
+        position: relative;
+        font-family: $fat;
+    }
     &:hover {
-    .simon-s{animation: blink-simon-s .5s alternate infinite;}
-    .simon-i{animation: blink-simon-i .5s alternate infinite;}
-    .simon-m{animation: blink-simon-m .5s alternate infinite;}
-    .simon-o{animation: blink-simon-o .5s alternate infinite;}
-    .simon-n{animation: blink-simon-n .5s alternate infinite;}
-    .schoetz-s{animation: blink-schoetz-s .5s alternate infinite;}
-    .schoetz-c{animation: blink-schoetz-c .5s alternate infinite;}
-    .schoetz-h{animation: blink-schoetz-h .5s alternate infinite;}
-    .schoetz-ö{animation: blink-schoetz-oe .5s alternate infinite;}
-    .schoetz-t{animation: blink-schoetz-t .5s alternate infinite;}
-    .schoetz-z{animation: blink-schoetz-z .5s alternate infinite;}
+    .simon-s{animation: blink-simon-s .5s;}
+    .simon-i{animation: blink-simon-i .5s;}
+    .simon-m{animation: blink-simon-m .5s;}
+    .simon-o{animation: blink-simon-o .5s;}
+    .simon-n{animation: blink-simon-n .5s;}
+    .schoetz-s{animation: blink-schoetz-s .5s;}
+    .schoetz-c{animation: blink-schoetz-c .5s;}
+    .schoetz-h{animation: blink-schoetz-h .5s;}
+    .schoetz-ö{animation: blink-schoetz-oe .5s;}
+    .schoetz-t{animation: blink-schoetz-t .5s;}
+    .schoetz-z{animation: blink-schoetz-z .5s;}
 
     }
 }

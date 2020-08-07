@@ -12,6 +12,8 @@ import IconSE from './IconSE';
 import IconWebDev from './IconWebDev';
 import IconProducer from './IconProducer';
 
+import Noise from "./noise/Noisy";
+
 
 
 function App() {
@@ -39,6 +41,10 @@ function App() {
 
       <HashRouter > 
         <div className="App">
+    <div className="noise">
+      <Noise />
+    </div>
+        
           <div className="component-container">
             <header>
               <nav>
@@ -56,7 +62,7 @@ function App() {
                 </NavLink></h1> 
                 <div className={`main-nav ${currentLocation !== "/" ? "shrinked-main-nav" : ""}`} onMouseOver={()=> mouseOver()}>
                 <NavLink onMouseEnter={()=> setHoverBF(true)} onMouseLeave={()=> setHoverBF(false)} activeClassName="active-nav" className={`nav-link ${shrink} `} to="/bustedfingerz">
-                Music Producer
+                { currentLocation === "/" ? "Music Producer" : "Busted Fingerz" }
                 { hoverBF && currentLocation === "/" ? <IconProducer /> : null }
 
                 </NavLink>

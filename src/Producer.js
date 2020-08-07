@@ -13,7 +13,8 @@ export default function Producer() {
     return (
         <DocumentTitle title ="Busted Fingerz">
             <div className="producer">
-                <h2>Busted Fingerz</h2>
+                <img src={require("./img/busted_fingerz_live.png")} alt="Busted Fingerz playing live in black and white" />
+                <img src={require("./img/busted_fingerz_live.png")} alt="Busted Fingerz playing live in black and white" />
             </div>
         </DocumentTitle>
     )

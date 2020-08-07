@@ -42,7 +42,18 @@ function App() {
           <div className="component-container">
             <header>
               <nav>
-                <h1><NavLink activeClassName="active-nav" className="home-link" exact={true} to="/"> Simon Schötz</NavLink></h1> 
+                <h1><NavLink activeClassName="active-nav" className="home-link" exact={true} to="/"> 
+                <span className="simon-s">S</span>
+                <span className="simon-i">i</span>
+                <span className="simon-m">m</span>
+                <span className="simon-o">o</span>
+                <span className="simon-n">n</span> <span className="schoetz-s">S</span>
+                <span className="schoetz-c">c</span>
+                <span className="schoetz-h">h</span>
+                <span className="schoetz-ö">ö</span>
+                <span className="schoetz-t">t</span>
+                <span className="schoetz-z">z</span>
+                </NavLink></h1> 
                 <div className={`main-nav ${currentLocation !== "/" ? "shrinked-main-nav" : ""}`} onMouseOver={()=> mouseOver()}>
                 <NavLink onMouseEnter={()=> setHoverBF(true)} onMouseLeave={()=> setHoverBF(false)} activeClassName="active-nav" className={`nav-link ${shrink} `} to="/bustedfingerz">
                 Music Producer

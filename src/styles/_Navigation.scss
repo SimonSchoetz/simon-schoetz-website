@@ -64,7 +64,106 @@
 
 .home-link {
     text-decoration: none;
-    font-family: $fat;
-    
+    span {font-family: $fat;}
+    &:hover {
+    .simon-s{animation: blink-simon-s .5s alternate infinite;}
+    .simon-i{animation: blink-simon-i .5s alternate infinite;}
+    .simon-m{animation: blink-simon-m .5s alternate infinite;}
+    .simon-o{animation: blink-simon-o .5s alternate infinite;}
+    .simon-n{animation: blink-simon-n .5s alternate infinite;}
+    .schoetz-s{animation: blink-schoetz-s .5s alternate infinite;}
+    .schoetz-c{animation: blink-schoetz-c .5s alternate infinite;}
+    .schoetz-h{animation: blink-schoetz-h .5s alternate infinite;}
+    .schoetz-ö{animation: blink-schoetz-oe .5s alternate infinite;}
+    .schoetz-t{animation: blink-schoetz-t .5s alternate infinite;}
+    .schoetz-z{animation: blink-schoetz-z .5s alternate infinite;}
+
+    }
 }
 
+@keyframes blink-simon-s {
+    0% {opacity: 1;}
+    1% {opacity: .3;}
+    10% {opacity: .3;}
+    11% {opacity: 1;}
+    100% {opacity: 1;}
+}
+@keyframes blink-simon-i {
+    0% {opacity: 1;}
+    9% {opacity: 1;}
+    10% {opacity: .3;}
+    19% {opacity: .3;}
+    20% {opacity: 1;}
+    100% {opacity: 1;}
+}
+@keyframes blink-simon-m {
+    0% {opacity: 1;}
+    18% {opacity: 1;}
+    19% {opacity: .3;}
+    28% {opacity: .3;}
+    29% {opacity: 1;}
+    100% {opacity: 1;}
+}
+@keyframes blink-simon-o {
+    0% {opacity: 1;}
+    27% {opacity: 1;}
+    28% {opacity: .3;}
+    37% {opacity: .3;}
+    38% {opacity: 1;}
+    100% {opacity: 1;}
+}
+@keyframes blink-simon-n {
+    0% {opacity: 1;}
+    36% {opacity: 1;}
+    37% {opacity: .3;}
+    46% {opacity: .3;}
+    47% {opacity: 1;}
+    100% {opacity: 1;}
+}
+@keyframes blink-schoetz-s {
+    0% {opacity: 1;}
+    45% {opacity: 1;}
+    46% {opacity: .3;}
+    55% {opacity: .3;}
+    56% {opacity: 1;}
+    100% {opacity: 1;}
+}
+@keyframes blink-schoetz-c {
+    0% {opacity: 1;}
+    54% {opacity: 1;}
+    55% {opacity: .3;}
+    64% {opacity: .3;}
+    65% {opacity: 1;}
+    100% {opacity: 1;}
+}
+@keyframes blink-schoetz-h {
+    0% {opacity: 1;}
+    63% {opacity: 1;}
+    64% {opacity: .3;}
+    73% {opacity: .3;}
+    74% {opacity: 1;}
+    100% {opacity: 1;}
+}
+@keyframes blink-schoetz-oe {
+    0% {opacity: 1;}
+    72% {opacity: 1;}
+    73% {opacity: .3;}
+    82% {opacity: .3;}
+    83% {opacity: 1;}
+    100% {opacity: 1;}
+}
+@keyframes blink-schoetz-t {
+    0% {opacity: 1;}
+    81% {opacity: 1;}
+    82% {opacity: .3;}
+    91% {opacity: .3;}
+    92% {opacity: 1;}
+    100% {opacity: 1;}
+}
+@keyframes blink-schoetz-z {
+    0% {opacity: 1;}
+    90% {opacity: 1;}
+    91% {opacity: .3;}
+    99% {opacity: .3;}
+    100% {opacity: 1;}
+}

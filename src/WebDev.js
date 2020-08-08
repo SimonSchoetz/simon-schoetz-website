@@ -8,7 +8,7 @@ export default function WebDev() {
     const locations = useLocation();
     useEffect(() => {
         setCurrentLocation(locations.pathname)
-    }, [setCurrentLocation])
+    }, [setCurrentLocation, locations.pathname])
     
     return (
         <DocumentTitle title ="Web Developer">

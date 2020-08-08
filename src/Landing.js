@@ -4,11 +4,11 @@ import { useLocation  } from "react-router-dom";
 import { Context } from './Context';
 
 export default function Landing() {
-    const {currentLocation, setCurrentLocation} = useContext(Context)
+    const {setCurrentLocation} = useContext(Context)
     const locations = useLocation();
     useEffect(() => {
         setCurrentLocation(locations.pathname)
-    }, [setCurrentLocation])
+    }, [setCurrentLocation, locations.pathname])
     return (
         <DocumentTitle title ="Simon Schötz">
                 <div className="landing">

@@ -1,4 +1,4 @@
-import React, { Suspense, useState, useEffect } from 'react';
+import React, { Suspense} from 'react';
 import { Color } from 'three';
 import { Canvas } from 'react-three-fiber';
 import Effects from './Effects/Effect';
@@ -6,12 +6,6 @@ import Effects from './Effects/Effect';
 
 
 export default function App({color}) {
-    
-    // useEffect(() => {
-    //     if (currentLocation === "/") setColor("#d1d5d6");
-    //     if (currentLocation === "/bustedfingerz") setColor("#8b0000");
-    //     console.log(color)
-    // }, [setColor, currentLocation])
     return (
 
 

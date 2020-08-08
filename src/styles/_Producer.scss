@@ -1,6 +1,9 @@
 .producer {
     position: relative;
     font-size: 1.2rem;
+    * {
+        list-style-type: none;
+    }
 
     section {
         margin-bottom: 3rem;
@@ -30,7 +33,7 @@
     }
     .release {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 2fr 2fr 1fr 1fr;
     }
     @keyframes fadeIn-Bio {
         0% {opacity: 0;}

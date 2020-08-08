@@ -9,7 +9,7 @@ export default function SoundEngineer() {
     const locations = useLocation();
     useEffect(() => {
         setCurrentLocation(locations.pathname)
-    }, [setCurrentLocation])
+    }, [setCurrentLocation, locations.pathname])
     
     return (
         <DocumentTitle title ="Sound Engineer">

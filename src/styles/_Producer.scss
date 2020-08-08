@@ -1,7 +1,38 @@
 .producer {
     position: relative;
-img {
-    max-width: 100%;
-}
+    font-size: 1.2rem;
+
+    section {
+        margin-bottom: 3rem;
+    }
+    .banner-bio {
+        background-image: url(../img/busted_fingerz_live.png);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 577px;
+        width: 100%;
+        article {
+            background-color: $main-dark-050;
+            backdrop-filter: blur(3px);
+            position: relative;
+            z-index: 2;
+            padding: 2rem;
+            max-width: 400px;
+            animation: fadeIn-Bio 5s;
+            * {
+            color: $main-bright;
+            }
+        }
+        
+    }
+    @keyframes fadeIn-Bio {
+        0% {opacity: 0;}
+        50% {opacity: 0;}
+        100% {opacity: 1;}
+        
+    }
 
 }

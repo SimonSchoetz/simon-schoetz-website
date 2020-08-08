@@ -3,10 +3,11 @@
     
     position: relative;
     z-index: 1;
+    margin:0 .5rem 3rem;
+
     .nav-link {
         position: relative;
         flex: 1 0 0;
-        margin: 0 .5rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -17,47 +18,57 @@
         color: $main-bright;
         text-decoration: none;
         transition: .5s;
+
+        &:nth-child(2) {
+            margin: 0 .5rem;
+        }
     }
-    
-    
 }
 
 .shrinked-main-nav {
     display: flex;
     flex-flow: wrap;
-    height: 8rem;
+    height: 9rem;
     transition: .5s;
+
     .shrinked-nav {
         position: absolute;
         height: 3rem;
         font-size: 2rem;
         transition: .5s;
         width: calc(50% - 1px);
-        margin: 0;
-        max-width: calc(50% - 1px);
+        max-width: 50%;
+        min-width: fit-content;
         &:hover {
-            background-color: rgba(39, 40, 40, 0.50);
+            background-color: $main-dark-050;
         }
-
         &:nth-child(3) {
             right: 0;
         }
+        
+        &:nth-child(2) {
+            margin: 0 ;
+        }
     }
+
     .right-nav {
         right: 0;
     }
+
     .active-nav {
         position: absolute;
-        top: 4rem;
-            height: 4rem;
+        top: 5rem;
+            height: 5rem;
             font-size: 3rem;
             transition: .5s;
-            background-color: transparent;
-            color: $main-dark;
+            background-color: $main-dark-050;
+            backdrop-filter: blur(3px);
+            // color: $main-dark;
             width: 100%;
             max-width: 100%;
             &:hover {
-                background-color: transparent;
+                background-color: $main-dark-050;
+                backdrop-filter: blur(3px);
                 cursor: initial;
             }
     }
@@ -65,11 +76,17 @@
 
 .home-link {
     text-decoration: none;
+    &:not(.shrinked-nav) {
+        cursor: initial;
+    }
+
     span {
         position: relative;
         font-family: $fat;
     }
-    &:hover {
+}
+
+.home-link.shrinked-nav:hover {
     .simon-s{animation: blink-simon-s .5s;}
     .simon-i{animation: blink-simon-i .5s;}
     .simon-m{animation: blink-simon-m .5s;}
@@ -81,8 +98,6 @@
     .schoetz-ö{animation: blink-schoetz-oe .5s;}
     .schoetz-t{animation: blink-schoetz-t .5s;}
     .schoetz-z{animation: blink-schoetz-z .5s;}
-
-    }
 }
 
 @keyframes blink-simon-s {

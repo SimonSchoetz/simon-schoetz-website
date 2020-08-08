@@ -10,8 +10,8 @@ export default function FaderContainer({navWidth}) {
     
     const renderChannels = () => {
            return dummyArray.map(num => (
-                <Fragment>
-                    <div key={num} className="channel">
+                <Fragment key={num}>
+                    <div className="channel">
                         <svg className="fader-line" width="4" height="300" viewBox="0 0 4 300" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="4" height="300" rx="2" fill="white"/>
                         </svg>

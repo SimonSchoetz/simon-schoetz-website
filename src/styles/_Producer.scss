@@ -4,6 +4,7 @@
 
     section {
         margin-bottom: 3rem;
+        width: 100%;
     }
     .banner-bio {
         background-image: url(../img/busted_fingerz_live.png);
@@ -26,7 +27,10 @@
             color: $main-bright;
             }
         }
-        
+    }
+    .release {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
     }
     @keyframes fadeIn-Bio {
         0% {opacity: 0;}

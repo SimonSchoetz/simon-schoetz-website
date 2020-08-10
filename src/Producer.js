@@ -46,13 +46,13 @@ export default function Producer() {
         {id: 34, name: "Roklem w/ Devastated", release: "Worst Generation EP", label: "Subotage Records", free: false, link: "https://subotage.bandcamp.com/album/worst-generation-ep-sub036-subotage-records", date: new Date("05 April 2019")},
         {id: 35, name: "Annias - Unseen Frequencies RMX", release: "", label: "", free: false, link: "https://annias.bandcamp.com/track/annias-unseen-frequencies-busted-fingerz-remix", date: new Date("15 April 2020")},
         {id: 36, name: "Reckless w/ Grawinkel", release: "Reckless / Data Dungeon", label: "Artikal", free: false, link: "https://artikalmusic.bandcamp.com/album/reckless-data-dungeon", date: new Date("24 April 2020")},
-        {id: 37, name: "Ourman - Pacing RMX", release: "", label: "Silent Motion", free: false, link: "https://silentmotionrecords.bandcamp.com/album/pacing-ep", date: new Date("24 April 2020")},
+        {id: 37, name: "Ourman - Pacing RMX", release: "Pacing EP", label: "Silent Motion", free: false, link: "https://silentmotionrecords.bandcamp.com/album/pacing-ep", date: new Date("24 April 2020")},
         
-    ]
+    ].sort((entryA, entryB) => entryB.date - entryA.date);
     const renderDiscography = () => (
         discography.map(el => {
-            return  <li key={el.id}>
-                        <ul className="release">
+            return  <li key={el.id} className="releases">
+                        <ul>
                             <li>{el.name}</li>
                             <li>{el.release}</li>
                             <li>{el.label}</li>

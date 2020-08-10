@@ -31,9 +31,15 @@
             }
         }
     }
-    .release {
-        display: grid;
-        grid-template-columns: 2fr 2fr 1fr 1fr;
+    .releases {
+        ul {
+            display: grid;
+            grid-template-columns: 2fr 2fr 1fr 1fr;
+            &:hover { 
+                background-color: $main-dark-050;
+                backdrop-filter: blur(3px);
+            }
+        }
     }
     @keyframes fadeIn-Bio {
         0% {opacity: 0;}

@@ -44,10 +44,9 @@ function App() {
 
     
     <div className="noise">
-      {currentLocation === "/" ? <Noise color={"rgb(209, 213, 214)"} /> : null}
-      {currentLocation === "/bustedfingerz" ? <Noise color={"rgb(200,200,225)"} /> : null}
+      {currentLocation === "/" || currentLocation === "/webdev" ? <Noise color={"rgb(209, 213, 214)"} /> : null}
+      {currentLocation === "/bustedfingerz" ? <Noise color={"rgb(0,7,7)"} /> : null}
       {currentLocation === "/soundengineer" ? <Noise color={"rgb(0,10,15)"} /> : null}
-      {currentLocation === "/webdev" ? <Noise color={"rgb(0,7,7)"} /> : null}
     </div>
         
           <div className="component-container">

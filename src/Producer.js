@@ -73,12 +73,16 @@ export default function Producer() {
                     </article>
                 </section>
                 <section className="discography">
-                <h2>DISCOGRAPHY</h2>
-                <ul>
-                    {renderDiscography()}
-                </ul>
-                
-
+                    <h2>DISCOGRAPHY</h2>
+                    <ul className="discography-headings">
+                        <li>NAME</li>
+                        <li>RELEASED ON</li>
+                        <li>LABEL</li>
+                        <li>AVAILABLE AT</li>
+                    </ul>
+                    <ul>
+                        {renderDiscography()}
+                    </ul>
                 </section>
             </div>
         </DocumentTitle>

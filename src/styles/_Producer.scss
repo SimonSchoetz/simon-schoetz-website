@@ -31,16 +31,37 @@
             }
         }
     }
-    .releases {
-        ul {
+    .discography {
+        padding: 1rem;
+        backdrop-filter: blur(3px);
+        .discography-headings{
             display: grid;
             grid-template-columns: 2fr 2fr 1fr 1fr;
-            &:hover { 
-                background-color: $main-dark-050;
-                backdrop-filter: blur(3px);
+            column-gap: .5rem;
+            padding: 0 1rem;
+            margin: 1rem 0;
+            border-bottom: 1px solid $main-dark-050;
+        }
+        .releases {
+            padding: 0 1rem;
+
+            ul {
+                display: grid;
+                grid-template-columns: 2fr 2fr 1fr 1fr;
+                column-gap: .5rem;
+                &:hover { 
+                    background-color: $main-dark-050;
+                    li {
+                        color: white;
+                        font-family: $fat;
+                        a:hover {
+                            color: white;
+                        }
+                    }
+                }
             }
         }
-    }
+    } 
     @keyframes fadeIn-Bio {
         0% {opacity: 0;}
         50% {opacity: 0;}

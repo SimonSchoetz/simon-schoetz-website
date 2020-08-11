@@ -1,32 +1,85 @@
 .sound-engineer {
     position: relative;
     font-size: 1.2rem;
-    
+
     * {
         list-style-type: none;
         color: $main-bright;
     }
-
-    
     .se-intro {
-        backdrop-filter: blur(3px);
+        background-image: url(../img/at-dorian-gray-studios.png);
+        background-size: cover;
+        background-position: center;
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-
-
     }
 
-    
-    section {
-            background-color: $main-dark-050;
-            padding: 1rem;
-            width: 50vw;
-            p {
-            padding: 1rem;
+    .se-intro-field {
+        position: relative;
+        background-color: $main-dark-075;
+        backdrop-filter: blur(3px);
+        padding: 1rem;
+        max-width: 600px;
+        min-width: 300px;
+        p {
+        padding: 1rem;
+        }
+        margin: 1rem;
+    }
+    .se-intro-nav {
+        position: relative;
+        display: flex;
+        a {
+            // padding: 0 1rem;
+            border: 0;
+            height: 2rem;
+            width: 100%;
+            font-size: 1.5rem;
+            text-decoration: none;
+            padding-top: 2px;
+            cursor: context-menu;
+            &:nth-child(1) {
+                text-align: start;
+                padding-right: 2px;
             }
-            margin: 1rem 0;
+            &:nth-child(2) {
+                text-align: end;
+                padding-right: 2px;
+            }
+                
+        }
+        .inactive {
+            // border: solid 1px $main-dark;
+            box-shadow: inset 0 -1px 3px -2px $main-bright-050, inset 0 2px 2px 0 $main-dark-050;
+            // background-color: $main-dark-050;
+            transition: .12s;
+            color:$main-bright-050;
+            &:hover {
+                box-shadow: inset 0 -1px 2px 0 $main-dark-050, inset 0 1px 2px -1px $main-bright-050;
+                cursor: pointer;
+                background-color: $main-dark-050;
+                color:$main-bright;
+            }
+        }
     }
-    
+
+    .se-what-i-do-text {
+
+    }
+
+    .se-bio-text {
+        position: absolute;
+        top: 4rem;
+        // position: relative;
+    }
+
+    .inactive-se-text{
+        transition: .25s;
+        opacity: 0;
+    }
+
+
+
 }

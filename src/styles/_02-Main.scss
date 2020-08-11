@@ -20,10 +20,29 @@
       margin-bottom: .5rem;
   }
 
-  .App {
-      display: flex;
-      justify-content: center;
-  }
+.App {
+    display: flex;
+    justify-content: center;
+    // position: relative;
+    // z-index: 1;
+}
+.noise-overlay {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(3px);
+}
+
+.dark-grey {
+    background-color: rgba(0, 7, 7, 0.8);
+}
+.bright-grey {
+    background-color: rgba(209, 213, 214, 0.8);
+}
+.dark-blue {
+    background-color: rgba(0,10,15, 0.8);
+}
   .component-container {
       width: 1400px;
   }

@@ -40,13 +40,14 @@ function App() {
     }}>
 
       <HashRouter > 
-        <div className="App">
+        <div className={`App`}>
 
     
     <div className="noise">
-      {currentLocation === "/" || currentLocation === "/webdev" ? <Noise color={"rgb(209, 213, 214)"} /> : null}
-      {currentLocation === "/bustedfingerz" ? <Noise color={"rgb(0,7,7)"} /> : null}
-      {currentLocation === "/soundengineer" ? <Noise color={"rgb(0,10,15)"} /> : null}
+    <Noise color={"rgb(209, 213, 214)"}/>
+      {currentLocation === "/" || currentLocation === "/webdev" ? <div className="noise-overlay bright-grey"/> : null}
+      {currentLocation === "/bustedfingerz" ? <div className="noise-overlay dark-grey"/> : null}
+      {currentLocation === "/soundengineer" ? <div className="noise-overlay dark-blue"/> : null}
     </div>
         
           <div className="component-container">

@@ -1,6 +1,6 @@
 .sound-engineer {
     position: relative;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 
     * {
         list-style-type: none;
@@ -27,6 +27,12 @@
         padding: 1rem;
         }
         margin: 1rem;
+        ul {
+            padding: 0 1rem;
+        }
+        li {
+            margin: .5rem 0;
+        }
     }
     .se-intro-nav {
         position: relative;
@@ -65,9 +71,6 @@
         }
     }
 
-    .se-what-i-do-text {
-
-    }
 
     .se-bio-text {
         position: absolute;

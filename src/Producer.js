@@ -53,10 +53,10 @@ export default function Producer() {
         discography.map(el => {
             return  <li key={el.id} className="releases">
                         <ul>
-                            <li>{el.name}</li>
+                            <li><a target="_blank" rel="noopener noreferrer" href={el.link}>{el.name}</a></li>
                             <li>{el.release}</li>
                             <li>{el.label}</li>
-                            <li><a target="_blank" rel="noopener noreferrer" href={el.link}>{el.free ? "Free DL" : "Buy Here"}</a></li>
+                            {/* <li><a target="_blank" rel="noopener noreferrer" href={el.link}>{el.free ? "Free DL" : "Buy Here"}</a></li> */}
                         </ul>
                     </li>
 
@@ -78,7 +78,7 @@ export default function Producer() {
                         <li>NAME</li>
                         <li>RELEASED ON</li>
                         <li>LABEL</li>
-                        <li>AVAILABLE AT</li>
+                        {/* <li>AVAILABLE AT</li> */}
                     </ul>
                     <ul>
                         {renderDiscography()}

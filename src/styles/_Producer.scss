@@ -37,7 +37,7 @@
         background-color: rgba(255, 255, 255, 0.171);
         .discography-headings{
             display: grid;
-            grid-template-columns: 2fr 2fr 1fr 1fr;
+            grid-template-columns: 2fr 2fr 1fr;
             column-gap: .5rem;
             padding: 0 1rem;
             margin: 1rem 0;
@@ -48,17 +48,20 @@
 
             ul {
                 display: grid;
-                grid-template-columns: 2fr 2fr 1fr 1fr;
+                grid-template-columns: 2fr 2fr 1fr;
                 column-gap: .5rem;
                 &:hover { 
                     background-color: $main-dark-050;
-                    li {
+                    li, a {
                         color: white;
                         font-family: $fat;
-                        a:hover {
-                            color: white;
-                        }
+                        // a:hover {
+                        //     color: white;
+                        // }
                     }
+                }
+                li {
+                    margin: .1rem 0;
                 }
             }
         }

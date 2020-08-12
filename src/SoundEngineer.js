@@ -46,11 +46,11 @@ export default function SoundEngineer() {
                         </div>
                         <div className={`se-what-i-do-text ${IDoActive ? "" : "inactive-se-text"}`}>
                             <p>
-                            With my professional knowledge and experience (check Bio on the right for more information about that), I'll help you to rise your productions to the highest standards. While I'm always open to listen to your music and give you feedback, if I have the time, I also offer pay-to-win solutions which guarantee you my full attention.
+                            With my professional knowledge and experience (check Bio for more information about that), I'll help you to rise your productions to the highest standards. While I'm always open to listen to your music and give you feedback, if I have the time, I also offer pay-to-win solutions which guarantee you my full attention.
                             </p>
                             <ul>
                                 <li>
-                                MASTERING: My masters will guarantee full impact on any club PA or Soundsystem. Additionally, you will get in-depth feedback on your work and you can decide if you want to make changes based on it or just keep my advice for your future productions.
+                                MASTERING: My masters guarantee full impact on any club PA or Soundsystem while translating transparent on smaller speaker. Additionally, I take notes during the process and provide you with in-depth feedback on your work.
                                 </li>
                                 <li>
                                 MIX DOWN: Give me full control by providing me with the stems of your project and I make it as shiny as it can be. You can fully focus on your creativity while I take care of the technicalities. At the end, you will have a mastered version and a premaster which you can pass on to the mastering engineer of your trust.

@@ -18,6 +18,7 @@
         align-items: center;
         min-height: 577px;
         width: 100%;
+        border-radius: 9vw 0 9vw 0;
         article {
             background-color: $main-dark-050;
             backdrop-filter: blur(3px);
@@ -25,6 +26,8 @@
             z-index: 2;
             padding: 2rem;
             max-width: 400px;
+            min-width: 300px;
+            margin: 0 1rem;
             animation: fadeIn-Bio 5s;
             * {
             color: $main-bright;
@@ -50,6 +53,7 @@
                 display: grid;
                 grid-template-columns: 2fr 2fr 1fr;
                 column-gap: .5rem;
+                
                 &:hover { 
                     background-color: $main-dark-050;
                     li, a {
@@ -60,6 +64,7 @@
                         // }
                     }
                 }
+                
                 li {
                     margin: .1rem 0;
                 }

@@ -75,9 +75,9 @@ export default function Producer() {
                 <section className="discography">
                     <h2>DISCOGRAPHY</h2>
                     <ul className="discography-headings">
-                        <li>NAME</li>
-                        <li>RELEASED ON</li>
-                        <li>LABEL</li>
+                        <li><h3>NAME</h3></li>
+                        <li><h3>RELEASED ON</h3></li>
+                        <li><h3>LABEL</h3></li>
                         {/* <li>AVAILABLE AT</li> */}
                     </ul>
                     <ul>

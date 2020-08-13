@@ -53,7 +53,7 @@ function App() {
           <div className="component-container">
             <header>
               <nav>
-                <h1><NavLink aria-label="home" alt="home" activeClassName="active-nav" className={`home-link ${shrink} `} exact={true} to="/"> 
+                <h1><NavLink title="home" aria-label="home" alt="home" activeClassName="active-nav" className={`home-link ${shrink} `} exact={true} to="/"> 
                 <span className="simon-s">S</span>
                 <span className="simon-i">i</span>
                 <span className="simon-m">m</span>

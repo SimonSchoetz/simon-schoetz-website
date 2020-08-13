@@ -6,84 +6,110 @@
         list-style-type: none;
         color: $main-bright;
     }
+    section {
+        margin-bottom: 3rem;
+        width: 100%;
+    }
+    //////////////////////////
+    //BANNER AND INTRO SECTION
+    //////////////////////////
     .se-intro {
         background-image: url(../img/at-dorian-gray-studios.png);
         background-size: cover;
         background-position: center;
-        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         border-radius: 9vw 0 9vw 0;
+
+        .se-intro-field {
+            position: relative;
+            background-color: $main-dark-075;
+            backdrop-filter: blur(3px);
+            padding: 2rem;
+            max-width: 600px;
+            min-width: 300px;
+            margin: 1rem;
+            p {
+            padding: 1rem 0;
+            }
+            li {
+                margin: .5rem 0;
+            }
+        }
+
+        .se-intro-nav {
+            position: relative;
+            display: flex;
+            a {
+                // padding: 0 1rem;
+                border: 0;
+                height: 2rem;
+                width: 100%;
+                font-size: 1.5rem;
+                text-decoration: none;
+                padding-top: 2px;
+                &:nth-child(1) {
+                    text-align: start;
+                    padding-right: 2px;
+                }
+                &:nth-child(2) {
+                    text-align: end;
+                    padding-right: 2px;
+                }
+                .inactive:hover {cursor: pointer;}
+                    
+            }
+            
+            
+        }
+
+        .se-bio-text {
+            position: absolute;
+            top: 2rem;
+            left: 0;
+            margin: 2rem;
+        }
+        .inactive-se-text{
+            transition: .25s;
+            opacity: 0;
+        }
     }
 
-    .se-intro-field {
-        position: relative;
-        background-color: $main-dark-075;
+    //////////////////////////
+    //    OFFERS SECTION
+    //////////////////////////
+
+    .se-offers {
+        padding: 1rem;
         backdrop-filter: blur(3px);
-        padding: 1rem;
-        max-width: 600px;
-        min-width: 300px;
+        background-color: $main-bright-025;
+        * {
+            color: $main-dark;
+        }
+        h3 {
+            padding-left: 1rem;
+            border-bottom: 1px solid $main-dark-050;
+        }
         p {
-        padding: 1rem;
+            padding: 1rem;
         }
-        margin: 1rem;
-        ul {
-            padding: 0 1rem;
-        }
-        li {
-            margin: .5rem 0;
-        }
-    }
-    .se-intro-nav {
-        position: relative;
-        display: flex;
-        a {
-            // padding: 0 1rem;
-            border: 0;
-            height: 2rem;
-            width: 100%;
-            font-size: 1.5rem;
-            text-decoration: none;
-            padding-top: 2px;
-            cursor: context-menu;
-            &:nth-child(1) {
-                text-align: start;
-                padding-right: 2px;
-            }
-            &:nth-child(2) {
-                text-align: end;
-                padding-right: 2px;
-            }
-                
-        }
-        .inactive {
-            // border: solid 1px $main-dark;
-            box-shadow: inset 0 -1px 3px -2px $main-bright-050, inset 0 2px 2px 0 $main-dark-050;
-            // background-color: $main-dark-050;
-            transition: .12s;
-            color:$main-bright-050;
-            &:hover {
-                box-shadow: inset 0 -1px 2px 0 $main-dark-050, inset 0 1px 2px -1px $main-bright-050;
-                cursor: pointer;
-                background-color: $main-dark-050;
-                color:$main-bright;
-            }
-        }
+
     }
 
 
-    .se-bio-text {
-        position: absolute;
-        top: 4rem;
-        // position: relative;
+    .inactive {
+        // border: solid 1px $main-dark;
+        box-shadow: inset 0 -1px 3px -2px $main-bright-050, inset 0 2px 2px 0 $main-dark-050;
+        // background-color: $main-dark-050;
+        transition: .12s;
+        color:$main-bright-050;
+        &:hover {
+            box-shadow: inset 0 -1px 2px 0 $main-dark-050, inset 0 1px 2px -1px $main-bright-050;
+            cursor: pointer;
+            background-color: $main-dark-050;
+            color:$main-bright;
+        }
     }
-
-    .inactive-se-text{
-        transition: .25s;
-        opacity: 0;
-    }
-
-
 
 }

@@ -53,7 +53,7 @@ function App() {
           <div className="component-container">
             <header>
               <nav>
-                <h1><NavLink title="home" aria-label="home" alt="home" activeClassName="active-nav" className={`home-link ${shrink} `} exact={true} to="/"> 
+                <h1><NavLink title="Home" aria-label="home" alt="home" activeClassName="active-nav" className={`home-link ${shrink} `} exact={true} to="/"> 
                 <span className="simon-s">S</span>
                 <span className="simon-i">i</span>
                 <span className="simon-m">m</span>
@@ -71,17 +71,17 @@ function App() {
                   </p>
                 </div>
                 <div className={`main-nav ${currentLocation !== "/" ? "shrinked-main-nav" : ""}`} onMouseOver={()=> mouseOver()}>
-                <NavLink aria-label="producer, bustedfingerz" onMouseEnter={()=> setHoverBF(true)} onMouseLeave={()=> setHoverBF(false)} activeClassName="active-nav" className={`nav-link ${shrink} `} to="/bustedfingerz">
+                <NavLink title="Busted Fingerz" aria-label="producer, bustedfingerz" onMouseEnter={()=> setHoverBF(true)} onMouseLeave={()=> setHoverBF(false)} activeClassName="active-nav" className={`nav-link ${shrink} `} to="/bustedfingerz">
                 { currentLocation === "/bustedfingerz" ? "BUSTED FINGERZ" : "Music Producer" }
                 { hoverBF && currentLocation === "/" ? <IconProducer /> : null }
                 </NavLink>
 
-                <NavLink aria-label="sound engineer" ref={refSoundEngineer} activeClassName="active-nav" className={`nav-link ${shrink} ${currentLocation === "/webdev" ? "right-nav" : ""}`} to="/soundengineer">
+                <NavLink title="Sound Engineer" aria-label="sound engineer" ref={refSoundEngineer} activeClassName="active-nav" className={`nav-link ${shrink} ${currentLocation === "/webdev" ? "right-nav" : ""}`} to="/soundengineer">
                 { currentLocation === "/soundengineer" ? "SOUND ENGINEER" : "Sound Engineer" }
                 { currentLocation === "/" ? <IconSE navWidth={navWidth}/> : null }
                 </NavLink>
 
-                <NavLink aria-label="web developer" activeClassName="active-nav" className={`nav-link ${shrink} `} to="/webdev">
+                <NavLink title="Web Developer" aria-label="web developer" activeClassName="active-nav" className={`nav-link ${shrink} `} to="/webdev">
                 { currentLocation === "/webdev" ? "WEB DEVELOPER" : "Web Developer" }
                 { currentLocation === "/" ? <IconWebDev /> : null }
                 </NavLink>

@@ -28,18 +28,18 @@ export default function SoundEngineer() {
     };
 
     const mixingRef = [
-        {id: 0, job: "mixing", name:"MediCated ft. Fikir Amlak/Rider Shafique - Worse Than Obeah/Jah Bless Me", link:"https://soundcloud.com/medicated830/ft-fikir-amlak-rider-shafique-worser-than-obeahfikir-amlak-jah-bless-merider-shafique"},
-        {id: 1, job: "mixing", name:" Ome - Way To Far EP", link:"https://soundcloud.com/simply-deep/sd021-ome-way-too-far-showreel"},
-        {id: 2, job: "mixing", name:" Bloomfeld - Octagon", link:"https://soundcloud.com/classicaltrax/bloomfeld-octagon"},
-        {id: 3, job: "mixing", name:" Ziek - Technology ", link:"https://soundcloud.com/ziek08/ziek-technology-minitrailermix"},
+        {id: 0, job: "mixing", artist:"MediCated ft. Fikir Amlak/Rider Shafique", release:"Worse Than Obeah/Jah Bless Me", link:"https://soundcloud.com/medicated830/ft-fikir-amlak-rider-shafique-worser-than-obeahfikir-amlak-jah-bless-merider-shafique"},
+        {id: 1, job: "mixing", artist:"Ome", release:"Way To Far EP", link:"https://soundcloud.com/simply-deep/sd021-ome-way-too-far-showreel"},
+        {id: 2, job: "mixing", artist:"Bloomfeld", release:"Octagon", link:"https://soundcloud.com/classicaltrax/bloomfeld-octagon"},
+        {id: 3, job: "mixing", artist:"Ziek ", release:"Technology", link:"https://soundcloud.com/ziek08/ziek-technology-minitrailermix"},
     ]
 
     const masterRef = [
-        {id: 0, job: "mastering", name:"Yoovee - Nova/Pandadub", link:"https://codepen.io/ReGGae/pen/bmyYEj"},
-        {id: 1, job: "mastering", name:"Ome - 482", link: "https://soundcloud.com/elemental-arts-fm/ome-482-elemental-arts-premiere"},
-        {id: 2, job: "mastering", name:" Oakin - The Teacher EP", link:"https://soundcloud.com/oakin/oakin-the-teacher-ep-free-download"},
-        {id: 3, job: "mastering", name:" Leap - Tell 'Em EP", link:"https://soundcloud.com/silentmotionrec/leap-tell-em-ep-jan-11th"},
-        {id: 4, job: "mastering", name:" Ome - Calavera/Big Fish", link:"https://soundcloud.com/sub_garden/ome-calavera-big-fish-sgdn021-showreel-out-on-may-25th"},
+        {id: 0, job: "mastering", artist:"Yoofee", release:"Nova/Pandadub", link:"https://codepen.io/ReGGae/pen/bmyYEj"},
+        {id: 1, job: "mastering", artist:"Ome", release:"482", link: "https://soundcloud.com/elemental-arts-fm/ome-482-elemental-arts-premiere"},
+        {id: 2, job: "mastering", artist:"Oakin", release:"The Teacher EP", link:"https://soundcloud.com/oakin/oakin-the-teacher-ep-free-download"},
+        {id: 3, job: "mastering", artist:"Leap", release:"Tell 'Em EP", link:"https://soundcloud.com/silentmotionrec/leap-tell-em-ep-jan-11th"},
+        {id: 4, job: "mastering", artist:"Ome", release:"Calavera/Big Fish", link:"https://soundcloud.com/sub_garden/ome-calavera-big-fish-sgdn021-showreel-out-on-may-25th"},
 
     ]
     
@@ -49,8 +49,8 @@ export default function SoundEngineer() {
                 <section className="se-intro">
                     <section className="se-intro-field"> 
                         <div className="se-intro-nav">
-                            <a className={`${IDoActive ? "" : "inactive"}`} onClick={() => changeBioNav("IDo")} >WHAT I DO</a>
-                            <a className={`${bioActive ? "" : "inactive"}`} onClick={() => changeBioNav("bio")} >BIO</a>
+                            <a title="What I Do" className={`${IDoActive ? "" : "inactive"}`} onClick={() => changeBioNav("IDo")} >WHAT I DO</a>
+                            <a title="Bio" className={`${bioActive ? "" : "inactive"}`} onClick={() => changeBioNav("bio")} >BIO</a>
                         </div>
                         <div className={`se-what-i-do-text ${IDoActive ? "" : "inactive-se-text"}`}>
                             <p>
@@ -89,19 +89,36 @@ export default function SoundEngineer() {
                         <p>
                             Mixing your tune with or without vocals, saving your lost project or a bad recording - you name it, I got you. I charge 20€ per hour. Depending on your project, it usually takes me something between 2-3 hours per tune. Sometimes more, sometimes less. You'll get a mastered version and a premaster in case you want to get it mastered by the mastering engineer of your trust. You'll have the chance to listen to previews via SoundCloud, the download will be enabled as soon as the payment arrived.
                         </p>
+                        <h3>CONTACT</h3>
+                        <p>
+                            Get in touch with me on all of these social media platforms
+                            https://www.facebook.com/simon.schotz 
+                            https://soundcloud.com/bustedfingerz/ 
+                            https://www.instagram.com/bustedfingerz/ 
+
+                            
+                             or via email simonsch.tz@gmail.com
+                        </p>
+                        <p>
+                            Not convinced yet? Check out the references below!
+                        </p>
                     </div>
                 </section>
-                <section className="se-offers">
+                <section className="se-ref">
                     <h2>REFERENCES</h2>
-                    <div>
-                        <h3>MASTERING</h3>
-                        <p>
-                            You give me a premaster and 20€, you'll get a master and a list with in-depth feedback in return. If you change the premaster based on my feedback and want a new version, you can get another master for additional 5€. Naturally, if I messed something up, the update will cost you nothing. You'll have the chance to listen to previews via SoundCloud, the download will be enabled as soon as the payment arrived. If you pay in advance, downloads will be enabled during the whole process.
-                        </p>
-                        <h3>MIX DOWN & OTHERS</h3>
-                        <p>
-                            Mixing your tune, saving your lost project or a bad recording - you name it, I got you. I charge 20€ per hour. Depending on your project, it usually takes me something between 2-3 hours per tune. Sometimes more, sometimes less. You'll get a mastered version and a premaster in case you want to get it mastered by the mastering engineer of your trust. You'll have the chance to listen to previews via SoundCloud, the download will be enabled as soon as the payment arrived.
-                        </p>
+                    <div className="se-ref-container">
+                        <div>
+                            <h3>MASTERING</h3>
+                            <p>
+                                You give me a premaster and 20€, you'll get a master and a list with in-depth feedback in return. If you change the premaster based on my feedback and want a new version, you can get another master for additional 5€. Naturally, if I messed something up, the update will cost you nothing. You'll have the chance to listen to previews via SoundCloud, the download will be enabled as soon as the payment arrived. If you pay in advance, downloads will be enabled during the whole process.
+                            </p>
+                        </div>
+                        <div>
+                            <h3>MIX DOWNS</h3>
+                            <p>
+                                Mixing your tune, saving your lost project or a bad recording - you name it, I got you. I charge 20€ per hour. Depending on your project, it usually takes me something between 2-3 hours per tune. Sometimes more, sometimes less. You'll get a mastered version and a premaster in case you want to get it mastered by the mastering engineer of your trust. You'll have the chance to listen to previews via SoundCloud, the download will be enabled as soon as the payment arrived.
+                            </p>
+                        </div>
                     </div>
                 </section>
             </div>

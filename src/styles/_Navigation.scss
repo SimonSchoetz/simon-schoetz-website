@@ -79,11 +79,14 @@
     &:not(.shrinked-nav) {
         cursor: context-menu;
     }
-
+    
     span {
         position: relative;
         font-family: $fat;
     }
+}
+.home-link.shrinked-nav:focus {
+    border: 1px solid white;
 }
 
 .home-link.shrinked-nav:hover {

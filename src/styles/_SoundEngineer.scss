@@ -5,6 +5,7 @@
     * {
         list-style-type: none;
         color: $main-bright;
+        text-decoration: none;
     }
     section {
         margin-bottom: 3rem;
@@ -127,9 +128,6 @@
 
                 }
 
-                a {
-                    text-decoration: none;
-                }
 
                 div {
                     display: flex;

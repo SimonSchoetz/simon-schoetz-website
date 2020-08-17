@@ -55,6 +55,7 @@
             
                 &:hover {
                     background-color: $main-dark-075;
+                    box-shadow: 0 5px 15px  $main-dark;
                     div {
                         transition: .25s;
                         font-size: 1.6rem;
@@ -75,10 +76,8 @@
                     width: 250px;
                     position: absolute;
                     opacity: .05;
-                    z-index: 1;
                 }
                 div {
-                    z-index: 2;
                     position: relative;
                     display: flex;
                     justify-content: center;

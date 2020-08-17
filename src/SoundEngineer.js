@@ -28,19 +28,19 @@ export default function SoundEngineer() {
     };
 
     const mixingRefs = [
-        {id: 0, job: "mixing", artist:"MediCated ft. Fikir Amlak/Rider Shafique", release:"Worse Than Obeah/Jah Bless Me", link:"https://soundcloud.com/medicated830/ft-fikir-amlak-rider-shafique-worser-than-obeahfikir-amlak-jah-bless-merider-shafique"},
-        {id: 1, job: "mixing", artist:"Ome", release:"Way To Far EP", link:"https://soundcloud.com/simply-deep/sd021-ome-way-too-far-showreel"},
-        {id: 2, job: "mixing", artist:"Bloomfeld", release:"Octagon", link:"https://soundcloud.com/classicaltrax/bloomfeld-octagon"},
-        {id: 3, job: "mixing", artist:"Ziek", release:"Technology", link:"https://soundcloud.com/ziek08/ziek-technology-minitrailermix"},
+        {id: 0, job: "mixing", artist:"MediCated ft. Fikir Amlak/Rider Shafique", release:"Worse Than Obeah/Jah Bless Me", artwork:"https://i1.sndcdn.com/artworks-000541356045-frrj4q-t500x500.jpg", link:"https://soundcloud.com/medicated830/ft-fikir-amlak-rider-shafique-worser-than-obeahfikir-amlak-jah-bless-merider-shafique"},
+        {id: 1, job: "mixing", artist:"Ome", release:"Way To Far EP", artwork:"https://f4.bcbits.com/img/a2599026224_10.jpg", link:"https://simplydeepuk.bandcamp.com/album/way-too-far"},
+        {id: 2, job: "mixing", artist:"Bloomfeld", release:"Octagon", artwork:"https://i1.sndcdn.com/artworks-PeU4Q7JuO9WStshA-WVRNyA-t500x500.jpg", link:"https://soundcloud.com/classicaltrax/bloomfeld-octagon"},
+        {id: 3, job: "mixing", artist:"Ziek", release:"Technology", artwork:"https://f4.bcbits.com/img/a4099032707_10.jpg", link:"https://ziek08.bandcamp.com/album/technology"},
     ].sort((entryA, entryB) => entryB.id - entryA.id);
     console.log(mixingRefs.sort((entryA, entryB) => entryA.artist - entryB.artist))
 
     const masterRefs = [
-        {id: 0, job: "mastering", artist:"Yoofee", release:"Nova/Pandadub", link:"https://codepen.io/ReGGae/pen/bmyYEj"},
-        {id: 1, job: "mastering", artist:"Ome", release:"482", link: "https://soundcloud.com/elemental-arts-fm/ome-482-elemental-arts-premiere"},
-        {id: 2, job: "mastering", artist:"Oakin", release:"The Teacher EP", link:"https://soundcloud.com/oakin/oakin-the-teacher-ep-free-download"},
-        {id: 3, job: "mastering", artist:"Leap", release:"Tell 'Em EP", link:"https://soundcloud.com/silentmotionrec/leap-tell-em-ep-jan-11th"},
-        {id: 4, job: "mastering", artist:"Ome", release:"Calavera/Big Fish", link:"https://soundcloud.com/sub_garden/ome-calavera-big-fish-sgdn021-showreel-out-on-may-25th"},
+        {id: 0, job: "mastering", artist:"Yoofee", release:"Nova/Pandadub", artwork:"https://f4.bcbits.com/img/a3874970530_10.jpg", link:"https://subgarden.bandcamp.com/album/nova-pandadub-sgdn023"},
+        {id: 1, job: "mastering", artist:"Ome", release:"482", artwork:"https://f4.bcbits.com/img/a4016380146_10.jpg", link: "https://fortheheadsrecords.bandcamp.com/track/482"},
+        {id: 2, job: "mastering", artist:"Oakin", release:"The Teacher EP", artwork:"https://f4.bcbits.com/img/a3225695983_10.jpg", link:"https://oakin.bandcamp.com/album/oakin-the-teacher-ep"},
+        {id: 3, job: "mastering", artist:"Leap", release:"Tell 'Em EP", artwork:"https://f4.bcbits.com/img/a2294412287_10.jpg", link:"https://silentmotionrecords.bandcamp.com/album/tell-em-ep"},
+        {id: 4, job: "mastering", artist:"Ome", release:"Calavera/Big Fish", artwork:"https://f4.bcbits.com/img/a2405176158_10.jpg", link:"https://subgarden.bandcamp.com/album/calavera-big-fish-sgdn021"},
 
     ].sort((entryA, entryB) => entryB.artist - entryA.artist);
 
@@ -48,8 +48,9 @@ export default function SoundEngineer() {
         array.map(ref => {
 
             return  <Fragment key={ref.id}>
-                        <li className="ref-card">
+                        <li title={`${ref.artist} - ${ref.release}`} className="ref-card">
                             <a target="_blank" rel="noopener noreferrer" href={ref.link}>
+                                <img src={ref.artwork} />
                                 <div>{ref.artist}</div>
                                 <div>{ref.release}</div>
                             </a>

@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState, Fragment} from 'react';
 import DocumentTitle from 'react-document-title';
 import { useLocation } from "react-router-dom";
 import { Context } from './Context';
@@ -27,21 +27,36 @@ export default function SoundEngineer() {
         };
     };
 
-    const mixingRef = [
+    const mixingRefs = [
         {id: 0, job: "mixing", artist:"MediCated ft. Fikir Amlak/Rider Shafique", release:"Worse Than Obeah/Jah Bless Me", link:"https://soundcloud.com/medicated830/ft-fikir-amlak-rider-shafique-worser-than-obeahfikir-amlak-jah-bless-merider-shafique"},
         {id: 1, job: "mixing", artist:"Ome", release:"Way To Far EP", link:"https://soundcloud.com/simply-deep/sd021-ome-way-too-far-showreel"},
         {id: 2, job: "mixing", artist:"Bloomfeld", release:"Octagon", link:"https://soundcloud.com/classicaltrax/bloomfeld-octagon"},
-        {id: 3, job: "mixing", artist:"Ziek ", release:"Technology", link:"https://soundcloud.com/ziek08/ziek-technology-minitrailermix"},
-    ]
+        {id: 3, job: "mixing", artist:"Ziek", release:"Technology", link:"https://soundcloud.com/ziek08/ziek-technology-minitrailermix"},
+    ].sort((entryA, entryB) => entryB.id - entryA.id);
+    console.log(mixingRefs.sort((entryA, entryB) => entryA.artist - entryB.artist))
 
-    const masterRef = [
+    const masterRefs = [
         {id: 0, job: "mastering", artist:"Yoofee", release:"Nova/Pandadub", link:"https://codepen.io/ReGGae/pen/bmyYEj"},
         {id: 1, job: "mastering", artist:"Ome", release:"482", link: "https://soundcloud.com/elemental-arts-fm/ome-482-elemental-arts-premiere"},
         {id: 2, job: "mastering", artist:"Oakin", release:"The Teacher EP", link:"https://soundcloud.com/oakin/oakin-the-teacher-ep-free-download"},
         {id: 3, job: "mastering", artist:"Leap", release:"Tell 'Em EP", link:"https://soundcloud.com/silentmotionrec/leap-tell-em-ep-jan-11th"},
         {id: 4, job: "mastering", artist:"Ome", release:"Calavera/Big Fish", link:"https://soundcloud.com/sub_garden/ome-calavera-big-fish-sgdn021-showreel-out-on-may-25th"},
 
-    ]
+    ].sort((entryA, entryB) => entryB.artist - entryA.artist);
+
+    const renderRefs = array => (
+        array.map(ref => {
+
+            return  <Fragment key={ref.id}>
+                        <li className="ref-card">
+                            <a target="_blank" rel="noopener noreferrer" href={ref.link}>
+                                <div>{ref.artist}</div>
+                                <div>{ref.release}</div>
+                            </a>
+                        </li>
+                    </Fragment>
+        }))
+    
     
     return (
         <DocumentTitle title ="Sound Engineer">
@@ -49,8 +64,8 @@ export default function SoundEngineer() {
                 <section className="se-intro">
                     <section className="se-intro-field"> 
                         <div className="se-intro-nav">
-                            <a title="What I Do" className={`${IDoActive ? "" : "inactive"}`} onClick={() => changeBioNav("IDo")} >WHAT I DO</a>
-                            <a title="Bio" className={`${bioActive ? "" : "inactive"}`} onClick={() => changeBioNav("bio")} >BIO</a>
+                            <button title="What I Do" className={`${IDoActive ? "" : "inactive"}`} onClick={() => changeBioNav("IDo")} >WHAT I DO</button>
+                            <button title="Bio" className={`${bioActive ? "" : "inactive"}`} onClick={() => changeBioNav("bio")} >BIO</button>
                         </div>
                         <div className={`se-what-i-do-text ${IDoActive ? "" : "inactive-se-text"}`}>
                             <p>
@@ -100,7 +115,7 @@ export default function SoundEngineer() {
                              or via email simonsch.tz@gmail.com
                         </p>
                         <p>
-                            Not convinced yet? Check out the references below!
+                            Not convinced yet? Check out some references below!
                         </p>
                     </div>
                 </section>
@@ -109,15 +124,15 @@ export default function SoundEngineer() {
                     <div className="se-ref-container">
                         <div>
                             <h3>MASTERING</h3>
-                            <p>
-                                You give me a premaster and 20€, you'll get a master and a list with in-depth feedback in return. If you change the premaster based on my feedback and want a new version, you can get another master for additional 5€. Naturally, if I messed something up, the update will cost you nothing. You'll have the chance to listen to previews via SoundCloud, the download will be enabled as soon as the payment arrived. If you pay in advance, downloads will be enabled during the whole process.
-                            </p>
+                            <ul className="ref-card-container">
+                                {renderRefs(masterRefs)}
+                            </ul>
                         </div>
                         <div>
                             <h3>MIX DOWNS</h3>
-                            <p>
-                                Mixing your tune, saving your lost project or a bad recording - you name it, I got you. I charge 20€ per hour. Depending on your project, it usually takes me something between 2-3 hours per tune. Sometimes more, sometimes less. You'll get a mastered version and a premaster in case you want to get it mastered by the mastering engineer of your trust. You'll have the chance to listen to previews via SoundCloud, the download will be enabled as soon as the payment arrived.
-                            </p>
+                            <ul className="ref-card-container">
+                                {renderRefs(mixingRefs)}
+                            </ul>
                         </div>
                     </div>
                 </section>

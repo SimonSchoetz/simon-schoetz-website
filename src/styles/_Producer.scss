@@ -38,35 +38,59 @@
         padding: 1rem;
         backdrop-filter: blur(3px);
         background-color: $main-bright-025;
-        .discography-headings{
-            display: grid;
-            grid-template-columns: 2fr 2fr 1fr;
-            column-gap: .5rem;
-            padding: 0 1rem;
-            margin: 1rem 0;
-            border-bottom: 1px solid $main-dark-050;
-        }
-        .releases {
-            padding: 0 1rem;
+        .discography-container {
+            display: flex;
+            flex-flow: wrap;
+            justify-content: space-around;
+            margin: 1.5rem 0;
 
-            ul {
-                display: grid;
-                grid-template-columns: 2fr 2fr 1fr;
-                column-gap: .5rem;
-                
-                &:hover { 
-                    background-color: $main-dark-050;
-                    li, a {
-                        color: white;
-                        font-family: $fat;
+        }
+        .release {
+            margin: .5rem;
+            width: 250px;
+            height: 250px;
+            background-color: $main-dark-050;
+            transition: .25s;
+            overflow: hidden;
+            
+                &:hover {
+                    background-color: $main-dark-075;
+                    div {
+                        transition: .25s;
+                        font-size: 1.6rem;
+                        letter-spacing: 5px;
+                        opacity: 0;
                     }
+                    img {
+                        transition: .25s;
+                        opacity: 1;
+                    }
+
                 }
+                a {
+                    text-decoration: none;
+                }
+                img {
+                    transition: .25s;
+                    width: 250px;
+                    position: absolute;
+                    opacity: .05;
+                    z-index: 1;
+                }
+                div {
+                    z-index: 2;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    height: 33%;
+                    font-size: 1.3rem;
+                    color: $main-bright;
+                    transition: .25s;
                 
-                li {
-                    margin: .1rem 0;
                 }
             }
-        }
     } 
     @keyframes fadeIn-Bio {
         0% {opacity: 0;}

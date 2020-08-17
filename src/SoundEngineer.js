@@ -122,7 +122,7 @@ export default function SoundEngineer() {
                 <section className="se-ref">
                     <h2>REFERENCES</h2>
                     <div className="se-ref-container">
-                        <div>
+                        <div className="ref-master-container">
                             <h3>MASTERING</h3>
                             <ul className="ref-card-container">
                                 {renderRefs(masterRefs)}

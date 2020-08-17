@@ -87,6 +87,9 @@
         * {
             color: $main-dark;
         }
+        h2 {
+            margin-bottom: 1rem;
+        }
         h3 {
             padding-left: 1rem;
             border-bottom: 1px solid $main-dark-050;
@@ -96,10 +99,18 @@
         }
 
     }
+    .se-ref-container {
+        .ref-master-container {
+            margin-bottom: 2rem;
+        }
+    }
     .ref-card-container {
-            display: flex;
-            flex-flow: wrap;
-            justify-content: space-around;
+        display: flex;
+        flex-flow: wrap;
+        justify-content: space-around;
+        margin: 1.5rem 0;
+        
+        
         .ref-card {
             margin: .5rem;
             width: 250px;

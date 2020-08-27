@@ -52,7 +52,6 @@
             background-color: $main-dark-050;
             transition: .25s;
             overflow: hidden;
-            
                 &:hover {
                     background-color: $main-dark-075;
                     box-shadow: 0 5px 15px $main-dark;
@@ -72,7 +71,17 @@
                     width: 250px;
                     position: absolute;
                 }
+                .blur-layer {
+                    z-index: 1;
+                    width: 250px;
+                    height: 250px;
+                    position: absolute;
+                    background-color: $main-dark-090;
+                    backdrop-filter: blur(2px);
+
+                }
                 div {
+                    z-index: 2;
                     position: relative;
                     display: flex;
                     justify-content: center;
@@ -82,8 +91,6 @@
                     font-size: 1.3rem;
                     color: $main-bright;
                     transition: .25s;
-                    background-color: $main-dark-090;
-                    backdrop-filter: blur(2px);
                 
                 }
             }

@@ -2,6 +2,9 @@ import React, {useState, useRef, useEffect} from 'react';
 import './App.scss';
 import {HashRouter, Switch, Route, NavLink } from "react-router-dom";
 import { Context } from './Context';
+//Appear on scroll automation
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import Landing from './Landing';
 import WebDev from "./WebDev";
@@ -17,6 +20,7 @@ import Noise from "./noise/Noisy";
 
 
 function App() {
+    AOS.init()
     const [currentLocation, setCurrentLocation] = useState("/");
     const shrink = currentLocation !== "/" ? "shrinked-nav" : "";
     const refSoundEngineer= useRef(0)

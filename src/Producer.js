@@ -4,6 +4,7 @@ import { useLocation  } from "react-router-dom";
 import { Context } from './Context';
 
 export default function Producer() {
+
     const {setCurrentLocation} = useContext(Context)
     const locations = useLocation();
     useEffect(() => {
@@ -51,8 +52,9 @@ export default function Producer() {
     ].sort((entryA, entryB) => entryB.date - entryA.date);
     const renderDiscography = () => (
         discography.map(el => {
-            return  <li title={`${el.name}`} key={el.id} className="release">
+            return  <li data-aos="fade-up" title={`${el.name}`} key={el.id} className="release">
                             <a target="_blank" rel="noopener noreferrer" href={el.link}>
+                                <div className="blur-layer"></div>
                                 <img alt="cover artwork" src={el.artwork === "" ? "https://i1.sndcdn.com/avatars-000456674544-werm3v-t500x500.jpg" : el.artwork} />
                                 <div>{el.name}</div>
                                 <div>{el.release === "" ? "Single" : el.release}</div>

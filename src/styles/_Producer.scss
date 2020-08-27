@@ -1,0 +1,105 @@
+.producer {
+    position: relative;
+    font-size: 1.2rem;
+    * {
+        list-style-type: none;
+    }
+
+    section {
+        margin-bottom: 3rem;
+        width: 100%;
+    }
+    .banner-bio {
+        background-image: url(../img/busted_fingerz_live.png);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 577px;
+        width: 100%;
+        border-radius: 9vw 0 9vw 0;
+        article {
+            background-color: $main-dark-050;
+            backdrop-filter: blur(3px);
+            position: relative;
+            z-index: 2;
+            padding: 2rem;
+            max-width: 400px;
+            min-width: 300px;
+            margin: 0 1rem;
+            animation: fadeIn-Bio 5s;
+            * {
+            color: $main-bright;
+            }
+        }
+    }
+    .discography {
+        padding: 1rem;
+        backdrop-filter: blur(3px);
+        background-color: $main-bright-025;
+        .discography-container {
+            display: flex;
+            flex-flow: wrap;
+            justify-content: space-around;
+            margin: 1.5rem 0;
+
+        }
+        .release {
+            margin: .5rem;
+            width: 250px;
+            height: 250px;
+            background-color: $main-dark-050;
+            transition: .25s;
+            overflow: hidden;
+                &:hover {
+                    background-color: $main-dark-075;
+                    box-shadow: 0 5px 15px $main-dark;
+                    div {
+                        transition: .25s;
+                        font-size: 1.6rem;
+                        letter-spacing: 5px;
+                        opacity: 0;
+                    }
+
+                }
+                a {
+                    text-decoration: none;
+                }
+                img {
+                    transition: .25s;
+                    width: 250px;
+                    position: absolute;
+                }
+                .blur-layer {
+                    z-index: 1;
+                    width: 250px;
+                    height: 250px;
+                    position: absolute;
+                    background-color: $main-dark-090;
+                    backdrop-filter: blur(2px);
+
+                }
+                div {
+                    z-index: 2;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    height: calc(100%/3);
+                    font-size: 1.3rem;
+                    color: $main-bright;
+                    transition: .25s;
+                
+                }
+            }
+    } 
+    @keyframes fadeIn-Bio {
+        0% {opacity: 0;}
+        50% {opacity: 0;}
+        100% {opacity: 1;}
+        
+    }
+
+}

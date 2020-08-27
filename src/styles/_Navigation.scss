@@ -1,0 +1,191 @@
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    margin:0 .5rem 3rem;
+
+    .nav-link {
+        position: relative;
+        flex: 1 0 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 450px;
+        height: 450px;
+        font-size: 3vw;
+        background-color: $main-dark;
+        color: $main-bright;
+        text-decoration: none;
+        transition: .5s;
+
+        &:nth-child(2) {
+            margin: 0 .5rem;
+        }
+    }
+}
+
+.shrinked-main-nav {
+    display: flex;
+    flex-flow: wrap;
+    height: 9rem;
+    transition: .5s;
+
+    .shrinked-nav {
+        position: absolute;
+        height: 3rem;
+        font-size: 2rem;
+        transition: .5s;
+        width: calc(50% - 1px);
+        max-width: 50%;
+        min-width: fit-content;
+        &:hover {
+            background-color: $main-dark-050;
+        }
+        &:nth-child(3) {
+            right: 0;
+        }
+        
+        &:nth-child(2) {
+            margin: 0 ;
+        }
+    }
+
+    .right-nav {
+        right: 0;
+    }
+
+    .active-nav {
+        position: absolute;
+        top: 5rem;
+            height: 5rem;
+            font-size: 3rem;
+            transition: .5s;
+            background-color: $main-dark-050;
+            backdrop-filter: blur(3px);
+            // color: $main-dark;
+            width: 100%;
+            max-width: 100%;
+            &:hover {
+                background-color: $main-dark-050;
+                backdrop-filter: blur(3px);
+                cursor: context-menu;
+            }
+    }
+}
+
+.home-link {
+    text-decoration: none;
+    &:not(.shrinked-nav) {
+        cursor: context-menu;
+    }
+    
+    span {
+        position: relative;
+        font-family: $fat;
+    }
+}
+.home-link.shrinked-nav:focus {
+    border: 1px solid white;
+}
+
+.home-link.shrinked-nav:hover {
+    .simon-s{animation: blink-simon-s .5s;}
+    .simon-i{animation: blink-simon-i .5s;}
+    .simon-m{animation: blink-simon-m .5s;}
+    .simon-o{animation: blink-simon-o .5s;}
+    .simon-n{animation: blink-simon-n .5s;}
+    .schoetz-s{animation: blink-schoetz-s .5s;}
+    .schoetz-c{animation: blink-schoetz-c .5s;}
+    .schoetz-h{animation: blink-schoetz-h .5s;}
+    .schoetz-ö{animation: blink-schoetz-oe .5s;}
+    .schoetz-t{animation: blink-schoetz-t .5s;}
+    .schoetz-z{animation: blink-schoetz-z .5s;}
+}
+
+@keyframes blink-simon-s {
+    0% {opacity: 1;}
+    1% {opacity: .3;}
+    10% {opacity: .3;}
+    11% {opacity: 1;}
+    100% {opacity: 1;}
+}
+@keyframes blink-simon-i {
+    0% {opacity: 1;}
+    9% {opacity: 1;}
+    10% {opacity: .3;}
+    19% {opacity: .3;}
+    20% {opacity: 1;}
+    100% {opacity: 1;}
+}
+@keyframes blink-simon-m {
+    0% {opacity: 1;}
+    18% {opacity: 1;}
+    19% {opacity: .3;}
+    28% {opacity: .3;}
+    29% {opacity: 1;}
+    100% {opacity: 1;}
+}
+@keyframes blink-simon-o {
+    0% {opacity: 1;}
+    27% {opacity: 1;}
+    28% {opacity: .3;}
+    37% {opacity: .3;}
+    38% {opacity: 1;}
+    100% {opacity: 1;}
+}
+@keyframes blink-simon-n {
+    0% {opacity: 1;}
+    36% {opacity: 1;}
+    37% {opacity: .3;}
+    46% {opacity: .3;}
+    47% {opacity: 1;}
+    100% {opacity: 1;}
+}
+@keyframes blink-schoetz-s {
+    0% {opacity: 1;}
+    45% {opacity: 1;}
+    46% {opacity: .3;}
+    55% {opacity: .3;}
+    56% {opacity: 1;}
+    100% {opacity: 1;}
+}
+@keyframes blink-schoetz-c {
+    0% {opacity: 1;}
+    54% {opacity: 1;}
+    55% {opacity: .3;}
+    64% {opacity: .3;}
+    65% {opacity: 1;}
+    100% {opacity: 1;}
+}
+@keyframes blink-schoetz-h {
+    0% {opacity: 1;}
+    63% {opacity: 1;}
+    64% {opacity: .3;}
+    73% {opacity: .3;}
+    74% {opacity: 1;}
+    100% {opacity: 1;}
+}
+@keyframes blink-schoetz-oe {
+    0% {opacity: 1;}
+    72% {opacity: 1;}
+    73% {opacity: .3;}
+    82% {opacity: .3;}
+    83% {opacity: 1;}
+    100% {opacity: 1;}
+}
+@keyframes blink-schoetz-t {
+    0% {opacity: 1;}
+    81% {opacity: 1;}
+    82% {opacity: .3;}
+    91% {opacity: .3;}
+    92% {opacity: 1;}
+    100% {opacity: 1;}
+}
+@keyframes blink-schoetz-z {
+    0% {opacity: 1;}
+    90% {opacity: 1;}
+    91% {opacity: .3;}
+    99% {opacity: .3;}
+    100% {opacity: 1;}
+}

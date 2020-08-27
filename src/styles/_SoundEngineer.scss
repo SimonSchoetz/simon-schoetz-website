@@ -1,0 +1,178 @@
+.sound-engineer {
+    position: relative;
+    font-size: 1.1rem;
+
+    * {
+        list-style-type: none;
+        color: $main-bright;
+        text-decoration: none;
+    }
+    section {
+        margin-bottom: 3rem;
+        width: 100%;
+    }
+    //////////////////////////
+    //BANNER AND INTRO SECTION
+    //////////////////////////
+    .se-intro {
+        background-image: url(../img/at-dorian-gray-studios.png);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 9vw 0 9vw 0;
+
+        .se-intro-field {
+            position: relative;
+            background-color: $main-dark-075;
+            backdrop-filter: blur(3px);
+            padding: 2rem;
+            max-width: 600px;
+            min-width: 300px;
+            margin: 1rem;
+            p {
+            padding: 1rem 0;
+            }
+            li {
+                margin: .5rem 0;
+            }
+        }
+
+        .se-intro-nav {
+            position: relative;
+            display: flex;
+            button {
+                // padding: 0 1rem;
+                border: 0;
+                height: 2rem;
+                width: 100%;
+                font-size: 1.5rem;
+                text-decoration: none;
+                padding-top: 2px;
+                &:nth-child(1) {
+                    text-align: start;
+                    padding-right: 2px;
+                }
+                &:nth-child(2) {
+                    text-align: end;
+                    padding-right: 2px;
+                }
+                .inactive:hover {cursor: pointer;}
+                    
+            }
+            
+            
+        }
+
+        .se-bio-text {
+            position: absolute;
+            top: 2rem;
+            left: 0;
+            margin: 2rem;
+        }
+        .inactive-se-text{
+            transition: .25s;
+            opacity: 0;
+        }
+    }
+
+    //////////////////////////
+    //    OFFERS SECTION
+    //////////////////////////
+
+    .se-offers, .se-ref {
+        padding: 1rem;
+        backdrop-filter: blur(3px);
+        background-color: $main-bright-025;
+        * {
+            color: $main-dark;
+        }
+        h2 {
+            margin-bottom: 1rem;
+        }
+        h3 {
+            padding-left: 1rem;
+            border-bottom: 1px solid $main-dark-050;
+        }
+        p {
+            padding: 1rem;
+        }
+
+    }
+    .se-ref-container {
+        .ref-master-container {
+            margin-bottom: 2rem;
+        }
+    }
+    .ref-card-container {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: space-around;
+        margin: 1.5rem 0;
+        
+        
+        .ref-card {
+            margin: .5rem;
+            width: 250px;
+            height: 250px;
+            background-color: $main-dark-050;
+            transition: .25s;
+            overflow: hidden;
+            
+                &:hover {
+                    background-color: $main-dark-075;
+                    box-shadow: 0 5px 15px $main-dark;
+                    div {
+                        transition: .25s;
+                        font-size: 2rem;
+                        letter-spacing: 5px;
+                        opacity: 0;
+                    }
+
+                }
+
+
+                div {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    position: relative;
+                    height: 50%;
+                    font-size: 1.3rem;
+                    color: $main-bright;
+                    transition: .25s;
+                    background-color: $main-dark-090;
+                    backdrop-filter: blur(2px);
+                    &:nth-child(2) {
+                        padding-top: 4rem;
+                    }
+                    &:nth-child(3) {
+                        padding-bottom: 4rem;
+                    }
+                
+                }
+                img {
+                    transition: .25s;
+                    width: 250px;
+                    position: absolute;
+                }
+        }
+    }
+
+    .inactive {
+        // border: solid 1px $main-dark;
+        box-shadow: inset 0 -1px 3px -2px $main-bright-050, inset 0 2px 2px 0 $main-dark-050;
+        // background-color: $main-dark-050;
+        transition: .12s;
+        color:$main-bright-050;
+        &:hover {
+            box-shadow: inset 0 -1px 2px 0 $main-dark-050, inset 0 1px 2px -1px $main-bright-050;
+            cursor: pointer;
+            background-color: $main-dark-050;
+            color:$main-bright;
+        }
+    }
+
+}

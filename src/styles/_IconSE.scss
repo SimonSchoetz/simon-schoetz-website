@@ -1,0 +1,43 @@
+.fader-container {
+    box-shadow: inset rgba(0, 0, 0, 0.3) 0px 0px 50px 10px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 450px;
+    height: 100%;
+    opacity: 0;
+    background-color: $main-dark;
+    & * {
+        background-color: transparent;
+    }
+    &:hover {
+        opacity: 1;
+        transition: .25s;
+        .btn0 {bottom: 13rem;}
+        .btn1 {bottom: 17rem;}
+        .btn2 {bottom: 19rem;}
+        .btn3 {bottom: 12rem;}
+        .btn4 {bottom: 15rem;}
+        .btn5 {bottom: 9rem;}
+        .btn6 {bottom: 7rem;}
+        .btn7 {bottom: 11rem;}
+        .btn8 {bottom: 14rem;}
+        .btn9 {bottom: 18rem;}
+        .btn10 {bottom: 16rem;}
+    }
+
+    .channel {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        height: 100%;
+    }
+    .fader-btn {
+        position: absolute;
+        bottom: 5rem;
+        transition: 2s;
+    }
+}

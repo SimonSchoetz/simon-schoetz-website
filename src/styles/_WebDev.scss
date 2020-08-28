@@ -2,7 +2,37 @@
     position: relative;
     font-size: 1.1rem;
 
-    .reference-gif {
-        max-width: 100%;
+    
+    section {
+        width: 100%;
+        max-width: 1400px;
+        position: relative;
+        h2 {
+            margin-bottom: 1rem;
+        }
+        h3 {
+            padding-left: 1rem;
+            border-bottom: 1px solid $main-dark-050;
+        }
+    }
+    .web-def-intro {
+        
+        padding: 1rem;
+        backdrop-filter: blur(3px);
+        background-color: $main-dark-025;
+        margin-bottom: 3rem;
+    }
+
+    .web-dev-ref {
+        position: relative;
+        max-width: 1400px;
+
+    }
+        
+    .etikett-radio {
+    background-image: url(../img/etikett-home.png);
+    background-size: cover;
+    background-position: center;
+    height: 100px;
     }
 }

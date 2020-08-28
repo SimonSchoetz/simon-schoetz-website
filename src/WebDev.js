@@ -15,6 +15,19 @@ export default function WebDev() {
         <DocumentTitle title ="Web Developer">
             <div className="web-dev">
                 <h2>Web Developer</h2>
+                <section className="web-def-intro">
+                <h2>Profile</h2>
+                    <h3>Professional Experience</h3>
+                    <div className="time-line">
+                    <code>08/2018 - 08/2020 DCI /</code>
+                    </div>
+                
+
+                </section>
+                <section className="web-def-ref">
+                    <div className="etikett-radio">
+                    </div>
+                </section>
                 
             </div>
         </DocumentTitle>

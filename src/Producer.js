@@ -52,7 +52,7 @@ export default function Producer() {
     ].sort((entryA, entryB) => entryB.date - entryA.date);
     const renderDiscography = () => (
         discography.map(el => {
-            return  <li data-aos="fade-up" title={`${el.name}`} key={el.id} className="release">
+            return  <li data-aos="zoom-in" data-aos-offset="-100" title={`${el.name}`} key={el.id} className="release">
                             <a target="_blank" rel="noopener noreferrer" href={el.link}>
                                 <div className="blur-layer"></div>
                                 <img alt="cover artwork" src={el.artwork === "" ? "https://i1.sndcdn.com/avatars-000456674544-werm3v-t500x500.jpg" : el.artwork} />

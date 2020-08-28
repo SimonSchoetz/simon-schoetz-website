@@ -48,7 +48,7 @@ export default function SoundEngineer() {
         array.map(ref => {
 
             return  <Fragment key={ref.id}>
-                        <li data-aos="fade-up" title={`${ref.artist} - ${ref.release}`} className="ref-card">
+                        <li data-aos="zoom-in" data-aos-offset="-100" title={`${ref.artist} - ${ref.release}`} className="ref-card">
                             <a target="_blank" rel="noopener noreferrer" href={ref.link}>
                                 <img src={ref.artwork} />
                                 <div>{ref.artist}</div>

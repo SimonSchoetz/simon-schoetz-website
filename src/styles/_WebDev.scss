@@ -83,6 +83,15 @@
                         align-items: center;
                         list-style-type: none;
                         margin: 0 .5rem 1rem;
+                        .img-container {
+                            width: 80px;
+                            height: 80px;
+                            display: flex;
+                            align-items: center;
+                        }
+                        .level-container {
+                            margin-top: 1rem;
+                        }
                     }
                 }
                 .tech-icon {

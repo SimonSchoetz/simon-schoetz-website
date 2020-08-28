@@ -12,26 +12,48 @@ export default function WebDev() {
     }, [setCurrentLocation, locations.pathname])
 
     const skillSet = [
-        {id: 0, name: "CSS3", img: "css3-logo.png", level: 4},
-        {id: 1, name: "Express.js", img: "express-logo.png", level: 3},
-        {id: 2, name: "GitHub", img: "github-logo.png", level: 4},
         {id: 3, name: "HTML5", img: "html5-logo.png", level: 5},
         {id: 4, name: "JavaScript", img: "js-logo.png", level: 4},
-        {id: 5, name: "MongoDB", img: "mongodb-logo.png", level: 3},
-        {id: 6, name: "Node.js", img: "node-logo.png", level: 3},
-        {id: 7, name: "npm", img: "npm-logo.png", level: 2},
+        {id: 0, name: "CSS3", img: "css3-logo.png", level: 4},
         {id: 8, name: "SASS", img: "sass-logo.png", level: 4},
         {id: 9, name: "React.js", img: "react-logo.png", level: 4},
+        {id: 6, name: "Node.js", img: "node-logo.png", level: 3},
+        {id: 1, name: "Express.js", img: "express-logo.png", level: 3},
+        {id: 5, name: "MongoDB", img: "mongodb-logo.png", level: 3},
+        {id: 7, name: "npm", img: "npm-logo.png", level: 2},
+        {id: 2, name: "GitHub", img: "github-logo.png", level: 4},
         {id: 10, name: "Three.js", img: "threejs-logo.png", level: 1},
         {id: 11, name: "Vue.js", img: "vuejs-logo.png", level: 1},
     ]
 
+    const fullStars = num => {
+        let stars = [];
 
+        for (let i = 0; i < num; i++) {
+            stars.push(<i class="fas fa-star" />)
+        }
+        return stars
+    }
+
+    const emptyStars = num => {
+        let stars = [];
+        let diff = 5 - num;
+
+        for (let i = 0; i < diff; i++) {
+            stars.push(<i class="far fa-star" />)
+        }
+        return stars
+    }
     const renderSkillSet = () => (
         skillSet.map(el => {
             return <Fragment key={el.id}>
                 <li>
-                <img alt={`Logo of ${el.name}`} title={el.name} className="tech-icon" src={require("./img/"+el.img)} ></img>
+                <div className="img-container">
+                    <img alt={`Logo of ${el.name}`} title={el.name} className="tech-icon" src={require("./img/"+el.img)} />
+                </div>
+                <div className="level-container">
+                {fullStars(el.level)}{emptyStars(el.level)}
+                </div>
                 </li>
             </Fragment>
 
@@ -40,7 +62,6 @@ export default function WebDev() {
     return (
         <DocumentTitle title ="Web Developer">
             <div className="web-dev">
-                <h2>Web Developer</h2>
                 <section className="web-def-intro">
                 <h2>Profile</h2>
                     <h3>Professional Experience</h3>
@@ -68,7 +89,6 @@ export default function WebDev() {
                             <ul>
                                 {renderSkillSet()}
                             </ul>
-                            
 
                         </div>
                     </div>

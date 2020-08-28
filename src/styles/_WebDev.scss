@@ -21,6 +21,52 @@
         backdrop-filter: blur(3px);
         background-color: $main-dark-025;
         margin-bottom: 3rem;
+        .time-line {
+            padding: 1rem;
+            .code-window {
+                padding: .5rem;
+                background-color: $main-dark;
+                width: 50%;
+
+            }
+
+            code, span {
+                font-family: 'Source Code Pro', monospace;
+                color: $main-bright;
+            }
+
+            .dot-1, .dot-2, .dot-3 {
+                margin-left: .1px;
+            }
+            .dot-1 {
+            animation: dot1 2s infinite;
+            }
+            .dot-2 {
+            animation: dot2 2s infinite;
+            }
+            .dot-3 {
+            animation: dot3 2s infinite;
+            }
+        }
+        @keyframes dot1 {
+            0% {opacity:0}
+            24% {opacity:0}
+            25% {opacity:1}
+            100% {opacity:1}
+        } 
+        @keyframes dot2 {
+            0% {opacity:0}
+            49% {opacity:0}
+            50% {opacity:1}
+            100% {opacity:1}
+        } 
+        @keyframes dot3 {
+            0% {opacity:0}
+            74% {opacity:0}
+            75% {opacity:1}
+            100% {opacity:1}
+        } 
+
     }
 
     .web-dev-ref {

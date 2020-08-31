@@ -3,7 +3,7 @@
     font-size: 2rem;
     margin: 3rem .5rem;
     transition: .5s;
-    height: 117px;
+    height: 130px;
     overflow: hidden;
 }
 .introduction-off {
@@ -11,4 +11,40 @@
     height: 0;
     margin: 0 .5rem;
     transition: .5s;
+}
+
+@media only screen and (max-width: 1075px) {
+    .introduction-on, .introduction-off {
+        height: 12vw;
+        font-size: 2.9vw;
+        
+    }
+    .introduction-off {
+        height: 0;
+    }
+}
+@media only screen and (max-width: 750px) {
+    .introduction-on, .introduction-off {
+        
+        height: 16vw;
+        font-size: 3.3vw;
+        
+    }
+    .introduction-off {
+        height: 0;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .introduction-on, .introduction-off {
+        margin: 2rem .5rem;
+        
+        height: fit-content;
+        
+        font-size: 1.1rem;
+        
+    }
+    .introduction-off {
+        height: 0;
+        margin: 0;
+    }
 }

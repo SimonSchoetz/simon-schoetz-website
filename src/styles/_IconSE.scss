@@ -4,7 +4,6 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    max-width: 450px;
     height: 100%;
     opacity: 0;
     background-color: $main-dark;
@@ -33,16 +32,37 @@
         justify-content: center;
         align-items: center;
         width: 35px;
-        height: 27vw;
+        height: 100%;
+        max-height: 450px;
             .fader-line {
                 height: 80%;
             }
-
     }
     
     .fader-btn {
         position: absolute;
         bottom: 5vw;
         transition: 2s;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .fader-container {
+    &:hover {
+        opacity: 1;
+        transition: .25s;
+        .btn0 {bottom: 18vw;}
+        .btn1 {bottom: 21vw;}
+        .btn2 {bottom: 24vw;}
+        .btn3 {bottom: 19vw;}
+        .btn4 {bottom: 20vw;}
+        .btn5 {bottom: 14vw;}
+        .btn6 {bottom: 12vw;}
+        .btn7 {bottom: 16vw;}
+        .btn8 {bottom: 19vw;}
+        .btn9 {bottom: 23vw;}
+        .btn10 {bottom: 21vw;}
+    }
+
     }
 }

@@ -1,17 +1,23 @@
+h1 {
+    font-family: $fat;
+    text-align: center;
+    font-size: 4rem;
+    margin: 2rem 0;
+}
 .main-nav {
     display: flex;
     justify-content: space-between;
     position: relative;
     z-index: 1;
     margin:0 .5rem 3rem;
-
+    
     .nav-link {
         position: relative;
         flex: 1 0 0;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 27vw;
+        height: 32vw;
         // width: 27vw;
         max-width: 450px;
         max-height: 450px;
@@ -60,19 +66,19 @@
     .active-nav {
         position: absolute;
         top: 5rem;
-            height: 5rem;
-            font-size: 3rem;
-            transition: .5s;
+        height: 5rem;
+        font-size: 3rem;
+        transition: .5s;
+        background-color: $main-dark-050;
+        backdrop-filter: blur(3px);
+        // color: $main-dark;
+        width: 100%;
+        max-width: 100%;
+        &:hover {
             background-color: $main-dark-050;
             backdrop-filter: blur(3px);
-            // color: $main-dark;
-            width: 100%;
-            max-width: 100%;
-            &:hover {
-                background-color: $main-dark-050;
-                backdrop-filter: blur(3px);
-                cursor: context-menu;
-            }
+            cursor: context-menu;
+        }
     }
 }
 
@@ -190,4 +196,36 @@
     91% {opacity: .3;}
     99% {opacity: .3;}
     100% {opacity: 1;}
+}
+
+///////////////////////////
+//Media Queries
+///////////////////////////
+@media only screen and (max-width: 768px) {
+    .main-nav {
+        flex-direction: column;
+        height: 64vh;
+        .nav-link {
+            font-size: 10vw;
+            max-width: 100%;
+            width: 100%;
+            max-height: 100%;
+            height: 33vh;
+
+            &:nth-child(2) {
+                margin: .5rem 0;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    h1 {
+        font-size: 14vw;
+        margin: 1rem 0 0;
+    }
+    // .main-nav {
+    //     .nav-link {
+    //     }
+    // }
 }

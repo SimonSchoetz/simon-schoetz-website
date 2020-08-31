@@ -9,12 +9,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  h1 {
-      font-family: $fat;
-      text-align: center;
-      font-size: 4rem;
-      margin: 2rem 0;
-  }
+
   h2 {
       font-size: 2rem;
       margin-bottom: .5rem;
@@ -61,3 +56,4 @@
     50% {opacity: 0;}
     100% {opacity: 1;}
 }
+

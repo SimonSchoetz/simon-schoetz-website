@@ -100,19 +100,55 @@
             }
 
         }
-          
     }
 
     .web-dev-ref {
         position: relative;
         max-width: 1400px;
+        padding: 1rem;
+        backdrop-filter: blur(3px);
+        background-color: $main-dark-025;
 
-    }
         
-    .etikett-radio {
-    background-image: url(../img/etikett-home.png);
-    background-size: cover;
-    background-position: center;
-    height: 100px;
+
+        .ref-container {
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center ;
+            margin: 1rem;
+
+
+            .ref-description {
+                backdrop-filter: blur(3px);
+                background-color: $main-dark-050;
+                max-width: 600px;
+                padding: 1rem 1rem 0;
+                margin: 1rem;
+                
+                p {
+                    padding: 1rem;
+                }
+                ul {
+                    padding: 1rem;
+                    li {
+                        list-style-type: none;
+                        margin: .5rem 0;
+                    }
+                }
+
+            }
+        }
+        .etikett-radio {
+            background-image: url(../img/etikett-home.png);
+            * {
+                color: $main-bright;
+                border-color: $main-bright;
+            }
+        }
     }
+    
+        
+   
 }

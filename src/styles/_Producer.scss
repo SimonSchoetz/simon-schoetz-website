@@ -47,6 +47,8 @@
         }
         .release {
             margin: .5rem;
+            max-width: 250px;
+            max-height: 250px;
             width: 70vw;
             height: 70vw;
             background-color: $main-dark-050;
@@ -111,7 +113,15 @@
                 max-width: 400px;
                 margin: 1rem .5rem;
             }
-
+        }
+        .discography {
+            padding: .5rem;
+            .release {
+                width: 70vw;
+                height: 70vw;
+                max-width: 500px;
+                max-height: 500px;
+            }
         }
     }
 }

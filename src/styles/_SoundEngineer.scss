@@ -30,7 +30,6 @@
             backdrop-filter: blur(3px);
             padding: 2rem;
             max-width: 600px;
-            // min-width: 300px;
             margin: 1rem;
             p {
             padding: 1rem 0;
@@ -44,7 +43,6 @@
             position: relative;
             display: flex;
             button {
-                // padding: 0 1rem;
                 border: 0;
                 height: 2rem;
                 width: 100%;
@@ -65,7 +63,6 @@
             
             
         }
-
         .se-bio-text {
             position: absolute;
             top: 2rem;
@@ -212,6 +209,10 @@
             }
             .se-bio-text {
                 margin: 1rem;
+            }
+            
+            .se-what-i-do-text {
+                font-size: 1.14rem;
             }
             .se-intro-nav {
                 position: relative;

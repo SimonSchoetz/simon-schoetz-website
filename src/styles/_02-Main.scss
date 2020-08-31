@@ -21,6 +21,7 @@
 .App {
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 .noise-overlay {
     position: absolute;
@@ -57,3 +58,8 @@
     100% {opacity: 1;}
 }
 
+// @media only screen and (max-width: 365px) {
+//     .landing, .error404, .producer, .sound-engineer, .web-dev {
+//         width: 90%;
+//     }
+// }

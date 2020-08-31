@@ -11,8 +11,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        height: 27vw;
+        width: 27vw;
         max-width: 450px;
-        height: 450px;
+        max-height: 450px;
         font-size: 3vw;
         background-color: $main-dark;
         color: $main-bright;

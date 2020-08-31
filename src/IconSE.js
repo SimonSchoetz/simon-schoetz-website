@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 
 export default function FaderContainer({navWidth}) {
-    const col = Math.floor(navWidth/35) - 2;
+    const col = Math.floor(navWidth/35) - 1;
     const dummyArray = []
 
     for (let i = 0; i < col; i++) {

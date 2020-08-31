@@ -109,12 +109,31 @@ export default function SoundEngineer() {
                         <h3>CONTACT</h3>
                         <p>
                             Get in touch with me on all of these social media platforms
-                            https://www.facebook.com/simon.schotz 
-                            https://soundcloud.com/bustedfingerz/ 
-                            https://www.instagram.com/bustedfingerz/ 
+                        </p>
+                        <ul className="sm-container">
+                            <li>
+                                <a href={`https://soundcloud.com/bustedfingerz/`} target="_blank" rel="noopener noreferrer">
+                                    <i className="fab fa-soundcloud"></i>
+                                    SoundCloud
+                                </a>
+                            </li>
+                            <li>
+                                <a href={`https://www.facebook.com/simon.schotz`} target="_blank" rel="noopener noreferrer">
+                                    <i className="fab fa-facebook"></i>
+                                    Facebook
+                                </a>
+                            </li>
+                            <li>
+                                <a href={`https://www.instagram.com/bustedfingerz/`} target="_blank" rel="noopener noreferrer">
+                                    <i className="fab fa-instagram"></i>
+                                    Instagram
+                                </a>
+                            </li>
+                        </ul>
+                             
 
-                            
-                             or via email simonsch.tz@gmail.com
+                        <p>
+                             or via email at simonsch.tz@gmail.com
                         </p>
                         <p>
                             Not convinced yet? Check out some references below!

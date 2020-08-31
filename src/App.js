@@ -1,11 +1,21 @@
 import React, {useState, useRef, useEffect} from 'react';
-import './App.scss';
 import {HashRouter, Switch, Route, NavLink } from "react-router-dom";
 import { Context } from './Context';
-//Appear on scroll automation
+///////////////////////////////
+//Animate elements in on scroll
+///////////////////////////////
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+///////////////////////////////
+//Scroll to top
+///////////////////////////////
+import ScrollMemory from 'react-router-scroll-memory';
+
+///////////////////////////////
+//Components
+///////////////////////////////
+import './App.scss';
 import Landing from './Landing';
 import WebDev from "./WebDev";
 import Producer from "./Producer";
@@ -43,16 +53,16 @@ function App() {
       currentLocation, setCurrentLocation
     }}>
 
-      <HashRouter > 
+      <HashRouter> 
+        <ScrollMemory />
         <div className={`App`}>
 
-    
-    <div className="noise">
-    <Noise color={"rgb(209, 213, 214)"}/>
-      {currentLocation === "/" || currentLocation === "/webdev" ? <div className="noise-overlay bright-grey"/> : null}
-      {currentLocation === "/bustedfingerz" ? <div className="noise-overlay dark-grey"/> : null}
-      {currentLocation === "/soundengineer" ? <div className="noise-overlay dark-blue"/> : null}
-    </div>
+          <div className="noise">
+          <Noise color={"rgb(209, 213, 214)"}/>
+            {currentLocation === "/" || currentLocation === "/webdev" ? <div className="noise-overlay bright-grey"/> : null}
+            {currentLocation === "/bustedfingerz" ? <div className="noise-overlay dark-grey"/> : null}
+            {currentLocation === "/soundengineer" ? <div className="noise-overlay dark-blue"/> : null}
+          </div>
         
           <div className="component-container">
             <header>

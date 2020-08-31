@@ -12,6 +12,7 @@
     "react-document-title": "^2.0.3",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
+    "react-router-scroll-memory": "^2.0.7",
     "react-scripts": "^3.4.3",
     "react-three-fiber": "^4.2.20",
     "three": "^0.119.1",

@@ -15,7 +15,7 @@
             border-bottom: 1px solid $main-dark-050;
         }
     }
-    .web-def-intro {
+    .web-dev-intro {
         
         padding: 1rem;
         backdrop-filter: blur(3px);
@@ -24,6 +24,7 @@
 
         .content-container {
             display: flex;
+            flex-flow: wrap;
             .time-line {
                 padding: 1rem;
                 width: 50%;
@@ -149,6 +150,55 @@
         }
     }
     
+}
+
+@media only screen and (max-width: 768px) {
+    .web-dev {
         
-   
+        
+    
+        .web-dev-intro {
+            padding: .5rem;
+            .content-container {
+                .time-line {
+                    width: 100%;
+                }
+                .technology-chart {
+                    width: 100%;
+                    ul {
+                        li {
+                            .img-container {
+                                max-width: 80px;
+                                max-height: 80px;
+                                width: 21vw;
+                                height: 21vw;
+                            }
+
+                        }
+                    }
+                    .tech-icon {
+                        max-width: 5rem;
+                        width: 21vw;
+                    }
+                }
+            }
+
+        }
+    .web-dev-ref {
+        padding: .5rem;
+        .ref-container {
+            .ref-description {
+                h3 {
+                    padding-left: .5rem;
+                }
+                padding: .5rem .5rem 0;
+                margin: .5rem;
+                p, ul {
+                    padding: .5rem;
+                }
+            }
+
+        }
+    }
+    }
 }

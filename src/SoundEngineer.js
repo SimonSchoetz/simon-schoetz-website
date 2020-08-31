@@ -150,7 +150,7 @@ export default function SoundEngineer() {
                             </ul>
                         </div>
                         <div>
-                            <h3>MIX DOWNS</h3>
+                            <h3>MIXDOWNS</h3>
                             <ul className="ref-card-container">
                                 {renderRefs(mixingRefs)}
                             </ul>

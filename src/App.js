@@ -71,7 +71,7 @@ function App() {
                 </NavLink></h1> 
                 <div className={`${currentLocation === "/" ? "introduction-on" : "introduction-off"}`}>
                   <p>
-                  Hello and welcome to my website. I'm a bass music producer and dj, a sound engineer, and a web developer based in Berlin, Germany. Pleas click on one of the cards below to read more about me and my doing in the respective area. 
+                  Hello and welcome to my website. I'm a bass music producer and dj, a sound engineer, and a web developer based in Berlin, Germany. Please click on one of the cards below to read more about me and my doing in the respective area. 
                   </p>
                 </div>
                 <div className={`main-nav ${currentLocation !== "/" ? "shrinked-main-nav" : ""}`} onMouseOver={()=> mouseOver()}>

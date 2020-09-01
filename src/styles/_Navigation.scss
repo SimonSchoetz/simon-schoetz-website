@@ -151,6 +151,7 @@ h1 {
 ////////////////////////////////
 
 .home-link.shrinked-nav:hover {
+    span {text-shadow: 1px 0 5px  $main-bright;}
     .simon-s{animation: blink-simon-s .5s;}
     .simon-i{animation: blink-simon-i .5s;}
     .simon-m{animation: blink-simon-m .5s;}

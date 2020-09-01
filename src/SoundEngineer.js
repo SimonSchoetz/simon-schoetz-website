@@ -75,22 +75,22 @@ export default function SoundEngineer() {
                             </p>
                             <ul>
                                 <li>
-                                MASTERING: My masters guarantee full impact on any club PA or Soundsystem while translating transparent on smaller speaker. Additionally, I take notes during the process and provide you with in-depth feedback on your work.
+                                MASTERING: My services guarantee full impact on any club PA or Soundsystem while translating transparent on smaller speaker. Additionally, I take notes during the process and provide you with in-depth feedback on your work.
                                 </li>
                                 <li>
-                                MIX DOWN: Give me full control by providing me with the stems of your project and I make it as shiny as it can be. You can fully focus on your creativity while I take care of the technicalities.
+                                MIXDOWN: Give me full control by providing me with the stems of your project and I make it as shiny as it can be. You can fully focus on your creativity while I take care of the technicalities.
                                 </li>
                                 <li> 
-                                OTHERS like: You have a mediocre version of your creatively outstanding tune but you lost the project? Well, I can't guarantee a 100% recovery from that but I promise you: There is much more possible than you think. Give me your version, what sounds or stems you are able to recover and let me do the magic.
+                                CUSTOM SOLUTIONS: You have a mediocre version of your creatively outstanding tune but you lost the project? Well, I can't guarantee a 100% recovery from that but I promise you: There is much more possible than you think. Give me your version, what sounds or stems you are able to recover and let me do the magic.
                                 </li>
                             </ul>
                         </div>
                         <div className={`se-bio-text ${bioActive ? "" : "inactive-se-text"}`}>
                             <p >
-                                From 2015 to 2018, I studied Music Technology at a Munich-based private school in cooperation with the University of West London. Apart of my scientific work in gathering knowledge about film music and post production, room acoustics, streaming and the music industry itself, I had hands-on experience at the famous Dorian Gray Studios in Munich. Here, I recorded bands with professional microphones and analogue outboard processing gear via a SSL console into a DAW. Moreover, I mixed the recordings on the SSL and printed the premaster onto a 2inch 24-track tape.
+                                I studied Music Technology at a Munich-based private school in cooperation with the University of West London. Apart from my academic career in film music and post production, room acoustics, streaming and the music industry itself, I had hands-on experience at the famous Dorian Gray Studios in Munich - involving  professional microphones, analogue outboard processing gear, a SSL console and a 2inch 24-track tape.
                             </p>
                             <p>
-                                Since I started to make own productions in 2016, I specialized myself in in-the-box workflows, sound design for musical purposes and mixing/mastering music made for clubs and Soundsystems. Due to my studies, I'm able to utilize knowledge from the conservative way of producing music while avoiding misconceptions based on superficial YouTube tutorials which too often don't emphasize the differences between the analogue and digital hemisphere. This gives me a huge advantage in my own productions but also allows me to help fellow producers to bring their creations to the next level. 
+                                Since I started working on own productions in 2016, I specialized in in-the-box workflows, sound design for musical purposes and mixing/mastering music made for clubs and Soundsystems. Due to my studies, I'm able to utilize knowledge from the conservative ideas of production while avoiding misconceptions based on superficial YouTube tutorials which too often don't emphasize the differences between the analogue and digital hemisphere enough. This gives me a huge advantage in my own productions but also allows me to help fellow producers to bring their creations to the next level. 
                             </p>
                         </div>
                     </section>
@@ -102,13 +102,13 @@ export default function SoundEngineer() {
                         <p>
                             You give me a premaster and 20€, you'll get a master and a list with in-depth feedback in return. If you change the premaster based on my feedback and want a new version, you can get another master for additional 5€. Naturally, if I messed something up, the update will cost you nothing. You'll have the chance to listen to previews via SoundCloud, the download will be enabled as soon as the payment arrived. If you pay in advance, downloads will be enabled during the whole process.
                         </p>
-                        <h3>MIX DOWN & OTHERS</h3>
+                        <h3>MIXDOWN & CUSTOM SOLUTIONS</h3>
                         <p>
                             Mixing your tune with or without vocals, saving your lost project or a bad recording - you name it, I got you. I charge 20€ per hour. Depending on your project, it usually takes me something between 2-3 hours per tune. Sometimes more, sometimes less. You'll get a mastered version and a premaster in case you want to get it mastered by the mastering engineer of your trust. You'll have the chance to listen to previews via SoundCloud, the download will be enabled as soon as the payment arrived.
                         </p>
                         <h3>CONTACT</h3>
                         <p>
-                            Get in touch with me on all of these social media platforms
+                            Get in touch with me with either of these platforms
                         </p>
                         <ul className="sm-container">
                             <li>
@@ -136,7 +136,7 @@ export default function SoundEngineer() {
                              or via email at simonsch.tz@gmail.com
                         </p>
                         <p>
-                            Not convinced yet? Check out some references below!
+                            Not convinced yet? Check out some of the references below!
                         </p>
                     </div>
                 </section>

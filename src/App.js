@@ -26,6 +26,7 @@ import IconWebDev from './IconWebDev';
 import IconProducer from './IconProducer';
 
 import Noise from "./noise/Noisy";
+import Curser from './Curser';
 
 
 
@@ -45,8 +46,16 @@ function App() {
     const mouseOver = () => {
       setNavWidth(refSoundEngineer.current.clientWidth)
     }
-    
 
+    ////////////////
+    //mouse tracker
+    ////////////////
+    let [x, setX] = useState(0);
+    let [y, setY] = useState(0); 
+    const handleMove = e => {
+      setX(e.pageX);
+      setY(e.pageY);
+    } 
   return (
 
     <Context.Provider value={{
@@ -55,7 +64,9 @@ function App() {
 
       <HashRouter> 
         <ScrollMemory />
-        <div className={`App`}>
+        <div className={`App`}  onMouseMove={handleMove}>
+
+          <Curser x={x} y={y} />
 
           <div className="noise">
           <Noise color={"rgb(209, 213, 214)"}/>

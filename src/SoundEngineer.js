@@ -33,7 +33,6 @@ export default function SoundEngineer() {
         {id: 2, job: "mixing", artist:"Bloomfeld", release:"Octagon", artwork:"https://i1.sndcdn.com/artworks-PeU4Q7JuO9WStshA-WVRNyA-t500x500.jpg", link:"https://soundcloud.com/classicaltrax/bloomfeld-octagon"},
         {id: 3, job: "mixing", artist:"Ziek", release:"Technology", artwork:"https://f4.bcbits.com/img/a4099032707_10.jpg", link:"https://ziek08.bandcamp.com/album/technology"},
     ].sort((entryA, entryB) => entryB.id - entryA.id);
-    console.log(mixingRefs.sort((entryA, entryB) => entryA.artist - entryB.artist))
 
     const masterRefs = [
         {id: 0, job: "mastering", artist:"Yoofee", release:"Nova/Pandadub", artwork:"https://f4.bcbits.com/img/a3874970530_10.jpg", link:"https://subgarden.bandcamp.com/album/nova-pandadub-sgdn023"},

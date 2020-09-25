@@ -107,10 +107,12 @@
         position: relative;
         max-width: 1400px;
         padding: 1rem;
+        margin-bottom: 1rem;
         backdrop-filter: blur(3px);
         background-color: $main-dark-025;
-
-        
+        div:not(:last-of-type) {
+                margin-bottom: 3rem;
+        }
 
         .ref-container {
             position: relative;
@@ -119,17 +121,18 @@
             display: flex;
             justify-content: center ;
             margin: 1rem;
+            
 
 
             .ref-description {
                 backdrop-filter: blur(3px);
-                background-color: $main-dark-050;
+                background-color: $main-dark-075;
                 max-width: 600px;
                 padding: 1rem 1rem 0;
                 margin: 1rem;
-                
                 p {
                     padding: 1rem;
+                    white-space: pre-wrap;
                 }
                 ul {
                     padding: 1rem;
@@ -141,12 +144,19 @@
 
             }
         }
-        .etikett-radio {
-            background-image: url(https://i.ibb.co/G5WFDN1/etikett-home.png);
+        .etikett-radio, .merch-store {
             * {
                 color: $main-bright;
                 border-color: $main-bright;
             }
+
+        }
+        .etikett-radio {
+            background-image: url(https://i.ibb.co/G5WFDN1/etikett-home.png);
+        }
+        .merch-store {
+            background-image: url(https://i.ibb.co/XV92dxV/merch-store-wip.png);
+
         }
     }
     
@@ -154,9 +164,6 @@
 
 @media only screen and (max-width: 768px) {
     .web-dev {
-        
-        
-    
         .web-dev-intro {
             padding: .5rem;
             .content-container {
@@ -184,21 +191,21 @@
             }
 
         }
-    .web-dev-ref {
-        padding: .5rem;
-        .ref-container {
-            .ref-description {
-                h3 {
-                    padding-left: .5rem;
+        .web-dev-ref {
+            padding: .5rem;
+            .ref-container {
+                .ref-description {
+                    h3 {
+                        padding-left: .5rem;
+                    }
+                    padding: .5rem .5rem 0;
+                    margin: .5rem;
+                    p, ul {
+                        padding: .5rem;
+                    }
                 }
-                padding: .5rem .5rem 0;
-                margin: .5rem;
-                p, ul {
-                    padding: .5rem;
-                }
-            }
 
+            }
         }
-    }
     }
 }

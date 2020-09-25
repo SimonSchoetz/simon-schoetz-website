@@ -97,31 +97,55 @@ export default function WebDev() {
                 </section>
                 <section className="web-dev-ref">
                     <h2>REFERENCES</h2>
-                    <h3>etikett~radio</h3>
-                    <div className="ref-container etikett-radio">
-                        <div className="ref-description">
-                            <h3>DESCRIPTION</h3>
-                            <p>
-                                etikett~radio is a radio station at Catalyst Institute (former dBs Music School Berlin) where students have the chance to gain their first experience as radio hosts. It has a database where admins can create accounts for students. Students can then work on their host profile and list their shows in the archive section, post to the blog section and so on. Moreover, the website has its own chat room where every user of the website can join and interact with each other.
-                            </p>
-                            <h3>LINKS</h3>
-                            <ul>
-                                <li>
-                                    <a target="_blank" rel="noopener noreferrer" href={`https://etikett-radio.herokuapp.com/`}>www.etikett-radio.com</a>
-                                </li>
-                                <li>
-                                    <a target="_blank" rel="noopener noreferrer" href={`https://github.com/SimonSchoetz/etikett-radio`}>GitHub Repo</a>
-                                </li>
-                            </ul>
-                            <h3>MAIN TECHNOLOGIES</h3>
-                            <ul>
-                               <li>Frontend: React.js, SASS</li>
-                               <li>Backend: MongoDB, Mongoose, Express.js, JWT</li>
-                               <li>Other: Sockit.io, Three.js</li>
-                            </ul>
-
+                    <div>
+                        <h3>etikett~radio</h3>
+                        <div className="ref-container etikett-radio">
+                            <div className="ref-description">
+                                <h3>DESCRIPTION</h3>
+                                <p>
+                                    etikett~radio is a radio station at Catalyst Institute (former dBs Music School Berlin) where students have the chance to gain their first experience as radio hosts. It has a database where admins can create accounts for students. Students can then work on their host profile and list their shows in the archive section, post to the blog section and so on. Moreover, the website has its own chat room where every user of the website can join and interact with each other.
+                                </p>
+                                <h3>LINKS</h3>
+                                <ul>
+                                    <li>
+                                        <a target="_blank" rel="noopener noreferrer" href={`https://etikett-radio.com/`}>www.etikett-radio.com</a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" rel="noopener noreferrer" href={`https://github.com/SimonSchoetz/etikett-radio`}>GitHub Repo</a>
+                                    </li>
+                                </ul>
+                                <h3>MAIN TECHNOLOGIES</h3>
+                                <ul>
+                                <li>Frontend: React.js, SASS</li>
+                                <li>Backend: MongoDB, Mongoose, Express.js, JWT</li>
+                                <li>Other: Sockit.io, Three.js</li>
+                                </ul>
+                            </div>
                         </div>
-
+                    </div>
+                    <div>
+                        <h3>MERCHANDISE ONLINE SHOP</h3>
+                        <div className="ref-container merch-store">
+                            <div className="ref-description">
+                                <h3>DESCRIPTION</h3>
+                                <p>
+                                    This website is an online shop with fictitious products. It exists solely for the purpose of being my personal playground for learning and experimenting with VueJS. The design focuses on mobile devices but functionalities also consider desktop users who interact with the page via mouse. It is still a work-in-progress and so far you one can browse through products and their variations and add them to the cart.
+                                </p>
+                                <h3>LINKS</h3>
+                                <ul>
+                                    <li>
+                                        <a target="_blank" rel="noopener noreferrer" href={`https://vuejs-merch-store.netlify.app/`}>Deployed on Netlify</a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" rel="noopener noreferrer" href={`https://github.com/SimonSchoetz/vuejs-merch-store`}>GitHub Repo</a>
+                                    </li>
+                                </ul>
+                                <h3>MAIN TECHNOLOGIES</h3>
+                                <ul>
+                                <li>Frontend: Vue.js, SASS</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </section>
                 

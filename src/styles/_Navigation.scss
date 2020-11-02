@@ -69,6 +69,7 @@ h1 {
         min-width: fit-content;
         &:hover {
             background-color: $main-dark-050;
+            backdrop-filter: blur(3px);
         }
         &:nth-child(3) {
             right: 0;

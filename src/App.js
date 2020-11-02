@@ -38,6 +38,7 @@ function App() {
 
     const [navWidth, setNavWidth] = useState(0);
     const [hoverBF ,setHoverBF] = useState(false);
+    const [mouseOnWindow, setMouseOnWindow] = useState(true);
 
     useEffect(() => {
       setNavWidth(refSoundEngineer.current.clientWidth)
@@ -46,12 +47,17 @@ function App() {
     const mouseOver = () => {
       setNavWidth(refSoundEngineer.current.clientWidth)
     }
+    const handleMouseEnter = (input) => {
+        // input ? setMouseOnWindow(true) : setMouseOnWindow(false)
+         if (input.type === "mouseenter") {setMouseOnWindow(true)}
+         else setMouseOnWindow(false)
+    }
 
     ////////////////
     //mouse tracker
     ////////////////
-    let [x, setX] = useState(0);
-    let [y, setY] = useState(0); 
+    const [x, setX] = useState(0);
+    const [y, setY] = useState(0); 
     const handleMove = e => {
       setX(e.pageX);
       setY(e.pageY);
@@ -64,10 +70,10 @@ function App() {
 
       <HashRouter> 
         <ScrollMemory />
-        <div className={`App`}  onMouseMove={handleMove}>
+        <div className={`App`} onMouseMove={handleMove} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseEnter}>
 
-          <Curser x={x} y={y} />
 
+          <Curser x={x} y={y} showMouse={mouseOnWindow}/>
           <div className="noise">
           <Noise color={"rgb(209, 213, 214)"}/>
             {currentLocation === "/" || currentLocation === "/webdev" ? <div className="noise-overlay bright-grey"/> : null}

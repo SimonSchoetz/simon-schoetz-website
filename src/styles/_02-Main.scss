@@ -10,6 +10,9 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
+  html {
+      overflow-x: hidden;
+  }
   h2 {
       font-size: 2rem;
       margin-bottom: .5rem;
@@ -26,6 +29,7 @@
 .noise-overlay {
     position: absolute;
     top: 0;
+    z-index: 2;
     width: 100vw;
     height: 100vh;
     backdrop-filter: blur(3px);
@@ -42,6 +46,8 @@
 }
   .component-container {
       width: 1400px;
+      position: relative;
+      z-index: 3;
   }
   .landing, .error404, .producer, .sound-engineer, .web-dev {
     padding: 0 .5rem;

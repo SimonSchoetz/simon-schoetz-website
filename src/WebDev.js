@@ -129,7 +129,7 @@ export default function WebDev() {
                             <div className="ref-description">
                                 <h3>DESCRIPTION</h3>
                                 <p>
-                                    This website is an online shop with fictitious products. It exists solely for the purpose of being my personal playground for learning and experimenting with VueJS. The design focuses on mobile devices but functionalities also consider desktop users who interact with the page via mouse. It is still a work-in-progress and so far you one can browse through products and their variations and add them to the cart.
+                                    This website is an online shop with fictitious products. It exists solely for the purpose of being my personal playground for learning and experimenting with VueJS. The design focuses on mobile devices but functionalities also consider desktop users who interact with the page via mouse. You can change products by hovering/pressing the color discs, add them to the cart if the chosen product is in stock and check out as soon as you filled out the form with your contact details.
                                 </p>
                                 <h3>LINKS</h3>
                                 <ul>

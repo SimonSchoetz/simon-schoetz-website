@@ -39,7 +39,7 @@ function App() {
 
     const [navWidth, setNavWidth] = useState(0);
     const [hoverBF ,setHoverBF] = useState(false);
-    const [mouseOnWindow, setMouseOnWindow] = useState(true);
+    const [mouseOnWindow, setMouseOnWindow] = useState(false);
 
     useEffect(() => {
       setNavWidth(refSoundEngineer.current.clientWidth)

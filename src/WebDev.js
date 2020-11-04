@@ -46,6 +46,7 @@ export default function WebDev() {
     // }
     const renderSkillSet = () => (
         skillSet.map(el => {
+            console.log(el.img)
             return <Fragment key={el.id}>
                 <li title={el.name}>
                     <div className="img-container">

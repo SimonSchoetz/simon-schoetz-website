@@ -48,6 +48,9 @@ export default function Producer() {
         {id: 35, name: "Annias - Unseen Frequencies RMX", release: "", label: "", free: false, artwork:"https://f4.bcbits.com/img/a2885809734_10.jpg", link: "https://annias.bandcamp.com/track/annias-unseen-frequencies-busted-fingerz-remix", date: "15 April 2020"},
         {id: 36, name: "Reckless w/ Grawinkel", release: "Reckless / Data Dungeon", label: "Artikal", free: false, artwork:"https://f4.bcbits.com/img/a0930028525_10.jpg", link: "https://artikalmusic.bandcamp.com/album/reckless-data-dungeon", date: "24 April 2020"},
         {id: 37, name: "Ourman - Pacing RMX", release: "Pacing EP", label: "Silent Motion", free: false, artwork:"https://f4.bcbits.com/img/a3035268384_10.jpg", link: "https://silentmotionrecords.bandcamp.com/album/pacing-ep", date: "24 April 2020"},
+        {id: 38, name: "Busted Fingerz & Evyi - Final", release: "Mosaic EP", label: "", free: true, artwork:"https://f4.bcbits.com/img/a2696905218_10.jpg", link: "https://bustedfingerz.bandcamp.com/album/mosaic-ep", date: "27 October 2020"},
+        {id: 39, name: "Busted Fingerz - 9to17", release: "Mosaic EP", label: "", free: true, artwork:"https://f4.bcbits.com/img/a2696905218_10.jpg", link: "https://bustedfingerz.bandcamp.com/album/mosaic-ep", date: "27 October 2020"},
+        {id: 40, name: "Busted Fingerz & The Widdler - Copycats", release: "Mosaic EP", label: "", free: true, artwork:"https://f4.bcbits.com/img/a2696905218_10.jpg", link: "https://bustedfingerz.bandcamp.com/album/mosaic-ep", date: "27 October 2020"},
         
     ].sort((entryA, entryB) => new Date(entryB.date) - new Date(entryA.date));;
     const renderDiscography = () => (

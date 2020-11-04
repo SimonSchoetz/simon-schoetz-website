@@ -2,7 +2,7 @@ import React, {useContext, useEffect, Fragment } from 'react';
 import DocumentTitle from 'react-document-title';
 import { useLocation  } from "react-router-dom";
 import { Context } from './Context';
-import testLogo from "./img/css3-logo-png";
+import testLogo from "./img/css3-logo.png";
 
 export default function WebDev() {
     const {setCurrentLocation} = useContext(Context)

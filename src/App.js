@@ -1,6 +1,7 @@
 import React, {useState, useRef, useEffect} from 'react';
 import {HashRouter, Switch, Route, NavLink } from "react-router-dom";
 import { Context } from './Context';
+import { BrowserView } from "react-device-detect";
 ///////////////////////////////
 //Animate elements in on scroll
 ///////////////////////////////
@@ -72,8 +73,10 @@ function App() {
         <ScrollMemory />
         <div className={`App`} onMouseMove={handleMove} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseEnter}>
 
-
-          <Curser x={x} y={y} showMouse={mouseOnWindow}/>
+          <BrowserView>
+            <Curser x={x} y={y} showMouse={mouseOnWindow}/>
+          </BrowserView>
+          
           <div className="noise">
           <Noise color={"rgb(209, 213, 214)"}/>
             {currentLocation === "/" || currentLocation === "/webdev" ? <div className="noise-overlay bright-grey"/> : null}

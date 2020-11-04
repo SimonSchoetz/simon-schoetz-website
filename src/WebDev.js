@@ -2,7 +2,7 @@ import React, {useContext, useEffect, Fragment } from 'react';
 import DocumentTitle from 'react-document-title';
 import { useLocation  } from "react-router-dom";
 import { Context } from './Context';
-// import testLogo from "./img/css3-logo.png";
+import Mailto from 'react-protected-mailto'
 
 export default function WebDev() {
     const {setCurrentLocation} = useContext(Context)
@@ -13,38 +13,20 @@ export default function WebDev() {
     }, [setCurrentLocation, locations.pathname])
 
     const skillSet = [
-        {id: 3, name: "HTML5", img: "html5-logo.png", level: 5},
-        {id: 4, name: "JavaScript", img: "js-logo.png", level: 4},
-        {id: 0, name: "CSS3", img: "css3-logo.png", level: 4},
-        {id: 8, name: "SASS", img: "sass-logo.png", level: 4},
-        {id: 9, name: "React.js", img: "react-logo.png", level: 4},
-        {id: 6, name: "Node.js", img: "node-logo.png", level: 3},
-        {id: 1, name: "Express.js", img: "express-logo.png", level: 3},
-        {id: 5, name: "MongoDB", img: "mongodb-logo.png", level: 3},
-        {id: 7, name: "npm", img: "npm-logo.png", level: 3},
-        {id: 2, name: "GitHub", img: "github-logo.png", level: 4},
-        {id: 10, name: "Three.js", img: "threejs-logo.png", level: 1},
-        {id: 11, name: "Vue.js", img: "vuejs-logo.png", level: 1},
+        {id: 3, name: "HTML5", img: "html5-logo.png"},
+        {id: 4, name: "JavaScript", img: "js-logo.png"},
+        {id: 0, name: "CSS3", img: "css3-logo.png"},
+        {id: 8, name: "SASS", img: "sass-logo.png"},
+        {id: 9, name: "React.js", img: "react-logo.png"},
+        {id: 6, name: "Node.js", img: "node-logo.png"},
+        {id: 1, name: "Express.js", img: "express-logo.png"},
+        {id: 5, name: "MongoDB", img: "mongodb-logo.png"},
+        {id: 7, name: "npm", img: "npm-logo.png"},
+        {id: 2, name: "GitHub", img: "github-logo.png"},
+        // {id: 10, name: "Three.js", img: "threejs-logo.png"},
+        {id: 11, name: "Vue.js", img: "vuejs-logo.png"},
     ]
 
-    // const fullStars = num => {
-    //     let stars = [];
-
-    //     for (let i = 0; i < num; i++) {
-    //         stars.push(<i class="fas fa-star" />)
-    //     }
-    //     return stars
-    // }
-
-    // const emptyStars = num => {
-    //     let stars = [];
-    //     let diff = 5 - num;
-
-    //     for (let i = 0; i < diff; i++) {
-    //         stars.push(<i class="far fa-star" />)
-    //     }
-    //     return stars
-    // }
     const renderSkillSet = () => (
         skillSet.map(el => {
             console.log("./img/"+el.img)
@@ -55,9 +37,6 @@ export default function WebDev() {
                         <img alt={`Logo of ${el.name}`} className="tech-icon" src={imgSrc} />
                     </div>
                     <div className="level-container"> {el.name} </div>
-                    {/* <div className="level-container">
-                    {fullStars(el.level)}{emptyStars(el.level)}
-                    </div> */}
                 </li>
             </Fragment>
 
@@ -67,7 +46,7 @@ export default function WebDev() {
         <DocumentTitle title ="Web Developer">
             <div className="web-dev">
                 <section className="web-dev-intro">
-                <h2>PROFILE</h2>
+                    <h2>PROFILE</h2>
                     <h3>PROFESSIONAL EXPERIENCE</h3>
                     <div className="content-container" >
                         <div className="time-line">
@@ -83,8 +62,10 @@ export default function WebDev() {
                                 sol ~/germany/berlin (master) <br/>
                                 $ find . -name job-as-web-developer <br/>
                                 {">"} Start search for jobs as Web Developer in Berlin. <br/>
-                                {">"} Learn new technologies (Threejs VueJS). <br/>
+                                {">"} Learn new technology (VueJS). <br/>
                                 {">"} Work on portfolio. <br/>
+                                {">"} Finish VueJS online shop. <br/>
+                                {">"} Work on mastering ReactJS. <br/>
                                 {">"} In progress<span className="dot-1" >.</span><span className="dot-2" >.</span><span className="dot-3" >.</span> <br/>
                                 </code>
                             </div>
@@ -95,8 +76,19 @@ export default function WebDev() {
                             </ul>
 
                         </div>
+                        
                     </div>
-
+                    <div class="contact">
+                        <h3>CONTACT</h3>
+                        <ul className="contact-list">
+                            <li>
+                                Email: <Mailto email="simonsch.tz@gmail.com"/>
+                            </li>
+                            <li>
+                                linkedIn: <a href="https://www.linkedin.com/in/simon-sch%C3%B6tz-454010166/" >linkedin.com/in/simon-sch%C3%B6tz-454010166/</a>
+                            </li>
+                        </ul>
+                    </div>
                 </section>
                 <section className="web-dev-ref">
                     <h2>REFERENCES</h2>

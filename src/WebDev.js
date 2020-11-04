@@ -2,6 +2,7 @@ import React, {useContext, useEffect, Fragment } from 'react';
 import DocumentTitle from 'react-document-title';
 import { useLocation  } from "react-router-dom";
 import { Context } from './Context';
+import testLogo from "./img/css3-logo-png";
 
 export default function WebDev() {
     const {setCurrentLocation} = useContext(Context)
@@ -46,11 +47,12 @@ export default function WebDev() {
     // }
     const renderSkillSet = () => (
         skillSet.map(el => {
-            console.log(el.img)
+            console.log("./img/"+el.img)
+            const imgSrc = require("./img/"+el.img);
             return <Fragment key={el.id}>
                 <li title={el.name}>
                     <div className="img-container">
-                        <img alt={`Logo of ${el.name}`} className="tech-icon" src={require("./img/"+el.img)} />
+                        <img alt={`Logo of ${el.name}`} className="tech-icon" src={imgSrc} />
                     </div>
                     <div className="level-container"> {el.name} </div>
                     {/* <div className="level-container">
@@ -67,6 +69,7 @@ export default function WebDev() {
                 <section className="web-dev-intro">
                 <h2>PROFILE</h2>
                     <h3>PROFESSIONAL EXPERIENCE</h3>
+                    <img src={testLogo}/>
                     <div className="content-container" >
                         <div className="time-line">
                             <div className="code-window">

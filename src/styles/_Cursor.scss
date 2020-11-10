@@ -7,12 +7,11 @@
     z-index: 1;
     overflow: hidden;
     pointer-events: none;
-    // transition: 1s;
 }
 .hide-curser {
+    transition: 1s;
     background-color: rgba(0, 0, 0, 0);
 }
 .show-curser {
-    
     background-color: rgba(0, 0, 0, 0.2);
 }

@@ -47,13 +47,15 @@ export default function SoundEngineer() {
         array.map(ref => {
 
             return  <Fragment key={ref.id}>
-                        <li data-aos="zoom-in" data-aos-offset="-100" title={`${ref.artist} - ${ref.release}`} className="ref-card">
-                            <a target="_blank" rel="noopener noreferrer" href={ref.link}>
-                                <div className="blur-layer" />
-                                <img src={ref.artwork} />
-                                <div>{ref.artist}</div>
-                                <div>{ref.release}</div>
-                            </a>
+                        <li title={`${ref.artist} - ${ref.release}`} className="ref-card">
+                            <div className="content-container"> 
+                                <a target="_blank" rel="noopener noreferrer" href={ref.link}>
+                                    <div className="blur-layer" />
+                                    <img alt={`Cover Artwork of ${ref.release} by ${ref.name}`} src={ref.artwork} />
+                                    <div>{ref.artist}</div>
+                                    <div>{ref.release}</div>
+                                </a>
+                             </div>
                         </li>
                     </Fragment>
         }))

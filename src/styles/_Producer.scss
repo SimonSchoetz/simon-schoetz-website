@@ -43,59 +43,6 @@
             flex-flow: wrap;
             justify-content: space-around;
             margin: 1.5rem 0 0;
-
-        }
-        .release {
-            position: relative;
-            margin: .5rem;
-            max-width: 250px;
-            max-height: 250px;
-            width: 70vw;
-            height: 70vw;
-            background-color: $main-dark-050;
-            transition: .25s;
-            overflow: hidden;
-                &:hover {
-                    background-color: $main-dark-075;
-                    box-shadow: 0 5px 15px $main-dark;
-                    div {
-                        transition: .25s;
-                        font-size: 1.6rem;
-                        letter-spacing: 5px;
-                        opacity: 0;
-                    }
-
-                }
-                a {
-                    text-decoration: none;
-                }
-                img {
-                    transition: .25s;
-                    width: 100%;
-                    position: absolute;
-                }
-                .blur-layer {
-                    z-index: 1;
-                    width: 100%;
-                    height: 100%;
-                    position: absolute;
-                    background-color: $main-dark-090;
-                    backdrop-filter: blur(2px);
-
-                }
-                div {
-                    z-index: 2;
-                    position: relative;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    text-align: center;
-                    height: calc(100%/3);
-                    font-size: 1.3rem;
-                    color: $main-bright;
-                    transition: .25s;
-                
-                }
         }
     } 
     @keyframes fadeIn-Bio {
@@ -104,7 +51,6 @@
         100% {opacity: 1;}
         
     }
-
 }
 @media only screen and (max-width: 596px) {
     .producer {

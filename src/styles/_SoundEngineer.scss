@@ -124,56 +124,12 @@
         flex-flow: wrap;
         justify-content: space-around;
         margin: 1.5rem 0;
-        
-        
         .ref-card {
-        position: relative;
-            margin: .5rem;
-            width: 250px;
-            height: 250px;
-            background-color: $main-dark-050;
-            transition: .25s;
-            overflow: hidden;
-            
-                &:hover {
-                    background-color: $main-dark-075;
-                    box-shadow: 0 5px 15px $main-dark;
-                    div {
-                        transition: .25s;
-                        font-size: 2rem;
-                        letter-spacing: 5px;
-                        opacity: 0;
-                    }
-
-                }
-
-
-                div {
-                    z-index: 2;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    text-align: center;
-                    position: relative;
+            .content-container {
+                div:not(.blur-layer) {
                     height: 50%;
-                    font-size: 1.3rem;
-                    color: $main-bright;
-                    transition: .25s;
                 }
-                img {
-                    transition: .25s;
-                    width: 100%;
-                    position: absolute;
-                }
-                .blur-layer {
-                    z-index: 1;
-                    width: 100%;
-                    height: 100%;
-                    position: absolute;
-                    background-color: $main-dark-090;
-                    backdrop-filter: blur(2px);
-
-                }
+            }
         }
     }
 

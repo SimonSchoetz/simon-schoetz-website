@@ -2,11 +2,6 @@ import React, {useState, useRef, useEffect} from 'react';
 import {HashRouter, Switch, Route, NavLink } from "react-router-dom";
 import { Context } from './Context';
 import { BrowserView } from "react-device-detect";
-///////////////////////////////
-//Animate elements in on scroll
-///////////////////////////////
-// import AOS from 'aos';
-// import 'aos/dist/aos.css';
 
 ///////////////////////////////
 //Scroll to top
@@ -32,7 +27,6 @@ import Curser from './Curser';
 
 
 function App() {
-    // AOS.init()
     const [currentLocation, setCurrentLocation] = useState("/");
     const shrink = currentLocation !== "/" ? "shrinked-nav" : "";
     const refSoundEngineer= useRef(0)

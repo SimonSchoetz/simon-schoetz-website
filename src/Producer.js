@@ -55,16 +55,19 @@ export default function Producer() {
     ].sort((entryA, entryB) => new Date(entryB.date) - new Date(entryA.date));;
     const renderDiscography = () => (
         discography.map(el => {
-            return  <li title={`${el.name}`} key={el.id} className="release">
-                            <a target="_blank" rel="noopener noreferrer" href={el.link}>
-                                <div className="blur-layer" />
-                                <img alt="cover artwork" src={el.artwork === "" ? "https://i1.sndcdn.com/avatars-000456674544-werm3v-t500x500.jpg" : el.artwork} />
-                                <div>{el.name}</div>
-                                <div>{el.release === "" ? "Single" : el.release}</div>
-                                <div>{el.label === "" ? "Self Release" : el.label}</div>
-                            </a>
-                    </li>
-
+            return  <>
+                <li title={`${el.name}`} key={el.id} className="ref-card">
+                    <div className="content-container">
+                        <a target="_blank" rel="noopener noreferrer" href={el.link}>
+                            <div className="blur-layer" />
+                            <img alt={`Cover Artwork of ${el.release} by ${el.name}`} src={el.artwork === "" ? "https://i1.sndcdn.com/avatars-000456674544-werm3v-t500x500.jpg" : el.artwork} />
+                            <div>{el.name}</div>
+                            <div>{el.release === "" ? "Single" : el.release}</div>
+                            <div>{el.label === "" ? "Self Release" : el.label}</div>
+                        </a>
+                    </div>
+                </li>
+            </>
         }))
  
 

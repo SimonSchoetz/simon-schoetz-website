@@ -1,0 +1,81 @@
+
+.ref-card {
+    position: relative;
+    margin: .5rem;
+    max-width: 250px;
+    max-height: 250px;
+    width: 70vw;
+    height: 70vw;
+    transition: .25s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .content-container {
+        overflow: hidden;
+        position: relative;
+        width: 250px;
+        height: 250px;
+        border-radius: 2px;
+        transition: .25s ease-in;
+        a {
+            position: absolute;
+            text-decoration: none;
+              width: 100%;
+            height: 100%;
+        }
+        img {
+            position: absolute;
+            transition: .25s ease-out;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+        .blur-layer {
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: $main-dark-090;
+            backdrop-filter: blur(2px);
+        }
+        div {
+            z-index: 2;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: calc(100%/3);
+            font-size: 1.3rem;
+            color: $main-bright;
+            transition: .25s;
+        }
+    }
+    &:hover {
+        transition: .25s;
+        .content-container {
+            background-color: $main-dark-075;
+            box-shadow: 0 5px 15px 5px $main-dark;
+            width: 230px;
+            height: 230px;
+            transition: .75s cubic-bezier(.166,.85,.45,1);
+            border-radius: 4px;
+            div {
+                transition: .25s;
+                font-size: 1.6rem;
+                letter-spacing: 5px;
+                opacity: 0;
+            }
+            img {
+                position: absolute;
+                transition: .75s cubic-bezier(.166,.85,.45,1);
+                width: 125%;
+                top: -12.5%;
+                left: -12.5%;
+            }
+            a {
+                box-shadow: inset 0 0 5px 5px black;
+            }
+        }
+    }
+}

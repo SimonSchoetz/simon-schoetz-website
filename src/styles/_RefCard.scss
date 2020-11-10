@@ -13,14 +13,14 @@
     .content-container {
         overflow: hidden;
         position: relative;
-        width: 250px;
-        height: 250px;
+        width: 100%;
+        height: 100%;
         border-radius: 2px;
         transition: .25s ease-in;
         a {
             position: absolute;
             text-decoration: none;
-              width: 100%;
+            width: 100%;
             height: 100%;
         }
         img {
@@ -56,8 +56,8 @@
         .content-container {
             background-color: $main-dark-075;
             box-shadow: 0 5px 15px 5px $main-dark;
-            width: 230px;
-            height: 230px;
+            width: 90%;
+            height: 90%;
             transition: .75s cubic-bezier(.166,.85,.45,1);
             border-radius: 4px;
             div {

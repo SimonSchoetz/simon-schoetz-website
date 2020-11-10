@@ -5,8 +5,8 @@ import { BrowserView } from "react-device-detect";
 ///////////////////////////////
 //Animate elements in on scroll
 ///////////////////////////////
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+// import AOS from 'aos';
+// import 'aos/dist/aos.css';
 
 ///////////////////////////////
 //Scroll to top
@@ -32,7 +32,7 @@ import Curser from './Curser';
 
 
 function App() {
-    AOS.init()
+    // AOS.init()
     const [currentLocation, setCurrentLocation] = useState("/");
     const shrink = currentLocation !== "/" ? "shrinked-nav" : "";
     const refSoundEngineer= useRef(0)

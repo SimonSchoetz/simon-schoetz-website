@@ -16,21 +16,6 @@ export default function SoundEngineer() {
         setCurrentLocation(locations.pathname)
     }, [setCurrentLocation, locations.pathname]);
 
-
-    const [bioActive, setBioActive] = useState(false);
-    const [IDoActive, setIDoActive] = useState(true);
-
-    const changeBioNav = (input) => {
-        if ((input === "bio" && bioActive === true) || (input === "IDo" && IDoActive === true)) return;
-        if (input === "bio") {
-            setBioActive(true);
-            setIDoActive(false);
-        };
-        if (input === "IDo") {
-            setBioActive(false);
-            setIDoActive(true);
-        };
-    };
     
     const mixingRefs = [
         {id: 0, job: "mixing", artist:"MediCated ft. Fikir Amlak/Rider Shafique", release:"Worse Than Obeah/Jah Bless Me", artwork:"https://i1.sndcdn.com/artworks-000541356045-frrj4q-t500x500.jpg", link:"https://soundcloud.com/medicated830/ft-fikir-amlak-rider-shafique-worser-than-obeahfikir-amlak-jah-bless-merider-shafique"},
@@ -74,37 +59,33 @@ export default function SoundEngineer() {
     return (
         <DocumentTitle title ="Sound Engineer">
             <div className="sound-engineer">
-                <section className="se-intro">
-                    <section className="se-intro-field" onMouseEnter={handleMouseOverContainer} onMouseLeave={handleMouseOverContainer}> 
-                        <div className="se-intro-nav">
-                            <button title="What I Do" className={`${IDoActive ? "" : "inactive"}`} onClick={() => changeBioNav("IDo")} onMouseEnter={handleMouseOverElement} onMouseLeave={handleMouseOverElement} >WHAT I DO</button>
-                            <button title="Bio" className={`${bioActive ? "" : "inactive"}`} onClick={() => changeBioNav("bio")} onMouseEnter={handleMouseOverElement} onMouseLeave={handleMouseOverElement} >BIO</button>
+                <section className="se-intro" 
+                    onMouseEnter={handleMouseOverContainer} 
+                    onMouseLeave={handleMouseOverContainer}
+                >
+                    <div className="intro-top">
+                        <div className="img-container">
+                            <div className="img-holder"></div>
                         </div>
-                        <div className={`se-what-i-do-text ${IDoActive ? "" : "inactive-se-text"}`}>
+                        <article>
+                            <h2>WHAT I DO</h2>
                             <p>
-                            With my professional knowledge and experience (check Bio for more information about that), I'll help you to rise your productions to the highest standards. While I'm always open to listen to your music and to give you feedback, if I have the time, I also offer pay-to-win solutions which guarantee you my full attention.
+                            With my professional knowledge and experience, I'll help you to rise your productions to the highest standards. While I'm always open to listen to your music and to give you feedback, if I have the time, I also offer pay-to-win solutions which guarantee you my full attention.
                             </p>
-                            <ul>
-                                <li>
-                                MASTERING: My services guarantee full impact on any club PA or Soundsystem while translating transparent on smaller speaker. Additionally, I take notes during the process and provide you with in-depth feedback on your work.
-                                </li>
-                                <li>
-                                MIXDOWN: Give me full control by providing me with the stems of your project and I make it as shiny as it can be. You can fully focus on your creativity while I take care of the technicalities.
-                                </li>
-                                <li> 
-                                CUSTOM SOLUTIONS: You have a mediocre version of your creatively outstanding tune but you lost the project? Well, I can't guarantee a 100% recovery from that but I promise you: There is much more possible than you think. Give me your version, what sounds or stems you are able to recover and let me do the magic.
-                                </li>
-                            </ul>
-                        </div>
-                        <div className={`se-bio-text ${bioActive ? "" : "inactive-se-text"}`}>
-                            <p >
-                                I studied Music Technology at a Munich-based private school in cooperation with the University of West London. Apart from my academic career in film music and post production, room acoustics, streaming and the music industry itself, I had hands-on experience at the famous Dorian Gray Studios in Munich - involving  professional microphones, analogue outboard processing gear, a SSL console and a 2inch 24-track tape.
-                            </p>
-                            <p>
-                                Since I started working on own productions in 2016, I specialized in in-the-box workflows, sound design for musical purposes and mixing/mastering music made for clubs and Soundsystems. Due to my studies, I'm able to utilize knowledge from the conservative ideas of production while avoiding misconceptions based on superficial YouTube tutorials which too often don't emphasize the differences between the analogue and digital hemisphere enough. This gives me a huge advantage in my own productions but also allows me to help fellow producers to bring their creations to the next level. 
-                            </p>
-                        </div>
-                    </section>
+                        </article>
+                        
+                    </div>
+                    <div className="intro-bottom">
+                        <p>
+                        My services guarantee full impact on any club PA or Soundsystem while translating transparent on smaller speaker. Additionally, I take notes during the process and provide you with in-depth feedback on your work.
+                        </p>
+                        <p>
+                        Give me full control by providing me with the stems of your project and I make it as shiny as it can be. You can fully focus on your creativity while I take care of the technicalities.
+                        </p>
+                        <p>
+                        You have a mediocre version of your creatively outstanding tune but you lost the project? Well, I can't guarantee a 100% recovery from that but I promise you: There is much more possible than you think. Give me your version, what sounds or stems you are able to recover and let me do the magic.
+                        </p>
+                    </div>
                 </section>
                 <section className="se-offers" onMouseEnter={handleMouseOverContainer} onMouseLeave={handleMouseOverContainer}>
                     <h2>OFFERS</h2>
@@ -141,14 +122,12 @@ export default function SoundEngineer() {
                                 </a>
                             </li>
                         </ul>
-                             
-
                         <p>
                              or via email at simonsch.tz@gmail.com
                         </p>
-                        <p>
+                        <h3 className="not-convinced">
                             Not convinced yet? Check out some of the references below!
-                        </p>
+                        </h3>
                     </div>
                 </section>
                 <section className="se-ref" onMouseEnter={handleMouseOverContainer} onMouseLeave={handleMouseOverContainer}>
@@ -167,6 +146,18 @@ export default function SoundEngineer() {
                             </ul>
                         </div>
                     </div>
+                </section>
+                <section className="se-bio" onMouseEnter={handleMouseOverContainer} onMouseLeave={handleMouseOverContainer}>
+                    <div className={`se-bio-text}`}>
+                    <h2>WHERE I COME FROM</h2>
+                        <p>
+                            I studied Music Technology at a Munich-based private school in cooperation with the University of West London. Apart from my academic career in film music and post production, room acoustics, streaming and the music industry itself, I had hands-on experience at the famous Dorian Gray Studios in Munich - involving  professional microphones, analogue outboard processing gear, a SSL console and a 2inch 24-track tape.
+                        </p>
+                        <p>
+                            Since I started working on own productions in 2016, I specialized in in-the-box workflows, sound design for musical purposes and mixing/mastering music made for clubs and Soundsystems. Due to my studies, I'm able to utilize knowledge from the conservative ideas of production while avoiding misconceptions based on superficial YouTube tutorials which too often don't emphasize the differences between the analogue and digital hemisphere enough. This gives me a huge advantage in my own productions but also allows me to help fellow producers to bring their creations to the next level. 
+                        </p>
+                    </div>
+
                 </section>
             </div>
         </DocumentTitle>

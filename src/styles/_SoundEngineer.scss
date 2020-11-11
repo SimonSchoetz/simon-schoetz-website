@@ -4,7 +4,6 @@
 
     * {
         list-style-type: none;
-        color: $main-bright;
         text-decoration: none;
     }
     section {
@@ -15,64 +14,54 @@
     //BANNER AND INTRO SECTION
     //////////////////////////
     .se-intro {
-        background-image: url(https://i.ibb.co/MPjdmNV/at-dorian-gray-studios.png);
-        background-size: cover;
-        background-position: center;
         display: flex;
         flex-direction: column;
         align-items: center;
-        border-radius: 9vw 0 9vw 0;
         padding: 1rem;
-
-        .se-intro-field {
-            position: relative;
-            background-color: $main-dark-075;
-            backdrop-filter: blur(3px);
-            padding: 2rem;
-            max-width: 600px;
-            margin: 1rem;
-            p {
-            padding: 1rem 0;
-            }
-            li {
-                margin: .5rem 0;
-            }
-        }
-
-        .se-intro-nav {
-            position: relative;
+        justify-content: center;
+        width: 100%;
+        background-color: $main-bright-050;
+        backdrop-filter: blur(3px);
+        padding: 2rem;
+        .intro-top {
             display: flex;
-            button {
-                border: 0;
-                height: 2rem;
-                width: 100%;
-                font-size: 1.5rem;
-                text-decoration: none;
-                padding-top: 2px;
-                &:nth-child(1) {
-                    text-align: start;
-                    padding-right: 2px;
-                }
-                &:nth-child(2) {
-                    text-align: end;
-                    padding-right: 2px;
-                }
-                .inactive:hover {cursor: pointer;}
+            margin-bottom: 4rem;
+            .img-container {
+                height: 100%;
+                height: 400px;
+                width: 50%;
+                border-radius: 2px;
+                .img-holder {
+                    background-image: url(https://i.ibb.co/MPjdmNV/at-dorian-gray-studios.png);
+                    background-size: cover;
+                    background-position: center;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 2px;
                     
+                }
             }
-            
-            
+            article {
+                width: 50%;
+                position: relative;
+                z-index: 2;
+                padding-left: 2rem;
+                width: 50%;
+                p {
+                    font-size: calc(1rem + 1vw);
+
+                }
+            }
         }
-        .se-bio-text {
-            position: absolute;
-            top: 2rem;
-            left: 0;
-            margin: 2rem;
+        .intro-bottom {
+            display: flex;
+            justify-content: space-around;
+            p {
+                width: calc(25%);
+                // font-size: calc(1rem + 1vw);
+            }
         }
-        .inactive-se-text{
-            transition: .25s;
-            opacity: 0;
-        }
+
     }
 
     //////////////////////////
@@ -86,31 +75,38 @@
         * {
             color: $main-dark;
         }
-        h2 {
-            margin-bottom: 1rem;
-        }
         h3 {
             padding-left: 1rem;
             border-bottom: 1px solid $main-dark-050;
+            &:not(:first-child) {
+                margin-top: 1.5rem;
+            }
         }
         p {
             padding: 1rem;
         }
-
+        .not-convinced {
+            margin: 3rem 0 2rem;
+            border: none;
+            text-align: center;
+        }
     }
+        
 
     .sm-container {
         padding: 0 1rem;
         li {
             text-decoration: underline;
             width: fit-content;
+            font-size: calc(1rem + .5vw);
             &:hover {
                 i, a {
                     color: $main-bright;
                 }
             }
             i {
-                width: 2rem;
+                width: 3rem;
+                font-size: calc(1.1rem + .5vw);
             }
         }
     }
@@ -132,18 +128,13 @@
             }
         }
     }
-
-    .inactive {
-        // border: solid 1px $main-dark;
-        box-shadow: inset 0 -1px 3px -2px $main-bright-050, inset 0 2px 2px 0 $main-dark-050;
-        // background-color: $main-dark-050;
-        transition: .12s;
-        color:$main-bright-050;
-        &:hover {
-            box-shadow: inset 0 -1px 2px 0 $main-dark-050, inset 0 1px 2px -1px $main-bright-050;
-            cursor: pointer;
-            background-color: $main-dark-050;
-            color:$main-bright;
+    .se-bio {
+        
+        padding: 1rem;
+        backdrop-filter: blur(3px);
+        background-color: $main-bright-050;
+        p {
+            padding: 1rem;
         }
     }
 
@@ -152,40 +143,8 @@
 @media only screen and (max-width: 596px) {
     .sound-engineer{
         .se-intro {
-
-            .se-intro-field {
-                padding: 1rem;
-                max-width: 600px;
-                margin: 1rem;
-                p {
-                padding: 1rem 0;
-                }
-                li {
-                    margin: .5rem 0;
-                }
-            }
             .se-bio-text {
                 margin: 1rem;
-            }
-            
-            .se-what-i-do-text {
-                font-size: 1.1rem;
-            }
-            .se-intro-nav {
-                position: relative;
-                display: flex;
-                justify-content: space-between;
-                button {
-                    &:nth-child(1) {
-                        width: fit-content;
-                        padding: 0 2px;
-                    }
-                    &:nth-child(2) {
-                        width: fit-content;
-                        padding: 0 2px;
-                    }
-                    .inactive:hover {cursor: pointer;}
-                }
             }
         }
 

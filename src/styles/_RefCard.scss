@@ -56,7 +56,6 @@
         transition: .25s;
         .content-container {
             background-color: $main-dark-075;
-            box-shadow: 0 5px 15px 5px $main-dark;
             width: 90%;
             height: 90%;
             transition: .75s cubic-bezier(.166,.85,.45,1);
@@ -73,7 +72,7 @@
                 width: 125%;
                 top: -12.5%;
                 left: -12.5%;
-                z-index: 3;
+                z-index: 3; //important or movement on images won't work
             }
         }
     }

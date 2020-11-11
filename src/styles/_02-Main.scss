@@ -17,11 +17,14 @@
       list-style-type: none;
   }
   h2 {
-      font-size: 2rem;
+      font-size: calc(2.5rem + 1vw);
       margin-bottom: .5rem;
   }
   h3 {
       letter-spacing: 2px;
+  }
+  p {
+      font-size: calc(1rem + .5vw);
   }
 
 .App {
@@ -55,7 +58,7 @@
       z-index: 3;
   }
   .landing, .error404, .producer, .sound-engineer, .web-dev {
-    padding: 0 .5rem;
+    // padding: 0 .5rem;
     display: flex;
     flex-direction: column;
     align-items: center;

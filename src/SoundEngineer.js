@@ -77,8 +77,8 @@ export default function SoundEngineer() {
                 <section className="se-intro">
                     <section className="se-intro-field" onMouseEnter={handleMouseOverContainer} onMouseLeave={handleMouseOverContainer}> 
                         <div className="se-intro-nav">
-                            <button title="What I Do" className={`${IDoActive ? "" : "inactive"}`} onClick={() => changeBioNav("IDo")} >WHAT I DO</button>
-                            <button title="Bio" className={`${bioActive ? "" : "inactive"}`} onClick={() => changeBioNav("bio")} >BIO</button>
+                            <button title="What I Do" className={`${IDoActive ? "" : "inactive"}`} onClick={() => changeBioNav("IDo")} onMouseEnter={handleMouseOverElement} onMouseLeave={handleMouseOverElement} >WHAT I DO</button>
+                            <button title="Bio" className={`${bioActive ? "" : "inactive"}`} onClick={() => changeBioNav("bio")} onMouseEnter={handleMouseOverElement} onMouseLeave={handleMouseOverElement} >BIO</button>
                         </div>
                         <div className={`se-what-i-do-text ${IDoActive ? "" : "inactive-se-text"}`}>
                             <p>

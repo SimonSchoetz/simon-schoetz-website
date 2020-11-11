@@ -14,6 +14,13 @@
             padding-left: 1rem;
             border-bottom: 1px solid $main-dark-050;
         }
+        a {
+            transition: .15s;
+            &:hover {
+                color: $main-bright;
+                transition: .15s;
+            }
+        }
     }
 
 
@@ -149,6 +156,11 @@
                     li {
                         list-style-type: none;
                         margin: .5rem 0;
+                        transition: .15s;
+                        a:hover {
+                            color: rgb(0, 183, 255);
+                            transition: .15s;
+                        }
                     }
                 }
 

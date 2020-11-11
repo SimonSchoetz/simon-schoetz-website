@@ -70,10 +70,6 @@ export default function Producer() {
         else setMouseOverElement(false)
     }
 
-    ////////////////////////////
-    // Component rendering
-    ////////////////////////////
-
     const renderDiscography = () => (
         discography.map(el => {
             return  <>

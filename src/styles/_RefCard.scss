@@ -73,9 +73,7 @@
                 width: 125%;
                 top: -12.5%;
                 left: -12.5%;
-            }
-            a {
-                box-shadow: inset 0 0 5px 5px black;
+                z-index: 3;
             }
         }
     }

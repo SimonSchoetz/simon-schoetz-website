@@ -97,7 +97,6 @@ h1 {
         &:hover {
             background-color: $main-dark-050;
             backdrop-filter: blur(3px);
-            cursor: context-menu;
         }
     }
 }
@@ -105,9 +104,6 @@ h1 {
 .home-link {
     text-decoration: none;
     background-size: cover;
-    &:not(.shrinked-nav) {
-        cursor: context-menu;
-    }
     
     span {
         position: relative;
@@ -144,7 +140,6 @@ h1 {
             &:hover {
                 background-color: $main-dark-050;
                 backdrop-filter: blur(3px);
-                cursor: context-menu;
             }
         }
     }

@@ -58,6 +58,7 @@ function App() {
       setX(e.pageX);
       setY(e.pageY);
     } 
+    console.log(mouseOverElement)
   return (
 
     <Context.Provider value={{
@@ -89,7 +90,17 @@ function App() {
             <header>
               <nav>
                 <h1>
-                  <NavLink title="Home" aria-label="home" alt="home" activeClassName="active-nav" className={`home-link ${shrink}`} exact={true} to="/"> 
+                  <NavLink 
+                    to="/"
+                    title="Home" 
+                    aria-label="home" 
+                    activeClassName="active-nav" 
+                    className={`home-link ${shrink}`} 
+                    alt="home" 
+                    exact={true} 
+                    onMouseEnter={()=> setMouseOverElement(true)} 
+                    onMouseLeave={()=> setMouseOverElement(false)}
+                  > 
                     <span className="simon-s">S</span>
                     <span className="simon-i">i</span>
                     <span className="simon-m">m</span>
@@ -108,17 +119,48 @@ function App() {
                   </p>
                 </div>
                 <div className={`main-nav ${currentLocation !== "/" ? "shrinked-main-nav" : ""}`} onMouseOver={()=> mouseOver()}>
-                  <NavLink title="Busted Fingerz" aria-label="producer, bustedfingerz" onMouseEnter={()=> setHoverBF(true)} onMouseLeave={()=> setHoverBF(false)} activeClassName="active-nav" className={`nav-link ${shrink} `} to="/bustedfingerz">
+                  <NavLink 
+                    to="/bustedfingerz"
+                    title="Busted Fingerz" 
+                    aria-label="producer, bustedfingerz" 
+                    activeClassName="active-nav" 
+                    className={`nav-link ${shrink} `} 
+                    onMouseEnter={()=> {
+                      setHoverBF(true);
+                      setMouseOverElement(true)
+                    }} 
+                    onMouseLeave={()=> {
+                      setHoverBF(false);
+                      setMouseOverElement(false)
+                    }}
+                  >
                     { currentLocation === "/bustedfingerz" ? "BUSTED FINGERZ" : "Music Producer" }
                     { hoverBF && currentLocation === "/" ? <IconProducer /> : null }
                   </NavLink>
 
-                  <NavLink title="Sound Engineer" aria-label="sound engineer" ref={refSoundEngineer} activeClassName="active-nav" className={`nav-link ${shrink} ${currentLocation === "/webdev" ? "right-nav" : ""}`} to="/soundengineer">
+                  <NavLink
+                    to="/soundengineer"
+                    title="Sound Engineer" 
+                    aria-label="sound engineer" 
+                    ref={refSoundEngineer} 
+                    activeClassName="active-nav" 
+                    className={`nav-link ${shrink} ${currentLocation === "/webdev" ? "right-nav" : ""}`}
+                    onMouseEnter={()=> setMouseOverElement(true)} 
+                    onMouseLeave={()=> setMouseOverElement(false)}
+                  >
                     { currentLocation === "/soundengineer" ? "SOUND ENGINEER" : "Sound Engineer" }
                     { currentLocation === "/" ? <IconSE navWidth={navWidth}/> : null }
                   </NavLink>
 
-                  <NavLink title="Web Developer" aria-label="web developer" activeClassName="active-nav" className={`nav-link ${shrink} `} to="/webdev">
+                  <NavLink
+                    to="/webdev"
+                    title="Web Developer" 
+                    aria-label="web developer" 
+                    activeClassName="active-nav" 
+                    className={`nav-link ${shrink} `} 
+                    onMouseEnter={()=> setMouseOverElement(true)} 
+                    onMouseLeave={()=> setMouseOverElement(false)}
+                  >
                     { currentLocation === "/webdev" ? "WEB DEVELOPER" : "Web Developer" }
                     { currentLocation === "/" ? <IconWebDev /> : null }
                   </NavLink>

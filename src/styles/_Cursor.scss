@@ -11,7 +11,7 @@
     overflow: hidden;
     pointer-events: none;
     mix-blend-mode: exclusion;
-    .curser-el-1 {
+    .cursor-el-1 {
         position: relative;
         border-radius: 100%;
         width: 100px;
@@ -22,21 +22,21 @@
             width: 50px;
             height: 50px;
             transition: width .15s, height .15s;
+                }
+        &.over-element {
+            width: 25px;
+            height: 25px;
+            background-color: rgb(255, 255, 255);
+            transition: width .15s, height .15s, background-color 1s;
+            mix-blend-mode: hue;
+
         }
     }
-    .over-element {
-        width: 25px;
-        height: 25px;
-        background-color: rgb(255, 255, 255);
-        transition: width .15s, height .15s, background-color 1s;
-        mix-blend-mode: hue;
-
-    }
 }
-.hide-curser {
+.hide-cursor {
     transition: 1s;
     background-color: rgba(0, 0, 0, 0);
 }
-.show-curser {
+.show-cursor {
     background-color: rgb(0, 183, 255);
 }

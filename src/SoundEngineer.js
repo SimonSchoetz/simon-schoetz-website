@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState, Fragment} from 'react';
+import React, {useContext, useEffect, useState } from 'react';
 import DocumentTitle from 'react-document-title';
 import { useLocation } from "react-router-dom";
 import { Context } from './Context';

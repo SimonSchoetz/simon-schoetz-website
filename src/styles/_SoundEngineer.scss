@@ -57,8 +57,12 @@
             display: flex;
             justify-content: space-around;
             p {
-                width: calc(25%);
-                // font-size: calc(1rem + 1vw);
+                background-color: $main-dark-075;
+                color: $main-bright;
+                width: calc(30%);
+                border-radius: 4px;
+                padding: 1vw;
+                height: fit-content;
             }
         }
 
@@ -140,22 +144,110 @@
 
 }
 
-@media only screen and (max-width: 596px) {
-    .sound-engineer{
-        .se-intro {
-            .se-bio-text {
-                margin: 1rem;
-            }
-        }
 
-        .ref-card-container {
-            .ref-card {
-                width: 70vw;
-                height: 70vw;
-                max-width: 500px;
-                max-height: 500px;
+@media only screen and (max-width: 768px) {
+    .sound-engineer {
+        //////////////////////////
+        //BANNER AND INTRO SECTION
+        //////////////////////////
+        .se-intro {
+            .intro-top {
+                flex-direction: column;
+                .img-container {
+                    width: 100%;
+                    height: 150px;
+                    margin-bottom: 2rem;
+                }
+                article {
+                    width: 100%;
+                    padding: 0;
+                }
+            }
+            .intro-bottom {
+                flex-flow: wrap;
+                justify-content: space-between;
+                p {
+                    &:not(:last-child) {
+                        width: 45%;
+                        margin-bottom: 2rem;
+                    }
+                    &:last-child {
+                    width: 100%;
+
+                    }
+                }
+            }
+    
+        }
+    
+        //////////////////////////
+        //    OFFERS SECTION
+        //////////////////////////
+    
+        .se-offers, .se-ref {
+            h3 {
+                &:not(:first-child) {
+                }
+            }
+            p {
+            }
+            .not-convinced {
             }
         }
-        
-    }   
+            
+    
+        .sm-container {
+            li {
+                &:hover {
+                    i, a {
+                    }
+                }
+                i {
+                }
+            }
+        }
+        .se-bio {
+        }
+    
+    }
+}
+
+@media only screen and (max-width: 596px) {
+    .sound-engineer {
+        //////////////////////////
+        //BANNER AND INTRO SECTION
+        //////////////////////////
+        .se-intro {
+            padding: 1rem 8px;
+            .intro-top {
+                .img-container {
+                }
+                article {
+                    width: 100%;
+                    padding: 0;
+                }
+            }
+            .intro-bottom {
+                flex-flow: wrap;
+                justify-content: space-between;
+                p {
+                    padding: 8px;
+                    &:not(:last-child) {
+                        width: 100%;
+                    }
+                }
+            }
+    
+        }
+        //////////////////////////
+        //    OFFERS SECTION
+        //////////////////////////
+    
+        .se-offers, .se-ref {
+            padding: 1rem 8px;
+        }
+        .se-bio {
+            padding: 1rem 8px;
+        }
+    }
 }

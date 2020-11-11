@@ -58,7 +58,6 @@ function App() {
       setX(e.pageX);
       setY(e.pageY);
     } 
-    console.log(mouseOverElement)
   return (
 
     <Context.Provider value={{

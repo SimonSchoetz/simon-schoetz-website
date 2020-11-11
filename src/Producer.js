@@ -69,11 +69,18 @@ export default function Producer() {
         if (input.type === "mouseenter") {setMouseOverElement(true)}
         else setMouseOverElement(false)
     }
+    const handleCoordinates = (input) => {
+        const rect = input.target.getBoundingClientRect();
+        const offsetX = input.clientX - rect.left;
+        const offsetY  = input.clientY - rect.top;
+        console.log(offsetX, offsetY)
+
+    }
 
     const renderDiscography = () => (
         discography.map(el => {
             return  <>
-                <li title={`${el.name}`} key={el.id} className="ref-card">
+                <li title={`${el.name}`} key={el.id} className="ref-card" onMouseMove={handleCoordinates} onMouseLeave={handleCoordinates}>
                     <div className="content-container">
                         <a target="_blank" rel="noopener noreferrer" href={el.link} onMouseEnter={handleMouseOverElement} onMouseLeave={handleMouseOverElement}>
                             <div className="blur-layer" />

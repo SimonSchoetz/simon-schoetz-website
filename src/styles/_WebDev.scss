@@ -111,13 +111,25 @@
             .contact {
                 .contact-list {
                     padding: 1rem;
+                    li {
+                        a:hover {
+                            color: rgb(0, 183, 255);
+                            transition: .15s;
+                        }
+                        &:not(:last-child) {
+                        margin-bottom: .5rem;
+                    }
 
-                    li:not(:last-child) {
-                        margin-bottom: .25rem;
                     }
                 }
             }
     }
+    // font-size: calc(1rem + .5vw);
+    // list-style-type: none;
+    // margin: .5rem 0;
+    // transition: .15s;
+    // a:hover {
+    // }
 
 
     .web-dev-ref {
@@ -154,6 +166,7 @@
                 ul {
                     padding: 1rem;
                     li {
+                        font-size: calc(1rem + .5vw);
                         list-style-type: none;
                         margin: .5rem 0;
                         transition: .15s;
@@ -226,8 +239,19 @@
                         padding: .5rem;
                     }
                 }
-
             }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 596px) {
+    .web-dev {
+        .web-dev-intro {
+            padding: 1rem 8px ;
+        }
+        .web-dev-ref {
+            padding: 1rem 8px ;
         }
     }
 }

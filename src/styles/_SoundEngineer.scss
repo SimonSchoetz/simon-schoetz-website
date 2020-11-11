@@ -105,7 +105,7 @@
             font-size: calc(1rem + .5vw);
             &:hover {
                 i, a {
-                    color: $main-bright;
+                    color: rgb(0, 183, 255)
                 }
             }
             i {
@@ -141,7 +141,6 @@
             padding: 1rem;
         }
     }
-
 }
 
 
@@ -173,42 +172,10 @@
                     }
                     &:last-child {
                     width: 100%;
-
                     }
                 }
             }
-    
         }
-    
-        //////////////////////////
-        //    OFFERS SECTION
-        //////////////////////////
-    
-        .se-offers, .se-ref {
-            h3 {
-                &:not(:first-child) {
-                }
-            }
-            p {
-            }
-            .not-convinced {
-            }
-        }
-            
-    
-        .sm-container {
-            li {
-                &:hover {
-                    i, a {
-                    }
-                }
-                i {
-                }
-            }
-        }
-        .se-bio {
-        }
-    
     }
 }
 
@@ -220,8 +187,6 @@
         .se-intro {
             padding: 1rem 8px;
             .intro-top {
-                .img-container {
-                }
                 article {
                     width: 100%;
                     padding: 0;

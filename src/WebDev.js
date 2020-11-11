@@ -90,9 +90,7 @@ export default function WebDev() {
                             <ul>
                                 {renderSkillSet()}
                             </ul>
-
                         </div>
-                        
                     </div>
                     <div class="contact">
                         <h3>CONTACT</h3>

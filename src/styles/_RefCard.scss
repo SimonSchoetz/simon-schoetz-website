@@ -73,8 +73,6 @@
                 width: 125%;
                 top: -12.5%;
                 left: -12.5%;
-                z-index: 3;
-                transition: z-index .25s linear .25s; //z-index has to be transitioned to make animation work and to be able to log the position in js because otherwise it would target the div
             }
             a {
                 box-shadow: inset 0 0 5px 5px black;

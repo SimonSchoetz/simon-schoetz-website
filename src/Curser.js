@@ -7,11 +7,12 @@ export default function Curser({x, y, showMouse, overContainer}) {
     }
 
     const mouseOnWindow = showMouse ? "show-curser" : "hide-curser";
+    const mouseOverContainer = overContainer ? "over-container" : ""
 
 
     return (
-        <div className={`cursor-component ${mouseOnWindow}`} style={coordinations}>
-            
+        <div className={`cursor-component`} style={coordinations}>
+            <div className={`curser-el-1 ${mouseOnWindow} ${mouseOverContainer}`}></div>
         </div>
     )
 }

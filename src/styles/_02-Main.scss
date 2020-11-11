@@ -28,7 +28,9 @@
     display: flex;
     justify-content: center;
     width: 100%;
+    * {cursor: none;}
 }
+
 .noise-overlay {
     position: absolute;
     top: 0;

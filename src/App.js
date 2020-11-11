@@ -33,7 +33,7 @@ function App() {
 
     const [navWidth, setNavWidth] = useState(0);
     const [hoverBF ,setHoverBF] = useState(false);
-    const [mouseOnWindow, setMouseOnWindow] = useState(false);
+    const [mouseOnWindow, setMouseOnWindow] = useState(true);
     const [mouseOverContainer, setMouseOverContainer] = useState(true)
 
     useEffect(() => {
@@ -57,7 +57,6 @@ function App() {
       setX(e.pageX);
       setY(e.pageY);
     } 
-    console.log(mouseOverContainer)
   return (
 
     <Context.Provider value={{

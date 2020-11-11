@@ -29,7 +29,7 @@ export default function ProducerCards({el, i}) {
     }
     return (
         <Fragment key={i}>
-            <li title={`${el.name}`} key={el.id} className="ref-card" onMouseMove={handleCoordinates} onMouseLeave={handleCoordinates}>
+            <li title={`${el.name}`} className="ref-card" onMouseMove={handleCoordinates} onMouseLeave={handleCoordinates}>
                 <div className="content-container">
                     <a target="_blank" rel="noopener noreferrer" href={el.link} onMouseEnter={handleMouseOverElement} onMouseLeave={handleMouseOverElement}>
                         <div className="blur-layer" />

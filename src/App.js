@@ -35,6 +35,7 @@ function App() {
     const [hoverBF ,setHoverBF] = useState(false);
     const [mouseOnWindow, setMouseOnWindow] = useState(true);
     const [mouseOverContainer, setMouseOverContainer] = useState(true)
+    const [mouseOverElement, setMouseOverElement] = useState(false)
 
     useEffect(() => {
       setNavWidth(refSoundEngineer.current.clientWidth)
@@ -61,7 +62,8 @@ function App() {
 
     <Context.Provider value={{
       currentLocation, setCurrentLocation,
-      mouseOverContainer, setMouseOverContainer
+      mouseOverContainer, setMouseOverContainer,
+      mouseOverElement, setMouseOverElement
     }}>
 
       <HashRouter> 
@@ -69,7 +71,11 @@ function App() {
         <div className={`App`} onMouseMove={handleMove} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseEnter}>
 
           <BrowserView>
-            <Curser x={x} y={y} showMouse={mouseOnWindow} overContainer={mouseOverContainer}/>
+            <Curser x={x} y={y} 
+            showMouse={mouseOnWindow} 
+            overContainer={mouseOverContainer}
+            overElement={mouseOverElement}  
+            />
           </BrowserView>
           
           <div className="noise">

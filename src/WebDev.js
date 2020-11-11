@@ -5,7 +5,11 @@ import { Context } from './Context';
 import Mailto from 'react-protected-mailto'
 
 export default function WebDev() {
-    const {setCurrentLocation, setMouseOverContainer} = useContext(Context)
+    const {
+        setCurrentLocation, 
+        setMouseOverContainer, 
+        setMouseOverElement
+    } = useContext(Context)
     const locations = useLocation();
 
     useEffect(() => {
@@ -26,7 +30,21 @@ export default function WebDev() {
         // {id: 10, name: "Three.js", img: "threejs-logo.png"},
         {id: 11, name: "Vue.js", img: "vuejs-logo.png"},
     ]
-
+    ////////////////////////////
+    // Event handling functions
+    ////////////////////////////
+    const handleMouseOverContainer = (input) => {
+        if (input.type === "mouseenter") {setMouseOverContainer(true)}
+        else setMouseOverContainer(false)
+    }
+    const handleMouseOverElement = (input) => {
+        if (input.type === "mouseenter") {setMouseOverElement(true)}
+        else setMouseOverElement(false)
+    }
+    
+    ////////////////////////////
+    // Component rendering
+    ////////////////////////////
     const renderSkillSet = () => (
         skillSet.map(el => {
             const imgSrc = `${process.env.PUBLIC_URL}/assets/images/${el.img}`;
@@ -40,16 +58,10 @@ export default function WebDev() {
             </Fragment>
         })
     )
-    const handleMouseEnter = (input) => {
-        if (input.type === "mouseenter") {setMouseOverContainer(true)}
-        else setMouseOverContainer(false)
-
-    }
-    
     return (
         <DocumentTitle title ="Web Developer">
             <div className="web-dev">
-                <section className="web-dev-intro" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseEnter}>
+                <section className="web-dev-intro" onMouseEnter={handleMouseOverContainer} onMouseLeave={handleMouseOverContainer}>
                     <h2>PROFILE</h2>
                     <h3>PROFESSIONAL EXPERIENCE</h3>
                     <div className="content-container" >
@@ -86,15 +98,15 @@ export default function WebDev() {
                         <h3>CONTACT</h3>
                         <ul className="contact-list">
                             <li>
-                                Email: <Mailto email="simonsch.tz@gmail.com"/>
+                                Email: <Mailto email="simonsch.tz@gmail.com" onMouseEnter={handleMouseOverElement} onMouseLeave={handleMouseOverElement}/>
                             </li>
                             <li>
-                                linkedIn: <a href="https://www.linkedin.com/in/simon-sch%C3%B6tz-454010166/" >linkedin.com/in/simon-sch%C3%B6tz-454010166/</a>
+                                linkedIn: <a href="https://www.linkedin.com/in/simon-sch%C3%B6tz-454010166/" onMouseEnter={handleMouseOverElement} onMouseLeave={handleMouseOverElement}>Simon Schötz</a>
                             </li>
                         </ul>
                     </div>
                 </section>
-                <section className="web-dev-ref" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseEnter}>
+                <section className="web-dev-ref" onMouseEnter={handleMouseOverContainer} onMouseLeave={handleMouseOverContainer}>
                     <h2>REFERENCES</h2>
                     <div>
                         <h3>etikett~radio</h3>
@@ -107,17 +119,17 @@ export default function WebDev() {
                                 <h3>LINKS</h3>
                                 <ul>
                                     <li>
-                                        <a target="_blank" rel="noopener noreferrer" href={`https://etikett-radio.com/`}>www.etikett-radio.com</a>
+                                        <a target="_blank" rel="noopener noreferrer" href={`https://etikett-radio.com/`} onMouseEnter={handleMouseOverElement} onMouseLeave={handleMouseOverElement}>www.etikett-radio.com</a>
                                     </li>
                                     <li>
-                                        <a target="_blank" rel="noopener noreferrer" href={`https://github.com/SimonSchoetz/etikett-radio`}>GitHub Repo</a>
+                                        <a target="_blank" rel="noopener noreferrer" href={`https://github.com/SimonSchoetz/etikett-radio`} onMouseEnter={handleMouseOverElement} onMouseLeave={handleMouseOverElement}>GitHub Repo</a>
                                     </li>
                                 </ul>
                                 <h3>MAIN TECHNOLOGIES</h3>
                                 <ul>
-                                <li>Frontend: React.js, SASS</li>
-                                <li>Backend: MongoDB, Mongoose, Express.js, JWT</li>
-                                <li>Other: Sockit.io, Three.js</li>
+                                    <li>Frontend: React.js, SASS</li>
+                                    <li>Backend: MongoDB, Mongoose, Express.js, JWT</li>
+                                    <li>Other: Sockit.io, Three.js</li>
                                 </ul>
                             </div>
                         </div>
@@ -133,10 +145,10 @@ export default function WebDev() {
                                 <h3>LINKS</h3>
                                 <ul>
                                     <li>
-                                        <a target="_blank" rel="noopener noreferrer" href={`https://vuejs-merch-store.netlify.app/`}>Deployed on Netlify</a>
+                                        <a target="_blank" rel="noopener noreferrer" href={`https://vuejs-merch-store.netlify.app/`} onMouseEnter={handleMouseOverElement} onMouseLeave={handleMouseOverElement}>Deployed on Netlify</a>
                                     </li>
                                     <li>
-                                        <a target="_blank" rel="noopener noreferrer" href={`https://github.com/SimonSchoetz/vuejs-merch-store`}>GitHub Repo</a>
+                                        <a target="_blank" rel="noopener noreferrer" href={`https://github.com/SimonSchoetz/vuejs-merch-store`} onMouseEnter={handleMouseOverElement} onMouseLeave={handleMouseOverElement}>GitHub Repo</a>
                                     </li>
                                 </ul>
                                 <h3>MAIN TECHNOLOGIES</h3>

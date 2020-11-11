@@ -5,7 +5,11 @@ import { Context } from './Context';
 
 export default function Producer() {
 
-    const {setCurrentLocation, setMouseOverContainer} = useContext(Context)
+    const {
+        setCurrentLocation, 
+        setMouseOverContainer, 
+        setMouseOverElement
+    } = useContext(Context)
     const locations = useLocation();
     useEffect(() => {
         setCurrentLocation(locations.pathname)
@@ -52,13 +56,30 @@ export default function Producer() {
         {id: 39, name: "Busted Fingerz - 9to17", release: "Mosaic EP", label: "", free: true, artwork:"https://f4.bcbits.com/img/a2696905218_10.jpg", link: "https://bustedfingerz.bandcamp.com/album/mosaic-ep", date: "27 October 2020"},
         {id: 40, name: "Busted Fingerz & The Widdler - Copycats", release: "Mosaic EP", label: "", free: true, artwork:"https://f4.bcbits.com/img/a2696905218_10.jpg", link: "https://bustedfingerz.bandcamp.com/album/mosaic-ep", date: "27 October 2020"},
         
-    ].sort((entryA, entryB) => new Date(entryB.date) - new Date(entryA.date));;
+    ].sort((entryA, entryB) => new Date(entryB.date) - new Date(entryA.date));
+
+    ////////////////////////////
+    // Event handling functions
+    ////////////////////////////
+    const handleMouseOverContainer = (input) => {
+        if (input.type === "mouseenter") {setMouseOverContainer(true)}
+        else setMouseOverContainer(false)
+    }
+    const handleMouseOverElement = (input) => {
+        if (input.type === "mouseenter") {setMouseOverElement(true)}
+        else setMouseOverElement(false)
+    }
+
+    ////////////////////////////
+    // Component rendering
+    ////////////////////////////
+
     const renderDiscography = () => (
         discography.map(el => {
             return  <>
                 <li title={`${el.name}`} key={el.id} className="ref-card">
                     <div className="content-container">
-                        <a target="_blank" rel="noopener noreferrer" href={el.link}>
+                        <a target="_blank" rel="noopener noreferrer" href={el.link} onMouseEnter={handleMouseOverElement} onMouseLeave={handleMouseOverElement}>
                             <div className="blur-layer" />
                             <img alt={`Cover Artwork of ${el.release} by ${el.name}`} src={el.artwork === "" ? "https://i1.sndcdn.com/avatars-000456674544-werm3v-t500x500.jpg" : el.artwork} />
                             <div>{el.name}</div>
@@ -69,22 +90,17 @@ export default function Producer() {
                 </li>
             </>
         }))
- 
-    const handleMouseEnter = (input) => {
-        if (input.type === "mouseenter") {setMouseOverContainer(true)}
-        else setMouseOverContainer(false)
 
-    }
     return (
         <DocumentTitle title ="Busted Fingerz">
             <div className="producer">
-                <section className="banner-bio" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseEnter}>
+                <section className="banner-bio" onMouseEnter={handleMouseOverContainer} onMouseLeave={handleMouseOverContainer}>
                     <article>
                         <h2>BIO</h2>
                         <p>With a remarkably quick start, Busted Fingerz was discovered and supported by dubstep legend The Widdler only a couple months after his first few steps in music production in 2016. Shortly after, he was signed by Version Collective. While having grown up in the rural south of Germany, he is now an inherent part of the Berlin scene since mid 2018, where he also founded the producer duo Off White. His carefully crafted sounds and powerful mixes state an innovative and creative mind and with his latest release on the iconic Artikal label, he proves once more to be a bass music heavy weight.</p>
                     </article>
                 </section>
-                <section className="discography" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseEnter}>
+                <section className="discography" onMouseEnter={handleMouseOverContainer} onMouseLeave={handleMouseOverContainer}>
                     <h2>DISCOGRAPHY</h2>
                     <ul className="discography-container">
                         {renderDiscography()}

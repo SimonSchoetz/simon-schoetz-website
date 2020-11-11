@@ -2,6 +2,7 @@ import React, {useContext, useEffect, useState, Fragment} from 'react';
 import DocumentTitle from 'react-document-title';
 import { useLocation } from "react-router-dom";
 import { Context } from './Context';
+import SoundEngineerCards from './SoundEngineerCards';
 
 
 export default function SoundEngineer() {
@@ -62,22 +63,12 @@ export default function SoundEngineer() {
     ////////////////////////////
     // Component rendering
     ////////////////////////////
-    const renderRefs = array => (
-        array.map(ref => {
+    const renderRefs = array => array.map((el, i) => {
 
-            return  <Fragment key={ref.id}>
-                        <li title={`${ref.artist} - ${ref.release}`} className="ref-card">
-                            <div className="content-container"> 
-                                <a target="_blank" rel="noopener noreferrer" href={ref.link} onMouseEnter={handleMouseOverElement} onMouseLeave={handleMouseOverElement}>
-                                    <div className="blur-layer" />
-                                    <img alt={`Cover Artwork of ${ref.release} by ${ref.name}`} src={ref.artwork} />
-                                    <div>{ref.artist}</div>
-                                    <div>{ref.release}</div>
-                                </a>
-                             </div>
-                        </li>
-                    </Fragment>
-        }))
+            return  (
+                <SoundEngineerCards el={el} i={i} />
+            )
+        })
     
     
     return (

@@ -1,7 +1,7 @@
 import React, { useState, useContext, Fragment } from 'react';
 import { Context } from './Context';
 
-export default function ProducerCards({el, i}) {    
+export default function SoundEngineerCards({el, i}) {    
     const {setMouseOverElement} = useContext(Context)
 
     const [imgOffset, setImgOffset] = useState({top: 0, left: 0})
@@ -29,14 +29,13 @@ export default function ProducerCards({el, i}) {
     }
     return (
         <Fragment key={i}>
-            <li title={`${el.name}`} key={el.id} className="ref-card" onMouseMove={handleCoordinates} onMouseLeave={handleCoordinates}>
-                <div className="content-container">
+            <li title={`${el.artist} - ${el.release}`} className="ref-card" onMouseMove={handleCoordinates} onMouseLeave={handleCoordinates}>
+                <div className="content-container"> 
                     <a target="_blank" rel="noopener noreferrer" href={el.link} onMouseEnter={handleMouseOverElement} onMouseLeave={handleMouseOverElement}>
                         <div className="blur-layer" />
-                        <img style={imgOffset} alt={`Cover Artwork of ${el.release} by ${el.name}`} src={el.artwork === "" ? "https://i1.sndcdn.com/avatars-000456674544-werm3v-t500x500.jpg" : el.artwork} />
-                        <div>{el.name}</div>
-                        <div>{el.release === "" ? "Single" : el.release}</div>
-                        <div>{el.label === "" ? "Self Release" : el.label}</div>
+                        <img style={imgOffset} alt={`Cover Artwork of ${el.release} by ${el.name}`} src={el.artwork} />
+                        <div>{el.artist}</div>
+                        <div>{el.release}</div>
                     </a>
                 </div>
             </li>

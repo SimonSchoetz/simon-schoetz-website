@@ -3,15 +3,16 @@
     width: 100px;
     height: 100px;
     border-radius: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    z-index: 50;
     overflow: hidden;
     pointer-events: none;
+    
 }
 .hide-curser {
     transition: 1s;
     background-color: rgba(0, 0, 0, 0);
 }
 .show-curser {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgb(0, 183, 255);
+    mix-blend-mode: exclusion;
 }

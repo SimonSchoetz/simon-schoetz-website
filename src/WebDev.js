@@ -5,7 +5,7 @@ import { Context } from './Context';
 import Mailto from 'react-protected-mailto'
 
 export default function WebDev() {
-    const {setCurrentLocation} = useContext(Context)
+    const {setCurrentLocation, setMouseOverContainer} = useContext(Context)
     const locations = useLocation();
 
     useEffect(() => {
@@ -38,13 +38,18 @@ export default function WebDev() {
                     <div className="level-container"> {el.name} </div>
                 </li>
             </Fragment>
+        })
+    )
+    const handleMouseEnter = (input) => {
+        if (input.type === "mouseenter") {setMouseOverContainer(true)}
+        else setMouseOverContainer(false)
 
-        }))
+    }
     
     return (
         <DocumentTitle title ="Web Developer">
             <div className="web-dev">
-                <section className="web-dev-intro">
+                <section className="web-dev-intro" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseEnter}>
                     <h2>PROFILE</h2>
                     <h3>PROFESSIONAL EXPERIENCE</h3>
                     <div className="content-container" >
@@ -89,7 +94,7 @@ export default function WebDev() {
                         </ul>
                     </div>
                 </section>
-                <section className="web-dev-ref">
+                <section className="web-dev-ref" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseEnter}>
                     <h2>REFERENCES</h2>
                     <div>
                         <h3>etikett~radio</h3>

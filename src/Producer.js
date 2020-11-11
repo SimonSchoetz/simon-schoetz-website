@@ -5,7 +5,7 @@ import { Context } from './Context';
 
 export default function Producer() {
 
-    const {setCurrentLocation} = useContext(Context)
+    const {setCurrentLocation, setMouseOverContainer} = useContext(Context)
     const locations = useLocation();
     useEffect(() => {
         setCurrentLocation(locations.pathname)
@@ -70,17 +70,21 @@ export default function Producer() {
             </>
         }))
  
+    const handleMouseEnter = (input) => {
+        if (input.type === "mouseenter") {setMouseOverContainer(true)}
+        else setMouseOverContainer(false)
 
+    }
     return (
         <DocumentTitle title ="Busted Fingerz">
             <div className="producer">
-                <section className="banner-bio">
+                <section className="banner-bio" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseEnter}>
                     <article>
                         <h2>BIO</h2>
                         <p>With a remarkably quick start, Busted Fingerz was discovered and supported by dubstep legend The Widdler only a couple months after his first few steps in music production in 2016. Shortly after, he was signed by Version Collective. While having grown up in the rural south of Germany, he is now an inherent part of the Berlin scene since mid 2018, where he also founded the producer duo Off White. His carefully crafted sounds and powerful mixes state an innovative and creative mind and with his latest release on the iconic Artikal label, he proves once more to be a bass music heavy weight.</p>
                     </article>
                 </section>
-                <section className="discography">
+                <section className="discography" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseEnter}>
                     <h2>DISCOGRAPHY</h2>
                     <ul className="discography-container">
                         {renderDiscography()}

@@ -5,7 +5,7 @@ import { Context } from './Context';
 
 
 export default function SoundEngineer() {
-    const {setCurrentLocation} = useContext(Context);
+    const {setCurrentLocation, setMouseOverContainer} = useContext(Context);
     const locations = useLocation();
     useEffect(() => {
         setCurrentLocation(locations.pathname)
@@ -26,6 +26,12 @@ export default function SoundEngineer() {
             setIDoActive(true);
         };
     };
+
+    const handleMouseEnter = (input) => {
+        if (input.type === "mouseenter") {setMouseOverContainer(true)}
+        else setMouseOverContainer(false)
+
+    }
 
     const mixingRefs = [
         {id: 0, job: "mixing", artist:"MediCated ft. Fikir Amlak/Rider Shafique", release:"Worse Than Obeah/Jah Bless Me", artwork:"https://i1.sndcdn.com/artworks-000541356045-frrj4q-t500x500.jpg", link:"https://soundcloud.com/medicated830/ft-fikir-amlak-rider-shafique-worser-than-obeahfikir-amlak-jah-bless-merider-shafique"},
@@ -65,7 +71,7 @@ export default function SoundEngineer() {
         <DocumentTitle title ="Sound Engineer">
             <div className="sound-engineer">
                 <section className="se-intro">
-                    <section className="se-intro-field"> 
+                    <section className="se-intro-field" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseEnter}> 
                         <div className="se-intro-nav">
                             <button title="What I Do" className={`${IDoActive ? "" : "inactive"}`} onClick={() => changeBioNav("IDo")} >WHAT I DO</button>
                             <button title="Bio" className={`${bioActive ? "" : "inactive"}`} onClick={() => changeBioNav("bio")} >BIO</button>
@@ -96,7 +102,7 @@ export default function SoundEngineer() {
                         </div>
                     </section>
                 </section>
-                <section className="se-offers">
+                <section className="se-offers" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseEnter}>
                     <h2>OFFERS</h2>
                     <div>
                         <h3>MASTERING</h3>
@@ -141,7 +147,7 @@ export default function SoundEngineer() {
                         </p>
                     </div>
                 </section>
-                <section className="se-ref">
+                <section className="se-ref" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseEnter}>
                     <h2>REFERENCES</h2>
                     <div className="se-ref-container">
                         <div className="ref-master-container">

@@ -104,6 +104,7 @@ h1 {
 
 .home-link {
     text-decoration: none;
+    background-size: cover;
     &:not(.shrinked-nav) {
         cursor: context-menu;
     }
@@ -111,6 +112,7 @@ h1 {
     span {
         position: relative;
         font-family: $fat;
+        z-index: 100;
     }
 }
 .home-link.shrinked-nav:focus {

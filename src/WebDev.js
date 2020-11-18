@@ -117,7 +117,7 @@ export default function WebDev() {
                                 <h3>LINKS</h3>
                                 <ul>
                                     <li>
-                                        <a target="_blank" rel="noopener noreferrer" href={`https://etikett-radio.com/`} onMouseEnter={handleMouseOverElement} onMouseLeave={handleMouseOverElement}>www.etikett-radio.com</a>
+                                        <a target="_blank" rel="noopener noreferrer" href={`https://www.etikett-radio.com/`} onMouseEnter={handleMouseOverElement} onMouseLeave={handleMouseOverElement}>www.etikett-radio.com</a>
                                     </li>
                                     <li>
                                         <a target="_blank" rel="noopener noreferrer" href={`https://github.com/SimonSchoetz/etikett-radio`} onMouseEnter={handleMouseOverElement} onMouseLeave={handleMouseOverElement}>GitHub Repo</a>

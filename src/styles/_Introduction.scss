@@ -1,6 +1,6 @@
 .introduction-on, .introduction-off {
     position: relative;
-    font-size: 2rem;
+    font-size: calc(2rem + .15vw);
     margin: 3rem .5rem;
     transition: .5s;
     height: 130px;

@@ -112,8 +112,8 @@ function App() {
                     <span className="schoetz-z">z</span>
                   </NavLink>
                 </h1> 
-                <div className={`${currentLocation === "/" ? "introduction-on" : "introduction-off"}`}>
-                  <p>
+                <div>
+                  <p className={`${currentLocation === "/" ? "introduction-on" : "introduction-off"}`}>
                   Hello and welcome to my website. I'm a bass music producer and dj, a sound engineer, and a web developer based in Berlin, Germany. Please click on one of the cards below to read more. 
                   </p>
                 </div>

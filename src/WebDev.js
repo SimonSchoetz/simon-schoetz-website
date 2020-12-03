@@ -4,6 +4,7 @@ import { useLocation  } from "react-router-dom";
 import { Context } from './Context';
 import Mailto from 'react-protected-mailto'
 import SkillSet from './components/SkillSet';
+import PortFolio from './components/PortFolio';
 
 export default function WebDev() {
     const {
@@ -21,48 +22,7 @@ export default function WebDev() {
     // DB Portfolio
     ////////////////////////////
 
-    const portfolio = [
-        {
-            id: 0, 
-            name: "Etikett Radio", 
-            description: "etikett~radio is a radio station at Catalyst Institute (former dBs Music School Berlin) where students have the chance to gain their first experience as radio hosts. It has a database where admins can create accounts for students. Students can then work on their host profile and list their shows in the archive section, post to the blog section and so on. Moreover, the website has its own chat room where every user of the website can join and interact with each other.", 
-            webLink: {
-                link: "https://www.etikett-radio.com/",
-                alt: "www.etikett-radio.com"
-            },
-            gitHub: "https://github.com/SimonSchoetz/etikett-radio",
-            frontend: "React.js, SCSS",
-            backend: "MongoDB, Mongoose, Express.js, JWT",
-            other: "Sockit,io, Three.js"
-        },
-        {
-            id: 1, 
-            name: "Merchandice Online Shop", 
-            description: "This website is an online shop with fictitious products. It exists solely for the purpose of being my personal playground for learning and experimenting with VueJS. The design focuses on mobile devices but functionalities also consider desktop users who interact with the page via mouse. You can change products by hovering/pressing the color discs, add them to the cart if the chosen product is in stock and check out as soon as you filled out the form with your contact details.", 
-            webLink: {
-                link: "https://vuejs-merch-store.netlify.app/",
-                alt: "Deployed on Netlify"
-            },
-            gitHub: "https://github.com/SimonSchoetz/vuejs-merch-store",
-            frontend: "Vue.js, SCSS",
-            backend: "",
-            other: ""
-        },
-        {
-            id: 2, 
-            name: "Simon Schötz", 
-            description: "The current website you are browsing is built with React.js and is my playground to try all sorts of animation which I build on my own with SCSS and interesting npm packages I find during my researches. Where possible, I stored data in a json-like structure to display it on the website like dynamic data coming from an actual server. Examples are the cards which are showcasing my music on other parts of this website or this portfolio.", 
-            webLink: {
-                link: "",
-                alt: ""
-            },
-            gitHub: "https://github.com/SimonSchoetz/simon-schoetz-website",
-            frontend: "React.js, SCSS",
-            backend: "",
-            other: ""
-        }
-                
-    ]
+    
 
 
 
@@ -127,78 +87,7 @@ export default function WebDev() {
 
                 <section className="web-dev-ref" onMouseEnter={handleMouseOverContainer} onMouseLeave={handleMouseOverContainer}>
                     <h2>REFERENCES</h2>
-                    <div>
-                        <h3>etikett~radio</h3>
-                        <div className="ref-container etikett-radio">
-                            <div className="ref-description">
-                                <h3>DESCRIPTION</h3>
-                                <p>
-                                    etikett~radio is a radio station at Catalyst Institute (former dBs Music School Berlin) where students have the chance to gain their first experience as radio hosts. It has a database where admins can create accounts for students. Students can then work on their host profile and list their shows in the archive section, post to the blog section and so on. Moreover, the website has its own chat room where every user of the website can join and interact with each other.
-                                </p>
-                                <h3>LINKS</h3>
-                                <ul>
-                                    <li>
-                                        <a target="_blank" rel="noopener noreferrer" href={`https://www.etikett-radio.com/`} onMouseEnter={handleMouseOverElement} onMouseLeave={handleMouseOverElement}>www.etikett-radio.com</a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" rel="noopener noreferrer" href={`https://github.com/SimonSchoetz/etikett-radio`} onMouseEnter={handleMouseOverElement} onMouseLeave={handleMouseOverElement}>GitHub Repo</a>
-                                    </li>
-                                </ul>
-                                <h3>MAIN TECHNOLOGIES</h3>
-                                <ul>
-                                    <li>Frontend: React.js, SCSS</li>
-                                    <li>Backend: MongoDB, Mongoose, Express.js, JWT</li>
-                                    <li>Other: Sockit.io, Three.js</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <h3>MERCHANDISE ONLINE SHOP</h3>
-                        <div className="ref-container merch-store">
-                            <div className="ref-description">
-                                <h3>DESCRIPTION</h3>
-                                <p>
-                                    This website is an online shop with fictitious products. It exists solely for the purpose of being my personal playground for learning and experimenting with VueJS. The design focuses on mobile devices but functionalities also consider desktop users who interact with the page via mouse. You can change products by hovering/pressing the color discs, add them to the cart if the chosen product is in stock and check out as soon as you filled out the form with your contact details.
-                                </p>
-                                <h3>LINKS</h3>
-                                <ul>
-                                    <li>
-                                        <a target="_blank" rel="noopener noreferrer" href={`https://vuejs-merch-store.netlify.app/`} onMouseEnter={handleMouseOverElement} onMouseLeave={handleMouseOverElement}>Deployed on Netlify</a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" rel="noopener noreferrer" href={`https://github.com/SimonSchoetz/vuejs-merch-store`} onMouseEnter={handleMouseOverElement} onMouseLeave={handleMouseOverElement}>GitHub Repo</a>
-                                    </li>
-                                </ul>
-                                <h3>MAIN TECHNOLOGIES</h3>
-                                <ul>
-                                <li>Frontend: Vue.js, SCSS</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <h3>www.simonschoetz.de</h3>
-                        <div className="ref-container simonschoetz-de">
-                            <div className="ref-description">
-                                <h3>DESCRIPTION</h3>
-                                <p>
-                                    The current website you are browsing is built with React.js and is my playground to try all sorts of animation which I build on my own with SCSS.
-                                </p>
-                                <h3>LINKS</h3>
-                                <ul>
-                                    <li>
-                                        <a target="_blank" rel="noopener noreferrer" href={`https://github.com/SimonSchoetz/simon-schoetz-website`} onMouseEnter={handleMouseOverElement} onMouseLeave={handleMouseOverElement}>GitHub Repo</a>
-                                    </li>
-                                </ul>
-                                <h3>MAIN TECHNOLOGIES</h3>
-                                <ul>
-                                <li>Frontend: React.js, SCSS</li>
-                                <li>Other: Three.js</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    <PortFolio />
                 </section>
                 
             </div>

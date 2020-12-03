@@ -124,12 +124,6 @@
                 }
             }
     }
-    // font-size: calc(1rem + .5vw);
-    // list-style-type: none;
-    // margin: .5rem 0;
-    // transition: .15s;
-    // a:hover {
-    // }
 
 
     .web-dev-ref {
@@ -155,10 +149,11 @@
 
             .ref-description {
                 backdrop-filter: blur(3px);
-                background-color: $main-dark-075;
+                background-color: $main-dark-090;
                 max-width: 600px;
                 padding: 1rem 1rem 0;
                 margin: 1rem;
+                border-radius: 4px;
                 p {
                     padding: 1rem;
                     white-space: pre-wrap;
@@ -179,7 +174,7 @@
 
             }
         }
-        .etikett-radio, .merch-store {
+        .etikett-radio, .merch-store, .simonschoetz-de {
             * {
                 color: $main-bright;
                 border-color: $main-bright;
@@ -192,6 +187,9 @@
         .merch-store {
             background-image: url(https://i.ibb.co/XV92dxV/merch-store-wip.png);
 
+        }
+        .simonschoetz-de {
+            background-image: url(https://i.ibb.co/BcNt79D/simonschoetz-home.png);
         }
     }
     

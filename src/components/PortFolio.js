@@ -67,9 +67,10 @@ export default function PortFolio() {
             
             return <Fragment key={el.id}>
 
-                <li>
+                <li className="portfolio-card">
                     <h3>{el.name}</h3>
                     <div className="ref-container" style={{backgroundImage: `url(${el.img})`}}>
+                    <div className="ref-description">
                         <h3>DESCRIPTION</h3>
                         <p>{el.description}</p>
                         <h3>LINKS</h3>
@@ -88,6 +89,8 @@ export default function PortFolio() {
                             {el.backend ? <li>Backend: {el.backend}</li>: null}
                             {el.other ? <li>Other: {el.other}</li>: null}
                         </ul>
+
+                    </div>
                     </div>
                 </li>
             </Fragment>

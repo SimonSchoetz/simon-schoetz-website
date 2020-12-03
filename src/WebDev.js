@@ -18,14 +18,7 @@ export default function WebDev() {
         setCurrentLocation(locations.pathname)
     }, [setCurrentLocation, locations.pathname])
 
-    ////////////////////////////
-    // DB Portfolio
-    ////////////////////////////
-
     
-
-
-
     ////////////////////////////
     // Event handling functions
     ////////////////////////////

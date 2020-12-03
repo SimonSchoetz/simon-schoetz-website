@@ -136,60 +136,51 @@
         div:not(:last-of-type) {
                 margin-bottom: 3rem;
         }
-
-        .ref-container {
-            position: relative;
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            justify-content: center ;
-            margin: 1rem;
-            
-
-
-            .ref-description {
-                backdrop-filter: blur(3px);
-                background-color: $main-dark-090;
-                max-width: 600px;
-                padding: 1rem 1rem 0;
-                margin: 1rem;
-                border-radius: 4px;
-                p {
-                    padding: 1rem;
-                    white-space: pre-wrap;
-                }
-                ul {
-                    padding: 1rem;
-                    li {
-                        font-size: calc(1rem + .5vw);
-                        list-style-type: none;
-                        margin: .5rem 0;
-                        transition: .15s;
-                        a:hover {
-                            color: rgb(0, 183, 255);
-                            transition: .15s;
+        ul {
+            .portfolio-card {
+                .ref-container {
+                    position: relative;
+                    background-size: cover;
+                    background-position: center;
+                    display: flex;
+                    justify-content: center ;
+                    margin: 1rem;
+                    * {
+                        color: $main-bright;
+                        border-color: $main-bright;
+                    }
+                    
+        
+        
+                    .ref-description {
+                        backdrop-filter: blur(3px);
+                        background-color: $main-dark-090;
+                        max-width: 600px;
+                        padding: 1rem 1rem 0;
+                        margin: 1rem;
+                        border-radius: 4px;
+                        p {
+                            padding: 1rem;
+                            white-space: pre-wrap;
                         }
+                        ul {
+                            padding: 1rem;
+                            li {
+                                font-size: calc(1rem + .5vw);
+                                list-style-type: none;
+                                margin: .5rem 0;
+                                transition: .15s;
+                                a:hover {
+                                    color: rgb(0, 183, 255);
+                                    transition: .15s;
+                                }
+                            }
+                        }
+        
                     }
                 }
 
             }
-        }
-        .etikett-radio, .merch-store, .simonschoetz-de {
-            * {
-                color: $main-bright;
-                border-color: $main-bright;
-            }
-
-        }
-        .etikett-radio {
-            background-image: url(https://i.ibb.co/G5WFDN1/etikett-home.png);
-        }
-        .merch-store {
-            background-image: url(https://i.ibb.co/XV92dxV/merch-store-wip.png);
-
-        }
-        .simonschoetz-de {
-            background-image: url(https://i.ibb.co/BcNt79D/simonschoetz-home.png);
         }
     }
     

@@ -3,9 +3,9 @@ import DocumentTitle from 'react-document-title';
 import { useLocation  } from "react-router-dom";
 import { Context } from './Context';
 import Mailto from 'react-protected-mailto'
-import SkillSet from './components/SkillSet';
-import PortFolio from './components/PortFolio';
-import CodeWindow from './components/CodeWindow';
+import SkillSet from './components/webdev-components/SkillSet';
+import PortFolio from './components/webdev-components/PortFolio';
+import CodeWindow from './components/webdev-components/CodeWindow';
 
 export default function WebDev() {
     const {

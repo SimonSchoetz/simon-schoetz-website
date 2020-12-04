@@ -1,0 +1,67 @@
+.to-top-playground {
+    height: 100vh;
+    width: 100vw;
+    background-color: $main-dark-025;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    .help-line-hoz {
+        width: 100%;
+        border-bottom: 1px blue solid;
+        position: absolute;
+        top: 95px;
+    }
+
+    .to-top-preview, .to-top {
+        width: 80px;
+        height: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $main-dark-025;
+        border-radius: 100%;
+        position: relative;
+        margin-top: 50px;
+    }
+    .to-top {
+        * {
+            position: absolute;
+        }
+        .word-top {
+            // top: 40px;
+            position: relative;
+        }
+        .word-to {
+            position: relative;
+            z-index: 2;
+        }
+        ////////////////////
+        //       T
+        ////////////////////
+        .t-roof-l, .t-roof-r {
+            height: 1.6px;
+            width: 4.5px;
+            background-color: $main-bright-050;
+            top: 23px;
+            z-index: 3;
+        }
+        .t-roof-r {
+            left: 34.8px;
+        }
+        .t-roof-l {
+            left: 30.2px;
+        }
+        .t-neck {
+            height: 11px;
+            width: 1.7px;
+            background-color: $main-bright-050;
+            top: 24.6px;
+            left: 33.8px;
+            z-index: 3;
+
+        }
+
+    }
+}

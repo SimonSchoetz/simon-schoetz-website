@@ -17,7 +17,8 @@ $main-dark-090: rgba(39, 40, 40, 0.90);
 // $to-top-t-height: 21.7%;
 // $to-top-t-left: 34.3%;
 // At 500% Zoom
-$to-top-t-height: 28.7%;
-$to-top-t-left: 37.7%;
+$to-height: 28.7%;
+$to-left: 37.7%;
+$to-ease-in-time: .8s cubic-bezier(.85,.2,.34,.86);
 
 //component basics

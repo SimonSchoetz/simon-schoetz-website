@@ -66,20 +66,19 @@ export default function WebDev() {
                     <PortFolio />
                 </section>
                 <section className="to-top-playground">
-                    <div className="help-line-hoz"/>
+                    {/* <div className="help-line-hoz"/> */}
                     <div className="to-top-preview">
                         <p>TO</p>
                         <p>TOP</p>
                         
                     </div>
                     <div className="to-top">
-                    <div className="t-roof-l"/>
-                    <div className="t-roof-r"/>
-                    <div className="t-neck"/>
-                    <div className="o-body"/>
-                    <p className="word-to">TO</p>
-                    <p className="word-top">TOP</p>
-
+                        <div className="t-roof-l"/>
+                        <div className="t-roof-r"/>
+                        <div className="t-neck"/>
+                        <div className="o-body"/>  
+                        <p className="word-to">TO</p>
+                        <p className="word-top">TOP</p>
                     </div>
 
 

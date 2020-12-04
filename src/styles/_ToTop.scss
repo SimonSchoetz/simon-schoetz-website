@@ -10,7 +10,7 @@
         width: 100%;
         border-bottom: 1px blue solid;
         position: absolute;
-        top: 95px;
+        top: 94px;
     }
 
     .to-top-preview, .to-top {
@@ -54,14 +54,26 @@
             left: 30.2px;
         }
         .t-neck {
-            height: 11px;
-            width: 1.7px;
+            height: 13.7%;
+            width: 2.2%;
             background-color: $main-bright-050;
-            top: 24.6px;
-            left: 33.8px;
+            top: 30.7%;
+            left: 42.35%;
             z-index: 3;
 
         }
-
+        ////////////////////
+        //       O
+        ////////////////////
+        .o-body {
+            width: 8.5px;
+            height: 13.2px;
+            border: solid $main-bright-050;
+            border-width: 1.6px 1.9px;
+            top: 22.8px;
+            left: 41px;
+            z-index: 3;
+            border-radius: 56% / 49%; //first value is shaping the long sides
+        }
     }
 }

@@ -24,6 +24,10 @@
         border-radius: 100%;
         position: relative;
         margin-top: 50px;
+        p {
+        font-size: 1.08rem;
+
+        }
     }
     .to-top {
         * {
@@ -36,29 +40,31 @@
         .word-to {
             position: relative;
             z-index: 2;
+            color: red;
         }
         ////////////////////
         //       T
         ////////////////////
         .t-roof-l, .t-roof-r {
-            height: 1.6px;
-            width: 4.5px;
-            background-color: $main-bright-050;
-            top: 23px;
+            height: 2.1%;
+            background-color: $main-dark;
+            top: $to-top-t-height; //28.7%;
             z-index: 3;
         }
-        .t-roof-r {
-            left: 34.8px;
-        }
         .t-roof-l {
-            left: 30.2px;
+            left: $to-top-t-left; //37.7%;
+            width: 6%;
+        }
+        .t-roof-r {
+            left: $to-top-t-left + 5.9%;
+            width: 5.9%;
         }
         .t-neck {
             height: 13.7%;
-            width: 2.2%;
-            background-color: $main-bright-050;
-            top: 30.7%;
-            left: 42.35%;
+            width: 2px;
+            background-color: $main-dark;
+            top: $to-top-t-height + 2.1%;
+            left: $to-top-t-left + 4.55%;
             z-index: 3;
 
         }
@@ -66,12 +72,12 @@
         //       O
         ////////////////////
         .o-body {
-            width: 8.5px;
-            height: 13.2px;
-            border: solid $main-bright-050;
-            border-width: 1.6px 1.9px;
-            top: 22.8px;
-            left: 41px;
+            width: 10.8%;
+            height: 16.3%;
+            border: solid $main-dark;
+            border-width: 2px;
+            top: $to-top-t-height - .1%;
+            left: $to-top-t-left + 13.6%;
             z-index: 3;
             border-radius: 56% / 49%; //first value is shaping the long sides
         }

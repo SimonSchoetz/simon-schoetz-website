@@ -74,6 +74,7 @@ function App() {
         <div className={`App`} onMouseMove={handleMove} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseEnter}>
 
           <ToTopButton setMouseOverElement={setMouseOverElement}/>
+
           <BrowserView>
             <Curser x={x} y={y} 
             showMouse={mouseOnWindow} 

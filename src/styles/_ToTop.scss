@@ -1,11 +1,6 @@
 
 .to-top {
 
-
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-
     //Styling from chrome button
     border-width: 2px;
     border-style: outset;
@@ -13,8 +8,13 @@
     border-radius: 100%;
     height: 80px;
     width: 80px;
+    ////////////////////////////
+    
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
     z-index: 10;
-    background-color: $main-bright-050;
+    background-color: $main-bright-075;
     opacity: 1;
     transform: scale(1);
     transition: .2s;
@@ -24,11 +24,10 @@
         opacity: 0;
         transition: opacity 1s, transform 5s;
     }
-    ////////////////////////////
     * {
         position: absolute;
         transition: .2s;
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     .word-to {
         position: relative;
@@ -149,7 +148,6 @@
 @keyframes wiggle {
     0% {
         border-radius: 56% / 49% 86% / 89%;
-        // transform: rotate(0deg);
     }
     25% {
         border-radius: 86% / 89%;
@@ -162,6 +160,5 @@
     }
     100% {
         border-radius: 56% / 49% 86% / 89%;
-        // transform: rotate(360deg);
     }
 }

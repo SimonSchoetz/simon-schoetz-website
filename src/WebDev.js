@@ -48,7 +48,7 @@ export default function WebDev() {
                             <SkillSet />
                         </div>
                     </div>
-                    <div class="contact">
+                    <div className="contact">
                         <h3>CONTACT</h3>
                         <ul className="contact-list">
                             <li>

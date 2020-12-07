@@ -23,6 +23,7 @@ import IconProducer from './IconProducer';
 
 import Noise from "./noise/Noisy";
 import Curser from './Curser';
+import ToTopButton from './components/ToTopButton';
 
 
 
@@ -44,7 +45,7 @@ function App() {
     const mouseOver = () => {
       setNavWidth(refSoundEngineer.current.clientWidth)
     }
-    const handleMouseEnter = (input) => {
+    const handleMouseEnter = input => {
          if (input.type === "mouseenter") {setMouseOnWindow(true)}
          else setMouseOnWindow(false)
     }
@@ -58,6 +59,7 @@ function App() {
       setX(e.pageX);
       setY(e.pageY);
     } 
+
   return (
 
     <Context.Provider value={{
@@ -65,11 +67,13 @@ function App() {
       mouseOverContainer, setMouseOverContainer,
       mouseOverElement, setMouseOverElement
     }}>
+    
 
       <HashRouter> 
         <ScrollMemory />
         <div className={`App`} onMouseMove={handleMove} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseEnter}>
 
+          <ToTopButton setMouseOverElement={setMouseOverElement}/>
           <BrowserView>
             <Curser x={x} y={y} 
             showMouse={mouseOnWindow} 

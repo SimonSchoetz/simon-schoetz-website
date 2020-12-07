@@ -1,146 +1,150 @@
-.to-top-playground {
-    height: 100vh;
-    width: 100vw;
-    background-color: $main-dark-025;
-    position: relative;
-    display: flex;
-    justify-content: center;
 
-    .to-top {
-        //Styling from chrome button
-        border-width: 2px;
-        border-style: outset;
-        border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
-        border-radius: 100%;
-        height: 80px;
-        width: 80px;
+.to-top {
+
+
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+
+    //Styling from chrome button
+    border-width: 2px;
+    border-style: outset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-radius: 100%;
+    height: 80px;
+    width: 80px;
+    z-index: 10;
+    background-color: $main-bright-050;
+    opacity: 1;
+    transform: scale(1);
+    transition: .2s;
+
+    &.hidden-to-top {
+        transform: scale(0);
+        opacity: 0;
+        transition: opacity 1s, transform 5s;
+    }
+    ////////////////////////////
+    * {
+        position: absolute;
+        transition: .2s;
+        font-size: 1.1rem;
+    }
+    .word-to {
         position: relative;
-        ////////////////////////////
+        z-index: 2;
+    }
+    .word-top {
+        top: 0px;
+        position: relative;
+    }
+    ////////////////////
+    //       T
+    ////////////////////
+    .t-roof-l, .t-roof-r, .t-neck {
+        height: 2.1%;
+        background-color: $main-dark;
+        top: $to-height; //28.7%;
+        z-index: 3;
+        opacity: 0;
+    }
+    .t-roof-l {
+        left: $to-left; //37.7%;
+        width: 6%;
+    }
+    .t-roof-r {
+        left: $to-left + 5.9%;
+        width: 5.9%;
+    }
+    .t-neck {
+        height: 13.7%;
+        width: 2px;
+        top: $to-height + 2.1%;
+        left: $to-left + 4.55%;
+    }
+    ////////////////////
+    //       O
+    ////////////////////
+    .o-body {
+        opacity: 0;
+        width: 10.8%;
+        height: 16.4%;
+        border: solid $main-dark;
+        border-width: 2px;
+        top: $to-height - .2%;
+        left: $to-left + 13.54%;
+        z-index: 3;
+        border-radius: 56% / 49%; //first value is shaping the long sides
+    }
+
+    &:hover {
         .word-to {
-            position: relative;
-            z-index: 2;
-        }
-        * {
-            position: absolute;
+            opacity: 0;
             transition: .2s;
         }
         .word-top {
-            top: 0px;
-            position: relative;
+            // top: -10px;
+            transition: $to-ease-in-time;
+            color: $main-bright;
+            font-size: 1.5rem;
+            z-index: 3;
         }
         ////////////////////
         //       T
         ////////////////////
-        /////
-        //TO
-        /////
-        .t-roof-l, .t-roof-r, .t-neck {
-            height: 2.1%;
-            background-color: $main-dark;
-            top: $to-height; //28.7%;
+        .t-roof-l, .t-roof-r, .t-neck, .o-body {
+            top: $to-height - 5%; //28.7%;
+            background-color: $main-bright;
             z-index: 3;
-            opacity: 0;
+            opacity: 1;
+            transition: 
+                width $to-ease-in-time, 
+                height $to-ease-in-time,
+                top $to-ease-in-time,
+                left $to-ease-in-time,
+                transform $to-ease-in-time,
+                background-color $to-ease-in-time,
+                opacity .2s
+            ;
         }
         .t-roof-l {
-            left: $to-left; //37.7%;
-            width: 6%;
+            left: 37.5%; //37.7%;
+            width: 15%;
+            transform: rotate(-45deg);
         }
         .t-roof-r {
-            left: $to-left + 5.9%;
-            width: 5.9%;
+            left: 47.5%;
+            width: 15%;
+            transform: rotate(45deg);
         }
         .t-neck {
-            height: 13.7%;
-            width: 2px;
-            top: $to-height + 2.1%;
-            left: $to-left + 4.55%;
+            height: 20%;
+            
+            // top: $to-height;
+            left: calc(50% - 1px);
         }
         ////////////////////
         //       O
         ////////////////////
         .o-body {
-            opacity: 0;
-            width: 10.8%;
-            height: 16.4%;
+            opacity: 1;
+            width: 100%;
+            height: 100%;
             border: solid $main-dark;
+            background-color: $main-dark;
+            // mix-blend-mode: exclusion;
             border-width: 2px;
-            top: $to-height - .2%;
-            left: $to-left + 13.54%;
-            z-index: 3;
-            border-radius: 56% / 49%; //first value is shaping the long sides
-        }
-
-        &:hover {
-            .word-to {
-                opacity: 0;
-                transition: .2s;
-            }
-            .word-top {
-                // top: -10px;
-                transition: $to-ease-in-time;
-                color: $main-bright;
-                font-size: 1.5rem;
-                z-index: 3;
-            }
-            ////////////////////
-            //       T
-            ////////////////////
-            /////
-            //TO
-            /////
-            .t-roof-l, .t-roof-r, .t-neck, .o-body {
-                top: $to-height - 5%; //28.7%;
-                background-color: $main-bright;
-                z-index: 3;
-                opacity: 1;
-                transition: 
-                    width $to-ease-in-time, 
-                    height $to-ease-in-time,
-                    top $to-ease-in-time,
-                    left $to-ease-in-time,
-                    transform $to-ease-in-time,
-                    background-color $to-ease-in-time,
-                    opacity .2s
-                ;
-            }
-            .t-roof-l {
-                left: 37.5%; //37.7%;
-                width: 15%;
-                transform: rotate(-45deg);
-            }
-            .t-roof-r {
-                left: 47.5%;
-                width: 15%;
-                transform: rotate(45deg);
-            }
-            .t-neck {
-                height: 20%;
-                
-                // top: $to-height;
-                left: calc(50% - 1px);
-            }
-            ////////////////////
-            //       O
-            ////////////////////
-            .o-body {
-                opacity: 1;
-                width: 100%;
-                height: 100%;
-                border: solid $main-dark;
-                background-color: $main-dark;
-                // mix-blend-mode: exclusion;
-                border-width: 2px;
-                top: 0;
-                left: 0;
-                z-index: 2;
-                animation: wiggle 5s infinite linear;
-                box-shadow: inset $main-bright 0 0 5px 0;
-
-            }
+            top: 0;
+            left: 0;
+            z-index: 2;
+            animation: wiggle 5s infinite linear;
+            box-shadow: inset $main-bright 0 0 5px 0;
 
         }
+
     }
 }
+
 
 @keyframes wiggle {
     0% {

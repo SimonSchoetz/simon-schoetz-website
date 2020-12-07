@@ -2,7 +2,7 @@ import React, {useContext, useEffect } from 'react';
 import DocumentTitle from 'react-document-title';
 import { useLocation  } from "react-router-dom";
 import { Context } from './Context';
-import ProducerCards from './ProducerCards';
+import ProducerCards from './components/producer-components/ProducerCards';
 
 export default function Producer() {
 

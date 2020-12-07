@@ -2,7 +2,7 @@ import React, {useContext, useEffect } from 'react';
 import DocumentTitle from 'react-document-title';
 import { useLocation } from "react-router-dom";
 import { Context } from './Context';
-import SoundEngineerCards from './SoundEngineerCards';
+import SoundEngineerCards from './components/se-components/SoundEngineerCards';
 
 
 export default function SoundEngineer() {

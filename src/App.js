@@ -17,12 +17,12 @@ import WebDev from "./WebDev";
 import Producer from "./Producer";
 import SoundEngineer from "./SoundEngineer";
 import Error404 from './Error404';
-import IconSE from './IconSE';
-import IconWebDev from './IconWebDev';
-import IconProducer from './IconProducer';
+import IconSE from './components/nav-components/IconSE';
+import IconWebDev from './components/nav-components/IconWebDev';
+import IconProducer from './components/nav-components/IconProducer';
 
 import Noise from "./noise/Noisy";
-import Curser from './Curser';
+import Curser from './components/Curser';
 import ToTopButton from './components/ToTopButton';
 
 

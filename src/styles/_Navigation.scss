@@ -11,6 +11,7 @@ h1 {
     z-index: 1;
     margin:0 0 3rem;
     
+    
     .nav-link {
         position: relative;
         flex: 1 0 0;
@@ -22,13 +23,20 @@ h1 {
         max-width: 450px;
         max-height: 450px;
         font-size: 3vw;
-        background-color: $main-dark;
-        color: $main-bright;
+        // background-color: rgba(255, 255, 255, 0.1);
+        color: $font-color-bright;
         text-decoration: none;
-        transition: .5s;
+        transition: .5s, border 0s;
+        // border: $subtle-border;
+        @include subtle-border;
 
         &:nth-child(2) {
             margin: 0 .5rem;
+        }
+        &:hover {
+            border: 0;
+            background-color: $main-dark;
+            color: transparent;
         }
     }
 }
@@ -67,9 +75,11 @@ h1 {
         width: calc(50% - 1px);
         max-width: 50%;
         min-width: fit-content;
+        border: 0;
         &:hover {
-            background-color: $main-dark-050;
+            background-color: $main-bright-025;
             backdrop-filter: blur(3px);
+            color: white;
         }
         &:nth-child(3) {
             right: 0;
@@ -90,14 +100,10 @@ h1 {
         height: 5rem;
         font-size: 3rem;
         transition: .5s;
-        background-color: $main-dark-050;
-        backdrop-filter: blur(3px);
+        background-color: $main-bright-025;
         width: 100%;
         max-width: 100%;
-        &:hover {
-            background-color: $main-dark-050;
-            backdrop-filter: blur(3px);
-        }
+        pointer-events: none;
     }
 }
 

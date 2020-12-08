@@ -11,6 +11,7 @@
     justify-content: center;
     align-items: center;
     .content-container {
+    border: $subtle-border;
         overflow: hidden;
         position: relative;
         width: 100%;
@@ -55,6 +56,7 @@
     &:hover {
         transition: .25s;
         .content-container {
+            border: 0;
             background-color: $main-dark-075;
             width: 90%;
             height: 90%;

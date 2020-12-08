@@ -104,7 +104,6 @@ export default function IconProducer() {
                 C272.83,112.38,272.27,112.34,271.76,112.29z"/>
             <path onMouseEnter={handleMouseEnter} fill="red" className={`st0-MF3-5`} d="M273.1,133.86l-1.4-3.84l-3.3,2.31l0.77,2.11C270.54,134.27,271.86,134.07,273.1,133.86z"/>
             </svg>
-
         </div>
     )
 }

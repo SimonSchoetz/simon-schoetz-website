@@ -84,10 +84,10 @@ function App() {
           </BrowserView>
           
           <div className="noise">
-          <Noise color={"rgb(209, 213, 214)"}/>
-            {currentLocation === "/" || currentLocation === "/webdev" ? <div className="noise-overlay bright-grey"/> : null}
-            {currentLocation === "/bustedfingerz" ? <div className="noise-overlay dark-grey"/> : null}
-            {currentLocation === "/soundengineer" ? <div className="noise-overlay dark-blue"/> : null}
+          {/* <Noise color={"rgb(39, 40, 40)"}/> */}
+            {/* {currentLocation === "/" || currentLocation === "/webdev" ? <div className="noise-overlay bright-grey"/> : null}
+            {currentLocation === "/bustedfingerz" ? <div className="noise-overlay dark-grey"/> : null} */}
+            {/* {currentLocation === "/soundengineer" ? <div className="noise-overlay dark-blue"/> : null} */}
           </div>
         
           <div className="component-container">

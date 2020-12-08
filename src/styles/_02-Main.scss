@@ -5,7 +5,7 @@
     box-sizing: border-box;
     font-family: $mid;
     background: transparent;
-    color: $main-dark;
+    color: $font-color-dark;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -33,6 +33,9 @@
     justify-content: center;
     width: 100%;
     * {cursor: none;}
+    background-color: $main-dark;
+    // background-image: linear-gradient($main-bright, $main-dark);
+    min-height: 100vh;
 }
 
 .noise-overlay {

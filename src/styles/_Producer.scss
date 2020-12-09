@@ -12,15 +12,14 @@
     }
     .bio {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         width: 100%;
         position: relative;
         backdrop-filter: blur(3px);
-        // padding: 2rem;
         .img-container {
             height: 100%;
             height: 500px;
-            width: 50%;
+            width: 48%;
             border-radius: 2px;
             .img-holder {
                 background-image: url(https://i.ibb.co/x2vkHQs/busted-fingerz-live.png);
@@ -34,15 +33,17 @@
         }
         article {
             position: relative;
-            background-color: $main-bright-025;
-            // z-index: 51;
-            padding-left: 2rem;
-            width: 50%;
+            width: 48%;
+            p {
+            background-color: $main-bright-050;
+            padding: 1rem;
+            border-radius: 2px;
+            }
         }
     }
     .discography {
         padding: 1rem;
-        backdrop-filter: blur(3px);
+        @include subtle-border;
         .discography-container {
             display: flex;
             flex-flow: wrap;
@@ -54,6 +55,7 @@
 @media only screen and (max-width: 768px) {
     .producer {
         .bio {
+            padding: 0;
             flex-direction: column;
             .img-container {
                 width: 100%;
@@ -63,15 +65,15 @@
             article {
                 width: 100%;
                 padding: 0;
+                h2 {
+                    padding-left: 1rem;
+                }
             }
         }
     }
 }
 @media only screen and (max-width: 596px) {
     .producer {
-        .bio {
-        padding: 1rem 8px ;
-        }
         .discography {
             padding: .5rem;
             .ref-card {

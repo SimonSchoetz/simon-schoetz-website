@@ -83,7 +83,7 @@ export default function Producer() {
                     </div>
                     <article>
                         <h2>BIO</h2>
-                        <p>With a remarkably quick start, Busted Fingerz was discovered and supported by dubstep legend The Widdler only a couple months after his first few steps in music production in 2016. Shortly after, he was signed by Version Collective. While having grown up in the rural south of Germany, he is now an inherent part of the Berlin scene since mid 2018, where he also founded the producer duo Off White. His carefully crafted sounds and powerful mixes state an innovative and creative mind and with his latest release on the iconic Artikal label, he proves once more to be a bass music heavy weight.</p>
+                        <p>With a remarkable quick start, Busted Fingerz was discovered and supported by dubstep legend The Widdler only a couple of months after his first few steps in music production in 2016. Shortly after, he was signed by Version Collective. While having grown up in the rural south of Germany, he is now an inherent part of the Berlin scene since mid-2018, where he also founded the producer duo Off White. His carefully crafted sounds and powerful mixes state an innovative and creative mind and with his latest release on the iconic Artikal label, he proves once more to be a bass music heavyweight.</p>
                     </article>
                 </section>
                 <section className="discography" onMouseEnter={handleMouseOverContainer} onMouseLeave={handleMouseOverContainer}>

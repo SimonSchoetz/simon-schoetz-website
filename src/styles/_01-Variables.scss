@@ -8,11 +8,13 @@ $main-bright: rgb(209, 213, 214);
 $main-bright-025: rgba(209, 213, 214, 0.25);
 $main-bright-050: rgba(209, 213, 214, 0.50);
 $main-bright-075: rgba(209, 213, 214, 0.75);
-$main-dark: rgb(39, 40, 40);
-$main-dark-025: rgba(39, 40, 40, 0.25);
-$main-dark-050: rgba(39, 40, 40, 0.50);
-$main-dark-075: rgba(39, 40, 40, 0.75);
-$main-dark-090: rgba(39, 40, 40, 0.90);
+$main-dark: rgb(39, 40, 41);
+$main-dark-025: rgba(39, 40, 41, 0.25);
+$main-dark-050: rgba(39, 40, 41, 0.50);
+$main-dark-075: rgba(39, 40, 41, 0.75);
+$main-dark-090: rgba(39, 40, 41, 0.90);
+$shade: rgba(0, 0, 0, .1);
+$shade-more: rgba(0, 0, 0, .2);
 
 
 //to-top-button
@@ -34,7 +36,8 @@ $subtle-border: 1px solid rgba(255, 255, 255, 0.1);
     width: 100%;
     height: 100%;
     opacity: 0;
-    box-shadow: inset rgba(250, 250, 250, 0.3) 0px 0px 5px 1px;
+    background-color: $shade-more;
+    // box-shadow: inset rgba(250, 250, 250, 0.3) 0px 0px 5px 1px;
 
     
 }

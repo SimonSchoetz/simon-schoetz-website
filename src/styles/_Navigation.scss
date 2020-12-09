@@ -23,11 +23,10 @@ h1 {
         max-width: 450px;
         max-height: 450px;
         font-size: 3vw;
-        // background-color: rgba(255, 255, 255, 0.1);
         color: $font-color-bright;
+        background-color: $shade;
         text-decoration: none;
-        transition: .5s, border 0s;
-        // border: $subtle-border;
+        transition: .5s, border 0s, background-color 0s;
         @include subtle-border;
 
         &:nth-child(2) {
@@ -61,13 +60,13 @@ h1 {
     }
 }
 
-.shrinked-main-nav {
+.shrank-main-nav {
     display: flex;
     flex-flow: wrap;
     height: 9rem;
     transition: .5s;
 
-    .shrinked-nav {
+    .shrank-nav {
         position: absolute;
         height: 3rem;
         font-size: 2rem;
@@ -76,6 +75,7 @@ h1 {
         max-width: 50%;
         min-width: fit-content;
         border: 0;
+        background-color: $shade;
         &:hover {
             background-color: $main-bright-025;
             backdrop-filter: blur(3px);
@@ -117,7 +117,7 @@ h1 {
         z-index: 100;
     }
 }
-.home-link.shrinked-nav:focus {
+.home-link.shrank-nav:focus {
     border: 1px solid white;
 }
 
@@ -126,9 +126,9 @@ h1 {
         font-size: 14vw;
         margin: 1rem 0 0;
     }
-    .shrinked-main-nav {
+    .shrank-main-nav {
     
-        .shrinked-nav {
+        .shrank-nav {
             font-size: 6.5vw;
             width: calc(50% - 1px);
         }
@@ -154,8 +154,13 @@ h1 {
 //   Hover Animation for H1
 ////////////////////////////////
 
-.home-link.shrinked-nav:hover {
-    span {text-shadow: 1px 0 5px  $main-bright;}
+.home-link.shrank-nav:hover {
+    background-image: linear-gradient($main-dark, $main-dark, $main-dark, $main-dark, $main-dark, $main-bright-025, $main-bright-050);
+    border-radius: 60% / 25% ;
+    border-bottom: 5px solid black;
+    span {
+        text-shadow: 0 2px 2px  $main-bright;
+    }
     .simon-s{animation: blink-simon-s .5s;}
     .simon-i{animation: blink-simon-i .5s;}
     .simon-m{animation: blink-simon-m .5s;}

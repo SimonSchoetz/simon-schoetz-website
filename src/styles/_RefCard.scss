@@ -11,7 +11,7 @@
     justify-content: center;
     align-items: center;
     .content-container {
-    border: $subtle-border;
+    @include subtle-border;
         overflow: hidden;
         position: relative;
         width: 100%;

@@ -29,7 +29,7 @@ import ToTopButton from './components/ToTopButton';
 
 function App() {
     const [currentLocation, setCurrentLocation] = useState("/");
-    const shrink = currentLocation !== "/" ? "shrinked-nav" : "";
+    const shrink = currentLocation !== "/" ? "shrank-nav" : "";
     const refSoundEngineer= useRef(0)
 
     const [navWidth, setNavWidth] = useState(0);
@@ -122,7 +122,7 @@ function App() {
                   Hello and welcome to my website. I'm a bass music producer and dj, a sound engineer, and a web developer based in Berlin, Germany. Please click on one of the cards below to read more. 
                   </p>
                 </div>
-                <div className={`main-nav ${currentLocation !== "/" ? "shrinked-main-nav" : ""}`} onMouseOver={()=> mouseOver()}>
+                <div className={`main-nav ${currentLocation !== "/" ? "shrank-main-nav" : ""}`} onMouseOver={()=> mouseOver()}>
                   <NavLink 
                     to="/bustedfingerz"
                     title="Busted Fingerz" 

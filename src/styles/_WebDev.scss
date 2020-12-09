@@ -12,8 +12,9 @@
             margin-bottom: 1rem;
         }
         h3 {
+            color: $main-bright;
             padding-left: 1rem;
-            border-bottom: 1px solid black;
+            border-bottom: 1px solid $main-bright;
         }
         a {
             transition: .15s;
@@ -102,6 +103,7 @@
                         }
                         .level-container {
                             margin-top: 1rem;
+                            color: $main-bright;
                         }
                     }
                 }
@@ -111,6 +113,9 @@
             }
         }
             .contact {
+                * {
+                    color: $main-bright;
+                }
                 .contact-list {
                     padding: 1rem;
                     li {

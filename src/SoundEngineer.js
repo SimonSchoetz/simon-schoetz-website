@@ -3,6 +3,7 @@ import DocumentTitle from 'react-document-title';
 import { useLocation } from "react-router-dom";
 import { Context } from './Context';
 import SoundEngineerCards from './components/se-components/SoundEngineerCards';
+import Mailto from 'react-protected-mailto'
 
 
 export default function SoundEngineer() {
@@ -99,8 +100,8 @@ export default function SoundEngineer() {
                             Mixing your tune with or without vocals, saving your lost project or a bad recording - you name it, I got you. I charge 20€ per hour. Depending on your project, it usually takes me something between 2-3 hours per tune. Sometimes more, sometimes less. You'll get a mastered version and a premaster in case you want to get it mastered by the mastering engineer of your trust. You'll have the chance to listen to previews via SoundCloud, the download will be enabled as soon as the payment arrived.
                         </p>
                         <h3>CONTACT</h3>
-                        <p>
-                            Get in touch with me with either of these platforms
+                        <p className="no-border">
+                            Get in touch with me with either of these platforms:
                         </p>
                         <ul className="sm-container">
                             <li>
@@ -121,10 +122,10 @@ export default function SoundEngineer() {
                                     Instagram
                                 </a>
                             </li>
+                            <li>
+                                or via email at <Mailto email="simonsch.tz@gmail.com" onMouseEnter={handleMouseOverElement} onMouseLeave={handleMouseOverElement}/>
+                            </li>
                         </ul>
-                        <p>
-                             or via email at simonsch.tz@gmail.com
-                        </p>
                         <h3 className="not-convinced">
                             Not convinced yet? Check out some of the references below!
                         </h3>

@@ -10,6 +10,15 @@
         margin-bottom: 10rem;
         width: 100%;
     }
+    
+    h3 {
+        color: $main-bright;
+        padding: .5rem 1rem;
+        border-bottom: 1px solid $main-bright;
+        &:not(:first-child) {
+            margin-top: 3rem;
+        }
+    }
     //////////////////////////
     //BANNER AND INTRO SECTION
     //////////////////////////
@@ -74,33 +83,40 @@
     //    OFFERS SECTION
     //////////////////////////
 
-    .se-offers, .se-ref {
-        padding: 1rem;
+    .se-offers {
+        padding: 1rem 0;
         backdrop-filter: blur(3px);
-        // background-color: $main-bright-050;
         
-        h3 {
-            padding-left: 1rem;
-            border-bottom: 1px solid black;
-            &:not(:first-child) {
-                margin-top: 3rem;
-            }
+        p, ul {
+            color: $main-bright;
+             * {
+                color: $main-bright;
+
+             }
         }
+
         p {
             padding: 1rem;
-            
+        }
+        .no-border {
+            box-shadow: none;
         }
         .not-convinced {
             border: none;
+            padding: 1rem;
             text-align: center;
             background-color: $shade-more;
+            color: $main-bright;
             @include subtle-border;
         }
+    }
+    .se-ref {
+
     }
         
 
     .sm-container {
-        padding: 0 1rem;
+        padding: 0 1rem 1rem;
         li {
             text-decoration: underline;
             width: fit-content;
@@ -125,7 +141,7 @@
         display: flex;
         flex-flow: wrap;
         justify-content: space-around;
-        margin: 1.5rem 0;
+        padding: 1.5rem 0;
         .ref-card {
             .content-container {
                 div:not(.blur-layer) {
@@ -225,9 +241,9 @@
         //    OFFERS SECTION
         //////////////////////////
     
-        .se-offers, .se-ref {
-            padding: 1rem 8px;
-        }
+        // .se-offers, .se-ref {
+        //     padding: 1rem 8px;
+        // }
         .se-ref {
             .se-ref-container {
                 .ref-card-container {

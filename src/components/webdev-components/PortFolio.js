@@ -70,27 +70,27 @@ export default function PortFolio() {
                 <li className="portfolio-card">
                     <h3>{el.name}</h3>
                     <div className="ref-container" style={{backgroundImage: `url(${el.img})`}}>
-                    <div className="ref-description">
-                        <h3>DESCRIPTION</h3>
-                        <p>{el.description}</p>
-                        <h3>LINKS</h3>
-                        <ul>
-                            <li>
-                                <a target="_blank" rel="noopener noreferrer" href={el.webLink.link} onMouseEnter={handleMouseOverElement} onMouseLeave={handleMouseOverElement}>{el.webLink.alt}</a>
+                        <div className="ref-description">
+                            <h3>DESCRIPTION</h3>
+                            <p>{el.description}</p>
+                            <h3>LINKS</h3>
+                            <ul>
+                                <li>
+                                    <a target="_blank" rel="noopener noreferrer" href={el.webLink.link} onMouseEnter={handleMouseOverElement} onMouseLeave={handleMouseOverElement}>{el.webLink.alt}</a>
 
-                            </li>
-                            <li>
-                                <a target="_blank" rel="noopener noreferrer" href={el.gitHub} onMouseEnter={handleMouseOverElement} onMouseLeave={handleMouseOverElement}>GitHub Repo</a>
-                            </li>
-                        </ul>
-                        <h3>MAIN TECHNOLOGIES</h3>
-                        <ul>
-                            {el.frontend ? <li>Frontend: {el.frontend}</li>: null}
-                            {el.backend ? <li>Backend: {el.backend}</li>: null}
-                            {el.other ? <li>Other: {el.other}</li>: null}
-                        </ul>
+                                </li>
+                                <li>
+                                    <a target="_blank" rel="noopener noreferrer" href={el.gitHub} onMouseEnter={handleMouseOverElement} onMouseLeave={handleMouseOverElement}>GitHub Repo</a>
+                                </li>
+                            </ul>
+                            <h3>MAIN TECHNOLOGIES</h3>
+                            <ul>
+                                {el.frontend ? <li>Frontend: {el.frontend}</li>: null}
+                                {el.backend ? <li>Backend: {el.backend}</li>: null}
+                                {el.other ? <li>Other: {el.other}</li>: null}
+                            </ul>
 
-                    </div>
+                        </div>
                     </div>
                 </li>
             </Fragment>

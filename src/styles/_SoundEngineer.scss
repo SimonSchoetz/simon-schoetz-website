@@ -7,7 +7,7 @@
         text-decoration: none;
     }
     section {
-        margin-bottom: 3rem;
+        margin-bottom: 10rem;
         width: 100%;
     }
     //////////////////////////
@@ -17,19 +17,17 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 1rem;
         justify-content: center;
         width: 100%;
-        background-color: $main-bright-050;
         backdrop-filter: blur(3px);
-        padding: 2rem;
         .intro-top {
             display: flex;
+            justify-content: space-between;
             margin-bottom: 4rem;
             .img-container {
                 height: 100%;
                 height: 400px;
-                width: 50%;
+                width: 48%;
                 border-radius: 2px;
                 .img-holder {
                     background-image: url(https://i.ibb.co/MPjdmNV/at-dorian-gray-studios.png);
@@ -42,13 +40,16 @@
                 }
             }
             article {
-                width: 50%;
+                width: 48%;
                 position: relative;
                 z-index: 2;
                 padding-left: 2rem;
                 width: 50%;
                 p {
-                    font-size: calc(1rem + 1vw);
+                    border-radius: 2px;
+                    font-size: calc(1rem + .7vw);
+                    padding: 1rem;
+                    background-color: $main-bright-050;
 
                 }
             }
@@ -57,7 +58,8 @@
             display: flex;
             justify-content: space-around;
             p {
-                background-color: $main-dark-075;
+                @include subtle-border;
+                background-color: $shade;
                 color: $main-bright;
                 width: calc(30%);
                 border-radius: 4px;
@@ -75,24 +77,24 @@
     .se-offers, .se-ref {
         padding: 1rem;
         backdrop-filter: blur(3px);
-        background-color: $main-bright-050;
-        * {
-            color: $main-dark;
-        }
+        // background-color: $main-bright-050;
+        
         h3 {
             padding-left: 1rem;
-            border-bottom: 1px solid $main-dark-050;
+            border-bottom: 1px solid black;
             &:not(:first-child) {
-                margin-top: 1.5rem;
+                margin-top: 3rem;
             }
         }
         p {
             padding: 1rem;
+            
         }
         .not-convinced {
-            margin: 3rem 0 2rem;
             border: none;
             text-align: center;
+            background-color: $shade-more;
+            @include subtle-border;
         }
     }
         
@@ -137,8 +139,10 @@
         padding: 1rem;
         backdrop-filter: blur(3px);
         background-color: $main-bright-050;
+        border-radius: 2px;
         p {
-            padding: 1rem;
+            
+            padding: 1rem .5rem;
         }
     }
 }
@@ -158,6 +162,9 @@
                     margin-bottom: 2rem;
                 }
                 article {
+                    h2 {
+                        padding-left: 1rem;
+                    }
                     width: 100%;
                     padding: 0;
                 }
@@ -181,21 +188,31 @@
 
 @media only screen and (max-width: 596px) {
     .sound-engineer {
+        section {
+            margin-bottom: 5rem;
+        }
         //////////////////////////
         //BANNER AND INTRO SECTION
         //////////////////////////
         .se-intro {
-            padding: 1rem 8px;
+            padding: 1rem 0;
             .intro-top {
                 article {
                     width: 100%;
                     padding: 0;
+                    p {
+                        padding: .5rem;
+                    }
                 }
             }
             .intro-bottom {
                 flex-flow: wrap;
                 justify-content: space-between;
                 p {
+                    &:not(:last-child) {
+                        width: 45%;
+                        margin-bottom: .5rem;
+                    }
                     padding: 8px;
                     &:not(:last-child) {
                         width: 100%;
@@ -210,6 +227,18 @@
     
         .se-offers, .se-ref {
             padding: 1rem 8px;
+        }
+        .se-ref {
+            .se-ref-container {
+                .ref-card-container {
+                    .ref-card {
+                        max-width: 100vw;
+                        max-height: 100vw;
+                        width: 90vw;
+                        height: 90vw;
+                    }
+                }
+            }
         }
         .se-bio {
             padding: 1rem 8px;

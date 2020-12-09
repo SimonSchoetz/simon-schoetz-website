@@ -10,8 +10,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    &:focus-within {
+        border: solid 2px white;
+    }
     .content-container {
-    @include subtle-border;
         overflow: hidden;
         position: relative;
         width: 100%;

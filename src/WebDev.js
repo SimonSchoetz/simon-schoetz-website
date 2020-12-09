@@ -48,8 +48,8 @@ export default function WebDev() {
                             <SkillSet />
                         </div>
                     </div>
-                    <div className="contact">
                         <h3>CONTACT</h3>
+                    <div className="contact">
                         <ul className="contact-list">
                             <li>
                                 Email: <Mailto email="simonsch.tz@gmail.com" onMouseEnter={handleMouseOverElement} onMouseLeave={handleMouseOverElement}/>

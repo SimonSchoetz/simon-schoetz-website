@@ -6,7 +6,7 @@
     }
 
     section {
-        margin-bottom: 3rem;
+        margin-bottom: 10rem;
         width: 100%;
         border-radius: 2px;
     }
@@ -43,7 +43,6 @@
     }
     .discography {
         padding: 1rem;
-        @include subtle-border;
         .discography-container {
             display: flex;
             flex-flow: wrap;
@@ -74,6 +73,9 @@
 }
 @media only screen and (max-width: 596px) {
     .producer {
+        section {
+            margin-bottom: 5rem;
+        }
         .discography {
             padding: .5rem;
             .ref-card {

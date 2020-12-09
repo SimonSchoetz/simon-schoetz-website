@@ -21,7 +21,7 @@ import IconSE from './components/nav-components/IconSE';
 import IconWebDev from './components/nav-components/IconWebDev';
 import IconProducer from './components/nav-components/IconProducer';
 
-import Noise from "./noise/Noisy";
+// import Noise from "./noise/Noisy";
 import Curser from './components/Curser';
 import ToTopButton from './components/ToTopButton';
 
